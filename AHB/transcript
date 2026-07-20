@@ -1,0 +1,3603 @@
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -voptargs="+acc" ahb_master_tb 
+# Start time: 21:26:21 on Jul 20,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_master(fast)".
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run -all
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [READ] Address=00000020,Data=ce
+#  [WRITE] Address=00000010,Data=ce
+#  [WRITE] Address=00000011,Data=fa
+#  [WRITE] Address=00000012,Data=ed
+#  [WRITE] Address=00000013,Data=fe
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=22
+#  [WRITE] Address=00000015,Data=22
+#  [WRITE] Address=00000016,Data=22
+#  [WRITE] Address=00000017,Data=22
+# 
+#  [WRITE] Address=00000018,Data=22
+#  [WRITE] Address=00000019,Data=22
+#  [WRITE] Address=0000001a,Data=22
+#  [WRITE] Address=0000001b,Data=22
+# 
+#  [WRITE] Address=0000001c,Data=22
+#  [WRITE] Address=0000001d,Data=22
+#  [WRITE] Address=0000001e,Data=22
+#  [WRITE] Address=0000001f,Data=22
+# 
+#  [WRITE] Address=00000040,Data=22
+#  [WRITE] Address=00000041,Data=22
+#  [WRITE] Address=00000042,Data=22
+#  [WRITE] Address=00000043,Data=22
+# 
+#  [WRITE] Address=00000040,Data=22
+#  [WRITE] Address=00000041,Data=22
+#  [WRITE] Address=00000042,Data=22
+#  [WRITE] Address=00000043,Data=22
+# 
+#  [WRITE] Address=00000042,Data=22
+#  [WRITE] Address=00000043,Data=22
+#  [WRITE] Address=00000044,Data=22
+#  [WRITE] Address=00000045,Data=22
+# 
+#  [WRITE] Address=00000044,Data=22
+#  [WRITE] Address=00000045,Data=22
+#  [WRITE] Address=00000046,Data=22
+#  [WRITE] Address=00000047,Data=22
+# 
+#  [WRITE] Address=00000044,Data=22
+#  [WRITE] Address=00000045,Data=22
+#  [WRITE] Address=00000046,Data=22
+#  [WRITE] Address=00000047,Data=22
+# 
+#  [READ] Address=0000004e,Data=22
+#  [READ] Address=0000004f,Data=22
+#  [READ] Address=00000040,Data=22
+#  [READ] Address=00000041,Data=22
+#  [READ] Address=00000040,Data=22
+#  [READ] Address=00000041,Data=22
+#  [READ] Address=00000042,Data=22
+#  [READ] Address=00000043,Data=22
+#  [READ] Address=00000044,Data=22
+#  [READ] Address=00000045,Data=22
+#  [READ] Address=00000046,Data=22
+#  [READ] Address=00000047,Data=22
+#  [READ] Address=00000048,Data=22
+#  [READ] Address=00000049,Data=22
+#  [READ] Address=0000004a,Data=22
+#  [READ] Address=0000004b,Data=22
+#  [WRITE] Address=00000042,Data=00
+#  [WRITE] Address=00000043,Data=00
+# 
+#  [WRITE] Address=00000042,Data=00
+#  [WRITE] Address=00000043,Data=00
+# 
+#  [READ] Address=00000048,Data=xx
+#  [READ] Address=00000049,Data=xx
+#  [READ] Address=0000004a,Data=xx
+#  [READ] Address=0000004b,Data=xx
+#  [READ] Address=0000004c,Data=xx
+#  [READ] Address=0000004d,Data=xx
+#  [WRITE] Address=00000064,Data=00
+#  [WRITE] Address=00000065,Data=00
+#  [WRITE] Address=00000066,Data=00
+#  [WRITE] Address=00000067,Data=00
+# 
+#  [WRITE] Address=00000074,Data=00
+#  [WRITE] Address=00000075,Data=00
+#  [WRITE] Address=00000076,Data=00
+#  [WRITE] Address=00000077,Data=00
+# 
+#  [WRITE] Address=00000078,Data=00
+#  [WRITE] Address=00000079,Data=00
+#  [WRITE] Address=0000007a,Data=00
+#  [WRITE] Address=0000007b,Data=00
+# 
+#  [WRITE] Address=0000007c,Data=00
+#  [WRITE] Address=0000007d,Data=00
+#  [WRITE] Address=0000007e,Data=00
+#  [WRITE] Address=0000007f,Data=00
+# 
+#  [WRITE] Address=0000007c,Data=00
+#  [WRITE] Address=0000007d,Data=00
+#  [WRITE] Address=0000007e,Data=00
+#  [WRITE] Address=0000007f,Data=00
+# 
+#  [WRITE] Address=00000090,Data=00
+#  [WRITE] Address=00000091,Data=00
+#  [WRITE] Address=00000092,Data=00
+#  [WRITE] Address=00000093,Data=00
+# 
+#  [READ] Address=00000098,Data=xx
+#  [READ] Address=00000099,Data=xx
+#  [READ] Address=0000009a,Data=xx
+#  [READ] Address=0000009b,Data=xx
+#  [WRITE] Address=000000a0,Data=00
+#  [WRITE] Address=000000a1,Data=00
+#  [WRITE] Address=000000a2,Data=00
+#  [WRITE] Address=000000a3,Data=00
+# 
+# ** Note: $stop    : ahb_master_tb .sv(204)
+#    Time: 715 ns  Iteration: 1  Instance: /ahb_master_tb
+# Break in Module ahb_master_tb at ahb_master_tb .sv line 204
+add wave -position end  sim:/ahb_master_tb/req_write
+add wave -position end  sim:/ahb_master_tb/req_wdata
+add wave -position end  sim:/ahb_master_tb/req_valid
+add wave -position end  sim:/ahb_master_tb/req_size
+add wave -position end  sim:/ahb_master_tb/req_rdata
+add wave -position end  sim:/ahb_master_tb/req_error
+add wave -position end  sim:/ahb_master_tb/req_done
+add wave -position end  sim:/ahb_master_tb/req_burst
+add wave -position end  sim:/ahb_master_tb/req_addr
+add wave -position end  sim:/ahb_master_tb/rdata_reg
+add wave -position end  sim:/ahb_master_tb/queue
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Fady  Hostname: MARTIN  ProcessID: 18872
+#           Attempting to use alternate WLF file "./wlft76d2re".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft76d2re
+# Drop insertion failed: sim:/ahb_master_tb/queue
+# (vsim-4027) Logging is not supported for Queue item: /ahb_master_tb/queue
+add wave -position end  sim:/ahb_master_tb/mem
+add wave -position end  sim:/ahb_master_tb/iterations
+add wave -position end  sim:/ahb_master_tb/increment
+add wave -position end  sim:/ahb_master_tb/i_beats_num
+add wave -position end  sim:/ahb_master_tb/hwrite
+add wave -position end  sim:/ahb_master_tb/hwdata
+add wave -position end  sim:/ahb_master_tb/htrans
+add wave -position end  sim:/ahb_master_tb/hsize
+add wave -position end  sim:/ahb_master_tb/hresp
+add wave -position end  sim:/ahb_master_tb/hresetn
+add wave -position end  sim:/ahb_master_tb/hready
+add wave -position end  sim:/ahb_master_tb/hrdata
+add wave -position end  sim:/ahb_master_tb/hprot
+add wave -position end  sim:/ahb_master_tb/hmastlock
+add wave -position end  sim:/ahb_master_tb/hclk
+add wave -position end  sim:/ahb_master_tb/hburst
+add wave -position end  sim:/ahb_master_tb/haddr
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run -all
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [READ] Address=00000020,Data=ce
+#  [WRITE] Address=00000010,Data=ce
+#  [WRITE] Address=00000011,Data=fa
+#  [WRITE] Address=00000012,Data=ed
+#  [WRITE] Address=00000013,Data=fe
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=22
+#  [WRITE] Address=00000015,Data=22
+#  [WRITE] Address=00000016,Data=22
+#  [WRITE] Address=00000017,Data=22
+# 
+#  [WRITE] Address=00000018,Data=22
+#  [WRITE] Address=00000019,Data=22
+#  [WRITE] Address=0000001a,Data=22
+#  [WRITE] Address=0000001b,Data=22
+# 
+#  [WRITE] Address=0000001c,Data=22
+#  [WRITE] Address=0000001d,Data=22
+#  [WRITE] Address=0000001e,Data=22
+#  [WRITE] Address=0000001f,Data=22
+# 
+#  [WRITE] Address=00000040,Data=22
+#  [WRITE] Address=00000041,Data=22
+#  [WRITE] Address=00000042,Data=22
+#  [WRITE] Address=00000043,Data=22
+# 
+#  [WRITE] Address=00000040,Data=22
+#  [WRITE] Address=00000041,Data=22
+#  [WRITE] Address=00000042,Data=22
+#  [WRITE] Address=00000043,Data=22
+# 
+#  [WRITE] Address=00000042,Data=22
+#  [WRITE] Address=00000043,Data=22
+#  [WRITE] Address=00000044,Data=22
+#  [WRITE] Address=00000045,Data=22
+# 
+#  [WRITE] Address=00000044,Data=22
+#  [WRITE] Address=00000045,Data=22
+#  [WRITE] Address=00000046,Data=22
+#  [WRITE] Address=00000047,Data=22
+# 
+#  [WRITE] Address=00000044,Data=22
+#  [WRITE] Address=00000045,Data=22
+#  [WRITE] Address=00000046,Data=22
+#  [WRITE] Address=00000047,Data=22
+# 
+#  [READ] Address=0000004e,Data=22
+#  [READ] Address=0000004f,Data=22
+#  [READ] Address=00000040,Data=22
+#  [READ] Address=00000041,Data=22
+#  [READ] Address=00000040,Data=22
+#  [READ] Address=00000041,Data=22
+#  [READ] Address=00000042,Data=22
+#  [READ] Address=00000043,Data=22
+#  [READ] Address=00000044,Data=22
+#  [READ] Address=00000045,Data=22
+#  [READ] Address=00000046,Data=22
+#  [READ] Address=00000047,Data=22
+#  [READ] Address=00000048,Data=22
+#  [READ] Address=00000049,Data=22
+#  [READ] Address=0000004a,Data=22
+#  [READ] Address=0000004b,Data=22
+#  [WRITE] Address=00000042,Data=00
+#  [WRITE] Address=00000043,Data=00
+# 
+#  [WRITE] Address=00000042,Data=00
+#  [WRITE] Address=00000043,Data=00
+# 
+#  [READ] Address=00000048,Data=xx
+#  [READ] Address=00000049,Data=xx
+#  [READ] Address=0000004a,Data=xx
+#  [READ] Address=0000004b,Data=xx
+#  [READ] Address=0000004c,Data=xx
+#  [READ] Address=0000004d,Data=xx
+#  [WRITE] Address=00000064,Data=00
+#  [WRITE] Address=00000065,Data=00
+#  [WRITE] Address=00000066,Data=00
+#  [WRITE] Address=00000067,Data=00
+# 
+#  [WRITE] Address=00000074,Data=00
+#  [WRITE] Address=00000075,Data=00
+#  [WRITE] Address=00000076,Data=00
+#  [WRITE] Address=00000077,Data=00
+# 
+#  [WRITE] Address=00000078,Data=00
+#  [WRITE] Address=00000079,Data=00
+#  [WRITE] Address=0000007a,Data=00
+#  [WRITE] Address=0000007b,Data=00
+# 
+#  [WRITE] Address=0000007c,Data=00
+#  [WRITE] Address=0000007d,Data=00
+#  [WRITE] Address=0000007e,Data=00
+#  [WRITE] Address=0000007f,Data=00
+# 
+#  [WRITE] Address=0000007c,Data=00
+#  [WRITE] Address=0000007d,Data=00
+#  [WRITE] Address=0000007e,Data=00
+#  [WRITE] Address=0000007f,Data=00
+# 
+#  [WRITE] Address=00000090,Data=00
+#  [WRITE] Address=00000091,Data=00
+#  [WRITE] Address=00000092,Data=00
+#  [WRITE] Address=00000093,Data=00
+# 
+#  [READ] Address=00000098,Data=xx
+#  [READ] Address=00000099,Data=xx
+#  [READ] Address=0000009a,Data=xx
+#  [READ] Address=0000009b,Data=xx
+#  [WRITE] Address=000000a0,Data=00
+#  [WRITE] Address=000000a1,Data=00
+#  [WRITE] Address=000000a2,Data=00
+#  [WRITE] Address=000000a3,Data=00
+# 
+# ** Note: $stop    : ahb_master_tb .sv(204)
+#    Time: 715 ns  Iteration: 1  Instance: /ahb_master_tb
+# Break in Module ahb_master_tb at ahb_master_tb .sv line 204
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 21:33:59 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 21:33:59 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+run
+run
+run
+run
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [READ] Address=00000020,Data=ce
+#  [WRITE] Address=00000010,Data=ce
+#  [WRITE] Address=00000011,Data=fa
+#  [WRITE] Address=00000012,Data=ed
+#  [WRITE] Address=00000013,Data=fe
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+run
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000020,Data=a1
+#  [WRITE] Address=00000021,Data=a1
+#  [WRITE] Address=00000022,Data=a1
+#  [WRITE] Address=00000023,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=22
+#  [WRITE] Address=00000015,Data=22
+#  [WRITE] Address=00000016,Data=22
+#  [WRITE] Address=00000017,Data=22
+# 
+#  [WRITE] Address=0000001c,Data=22
+#  [WRITE] Address=0000001d,Data=22
+#  [WRITE] Address=0000001e,Data=22
+#  [WRITE] Address=0000001f,Data=22
+# 
+#  [WRITE] Address=00000024,Data=22
+#  [WRITE] Address=00000025,Data=22
+#  [WRITE] Address=00000026,Data=22
+#  [WRITE] Address=00000027,Data=22
+# 
+#  [WRITE] Address=0000004c,Data=22
+#  [WRITE] Address=0000004d,Data=22
+#  [WRITE] Address=0000004e,Data=22
+#  [WRITE] Address=0000004f,Data=22
+# 
+#  [WRITE] Address=00000050,Data=22
+#  [WRITE] Address=00000051,Data=22
+#  [WRITE] Address=00000052,Data=22
+#  [WRITE] Address=00000053,Data=22
+# 
+add wave -position 5  sim:/ahb_master_tb/dut/current_state
+add wave -position 6  sim:/ahb_master_tb/dut/beats_counter
+add wave -position 7  sim:/ahb_master_tb/dut/beats_req
+add wave -position 6  sim:/ahb_master_tb/dut/next_state
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [READ] Address=00000020,Data=ce
+#  [WRITE] Address=00000010,Data=ce
+#  [WRITE] Address=00000011,Data=fa
+#  [WRITE] Address=00000012,Data=ed
+#  [WRITE] Address=00000013,Data=fe
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+run
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000020,Data=a1
+#  [WRITE] Address=00000021,Data=a1
+#  [WRITE] Address=00000022,Data=a1
+#  [WRITE] Address=00000023,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=22
+#  [WRITE] Address=00000015,Data=22
+#  [WRITE] Address=00000016,Data=22
+#  [WRITE] Address=00000017,Data=22
+# 
+#  [WRITE] Address=0000001c,Data=22
+#  [WRITE] Address=0000001d,Data=22
+#  [WRITE] Address=0000001e,Data=22
+#  [WRITE] Address=0000001f,Data=22
+# 
+#  [WRITE] Address=00000024,Data=22
+#  [WRITE] Address=00000025,Data=22
+#  [WRITE] Address=00000026,Data=22
+#  [WRITE] Address=00000027,Data=22
+# 
+#  [WRITE] Address=0000004c,Data=22
+#  [WRITE] Address=0000004d,Data=22
+#  [WRITE] Address=0000004e,Data=22
+#  [WRITE] Address=0000004f,Data=22
+# 
+#  [WRITE] Address=00000050,Data=22
+#  [WRITE] Address=00000051,Data=22
+#  [WRITE] Address=00000052,Data=22
+#  [WRITE] Address=00000053,Data=22
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 21:42:33 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 21:42:34 on Jul 20,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=00000060,Data=c1
+#  [WRITE] Address=00000061,Data=ab
+#  [WRITE] Address=00000062,Data=ff
+#  [WRITE] Address=00000063,Data=af
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 21:45:48 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 21:45:48 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=ef
+#  [WRITE] Address=00000005,Data=be
+#  [WRITE] Address=00000006,Data=ad
+#  [WRITE] Address=00000007,Data=de
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+run
+#  [WRITE] Address=00000010,Data=aa
+#  [WRITE] Address=00000011,Data=55
+#  [WRITE] Address=00000012,Data=aa
+#  [WRITE] Address=00000013,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 21:46:55 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 21:46:55 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+run
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 21:47:20 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 21:47:20 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+run
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=2f
+#  [WRITE] Address=0000001d,Data=2f
+#  [WRITE] Address=0000001e,Data=2f
+#  [WRITE] Address=0000001f,Data=2f
+# 
+#  [WRITE] Address=0000001c,Data=2f
+#  [WRITE] Address=0000001d,Data=2f
+#  [WRITE] Address=0000001e,Data=2f
+#  [WRITE] Address=0000001f,Data=2f
+# 
+#  [WRITE] Address=0000001c,Data=2f
+#  [WRITE] Address=0000001d,Data=2f
+#  [WRITE] Address=0000001e,Data=2f
+#  [WRITE] Address=0000001f,Data=2f
+# 
+#  [WRITE] Address=0000001c,Data=2f
+#  [WRITE] Address=0000001d,Data=2f
+#  [WRITE] Address=0000001e,Data=2f
+#  [WRITE] Address=0000001f,Data=2f
+# 
+#  [WRITE] Address=00000064,Data=c1
+#  [WRITE] Address=00000065,Data=ab
+#  [WRITE] Address=00000066,Data=ff
+#  [WRITE] Address=00000067,Data=af
+# 
+#  [WRITE] Address=00000064,Data=c1
+#  [WRITE] Address=00000065,Data=ab
+#  [WRITE] Address=00000066,Data=ff
+#  [WRITE] Address=00000067,Data=af
+# 
+#  [WRITE] Address=00000064,Data=c1
+#  [WRITE] Address=00000065,Data=ab
+#  [WRITE] Address=00000066,Data=ff
+#  [WRITE] Address=00000067,Data=af
+# 
+#  [WRITE] Address=00000064,Data=c1
+#  [WRITE] Address=00000065,Data=ab
+#  [WRITE] Address=00000066,Data=ff
+#  [WRITE] Address=00000067,Data=af
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 21:47:54 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 21:47:54 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=00000060,Data=c1
+#  [WRITE] Address=00000061,Data=ab
+#  [WRITE] Address=00000062,Data=ff
+#  [WRITE] Address=00000063,Data=af
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 21:48:28 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 21:48:28 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=2f
+#  [WRITE] Address=00000015,Data=2f
+#  [WRITE] Address=00000016,Data=2f
+#  [WRITE] Address=00000017,Data=2f
+# 
+#  [WRITE] Address=00000018,Data=2f
+#  [WRITE] Address=00000019,Data=2f
+#  [WRITE] Address=0000001a,Data=2f
+#  [WRITE] Address=0000001b,Data=2f
+# 
+#  [WRITE] Address=0000001c,Data=2f
+#  [WRITE] Address=0000001d,Data=2f
+#  [WRITE] Address=0000001e,Data=2f
+#  [WRITE] Address=0000001f,Data=2f
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 21:50:03 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 21:50:03 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=2f
+#  [WRITE] Address=00000015,Data=2f
+#  [WRITE] Address=00000016,Data=2f
+#  [WRITE] Address=00000017,Data=2f
+# 
+#  [WRITE] Address=00000018,Data=2f
+#  [WRITE] Address=00000019,Data=2f
+#  [WRITE] Address=0000001a,Data=2f
+#  [WRITE] Address=0000001b,Data=2f
+# 
+#  [WRITE] Address=0000001c,Data=2f
+#  [WRITE] Address=0000001d,Data=2f
+#  [WRITE] Address=0000001e,Data=2f
+#  [WRITE] Address=0000001f,Data=2f
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+run
+#  [WRITE] Address=00000088,Data=c1
+#  [WRITE] Address=00000089,Data=ab
+#  [WRITE] Address=0000008a,Data=ff
+#  [WRITE] Address=0000008b,Data=af
+# 
+#  [WRITE] Address=0000008c,Data=c1
+#  [WRITE] Address=0000008d,Data=ab
+#  [WRITE] Address=0000008e,Data=ff
+#  [WRITE] Address=0000008f,Data=af
+# 
+#  [WRITE] Address=00000060,Data=c1
+#  [WRITE] Address=00000061,Data=ab
+#  [WRITE] Address=00000062,Data=ff
+#  [WRITE] Address=00000063,Data=af
+# 
+#  [WRITE] Address=00000060,Data=c1
+#  [WRITE] Address=00000061,Data=ab
+#  [WRITE] Address=00000062,Data=ff
+#  [WRITE] Address=00000063,Data=af
+# 
+#  [WRITE] Address=0000006c,Data=ce
+#  [WRITE] Address=0000006d,Data=fa
+#  [WRITE] Address=0000006e,Data=ed
+#  [WRITE] Address=0000006f,Data=fe
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 21:51:00 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# ** Error: (vlog-13069) ahb_master_tb .sv(88): near ")": syntax error, unexpected ')'.
+# End time: 21:51:00 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/questasim64_2021.1/win64/vlog failed.
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 21:51:07 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 21:51:07 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+run
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+run
+#  [WRITE] Address=00000018,Data=2f
+#  [WRITE] Address=00000019,Data=2f
+#  [WRITE] Address=0000001a,Data=2f
+#  [WRITE] Address=0000001b,Data=2f
+# 
+#  [WRITE] Address=0000001c,Data=2f
+#  [WRITE] Address=0000001d,Data=2f
+#  [WRITE] Address=0000001e,Data=2f
+#  [WRITE] Address=0000001f,Data=2f
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000060,Data=c1
+#  [WRITE] Address=00000061,Data=ab
+#  [WRITE] Address=00000062,Data=ff
+#  [WRITE] Address=00000063,Data=af
+# 
+#  [WRITE] Address=00000060,Data=c1
+#  [WRITE] Address=00000061,Data=ab
+#  [WRITE] Address=00000062,Data=ff
+#  [WRITE] Address=00000063,Data=af
+# 
+#  [WRITE] Address=00000064,Data=c1
+#  [WRITE] Address=00000065,Data=ab
+#  [WRITE] Address=00000066,Data=ff
+#  [WRITE] Address=00000067,Data=af
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 21:52:01 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 21:52:01 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [WRITE] Address=00000060,Data=c1
+#  [WRITE] Address=00000061,Data=ab
+#  [WRITE] Address=00000062,Data=ff
+#  [WRITE] Address=00000063,Data=af
+# 
+run
+#  [WRITE] Address=00000064,Data=c1
+#  [WRITE] Address=00000065,Data=ab
+#  [WRITE] Address=00000066,Data=ff
+#  [WRITE] Address=00000067,Data=af
+# 
+#  [WRITE] Address=00000068,Data=c1
+#  [WRITE] Address=00000069,Data=ab
+#  [WRITE] Address=0000006a,Data=ff
+#  [WRITE] Address=0000006b,Data=af
+# 
+#  [WRITE] Address=0000006c,Data=c1
+#  [WRITE] Address=0000006d,Data=ab
+#  [WRITE] Address=0000006e,Data=ff
+#  [WRITE] Address=0000006f,Data=af
+# 
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [READ] Address=00000020,Data=ce
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 22:00:12 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 22:00:13 on Jul 20,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 22:00:58 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 22:00:58 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [WRITE] Address=00000060,Data=c1
+#  [WRITE] Address=00000061,Data=ab
+#  [WRITE] Address=00000062,Data=ff
+#  [WRITE] Address=00000063,Data=af
+# 
+run
+#  [WRITE] Address=00000064,Data=c1
+#  [WRITE] Address=00000065,Data=ab
+#  [WRITE] Address=00000066,Data=ff
+#  [WRITE] Address=00000067,Data=af
+# 
+#  [WRITE] Address=00000068,Data=c1
+#  [WRITE] Address=00000069,Data=ab
+#  [WRITE] Address=0000006a,Data=ff
+#  [WRITE] Address=0000006b,Data=af
+# 
+#  [WRITE] Address=0000006c,Data=c1
+#  [WRITE] Address=0000006d,Data=ab
+#  [WRITE] Address=0000006e,Data=ff
+#  [WRITE] Address=0000006f,Data=af
+# 
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [READ] Address=00000060,Data=c1
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 22:05:44 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 22:05:44 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [WRITE] Address=00000060,Data=c1
+#  [WRITE] Address=00000061,Data=ab
+#  [WRITE] Address=00000062,Data=ff
+#  [WRITE] Address=00000063,Data=af
+# 
+run
+#  [WRITE] Address=00000064,Data=c1
+#  [WRITE] Address=00000065,Data=ab
+#  [WRITE] Address=00000066,Data=ff
+#  [WRITE] Address=00000067,Data=af
+# 
+#  [WRITE] Address=00000068,Data=c1
+#  [WRITE] Address=00000069,Data=ab
+#  [WRITE] Address=0000006a,Data=ff
+#  [WRITE] Address=0000006b,Data=af
+# 
+#  [WRITE] Address=0000006c,Data=c1
+#  [WRITE] Address=0000006d,Data=ab
+#  [WRITE] Address=0000006e,Data=ff
+#  [WRITE] Address=0000006f,Data=af
+# 
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [READ] Address=00000060,Data=c1
+run
+#  [WRITE] Address=00000040,Data=ce
+# 
+#  [WRITE] Address=00000040,Data=78
+# 
+#  [WRITE] Address=00000041,Data=78
+# 
+#  [WRITE] Address=00000042,Data=78
+# 
+#  [WRITE] Address=00000043,Data=78
+# 
+#  [WRITE] Address=00000044,Data=78
+# 
+#  [WRITE] Address=00000045,Data=78
+# 
+#  [WRITE] Address=00000046,Data=78
+# 
+run
+#  [WRITE] Address=00000040,Data=22
+# 
+#  [WRITE] Address=00000041,Data=22
+# 
+#  [WRITE] Address=00000042,Data=22
+# 
+#  [WRITE] Address=00000043,Data=22
+# 
+#  [WRITE] Address=00000044,Data=22
+# 
+#  [WRITE] Address=00000045,Data=22
+# 
+#  [WRITE] Address=00000046,Data=22
+# 
+#  [WRITE] Address=00000047,Data=22
+# 
+run
+# ** Note: $stop    : ahb_master_tb .sv(204)
+#    Time: 575 ns  Iteration: 1  Instance: /ahb_master_tb
+# Break in Module ahb_master_tb at ahb_master_tb .sv line 204
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:05:50 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# ** Error: ahb_master_tb .sv(194): Number of actuals and formals does not match in task call.
+# End time: 23:05:50 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/questasim64_2021.1/win64/vlog failed.
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:06:09 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:06:09 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [WRITE] Address=00000080,Data=c1
+#  [WRITE] Address=00000081,Data=ab
+#  [WRITE] Address=00000082,Data=ff
+#  [WRITE] Address=00000083,Data=af
+# 
+run
+#  [WRITE] Address=00000084,Data=c1
+#  [WRITE] Address=00000085,Data=ab
+#  [WRITE] Address=00000086,Data=ff
+#  [WRITE] Address=00000087,Data=af
+# 
+#  [WRITE] Address=00000088,Data=c1
+#  [WRITE] Address=00000089,Data=ab
+#  [WRITE] Address=0000008a,Data=ff
+#  [WRITE] Address=0000008b,Data=af
+# 
+#  [WRITE] Address=0000008c,Data=c1
+#  [WRITE] Address=0000008d,Data=ab
+#  [WRITE] Address=0000008e,Data=ff
+#  [WRITE] Address=0000008f,Data=af
+# 
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [READ] Address=00000060,Data=xx
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:07:13 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:07:13 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000084,Data=c1
+#  [WRITE] Address=00000085,Data=ab
+#  [WRITE] Address=00000086,Data=ff
+#  [WRITE] Address=00000087,Data=af
+# 
+#  [READ] Address=0000008c,Data=xx
+#  [READ] Address=0000008d,Data=xx
+#  [READ] Address=0000008e,Data=xx
+#  [READ] Address=0000008f,Data=xx
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:13:44 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:13:44 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000084,Data=c1
+#  [WRITE] Address=00000085,Data=ab
+#  [WRITE] Address=00000086,Data=ff
+#  [WRITE] Address=00000087,Data=af
+# 
+#  [READ] Address=0000008c,Data=xx
+#  [READ] Address=0000008d,Data=xx
+#  [READ] Address=0000008e,Data=xx
+#  [READ] Address=0000008f,Data=xx
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:14:00 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:14:00 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000084,Data=c1
+#  [WRITE] Address=00000085,Data=ab
+#  [WRITE] Address=00000086,Data=ff
+#  [WRITE] Address=00000087,Data=af
+# 
+#  [READ] Address=0000008c,Data=xx
+#  [READ] Address=0000008d,Data=xx
+#  [READ] Address=0000008e,Data=xx
+#  [READ] Address=0000008f,Data=xx
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:14:41 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:14:41 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000088,Data=c1
+#  [WRITE] Address=00000089,Data=ab
+#  [WRITE] Address=0000008a,Data=ff
+#  [WRITE] Address=0000008b,Data=af
+# 
+#  [READ] Address=00000060,Data=xx
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:15:51 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:15:51 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000084,Data=c1
+#  [WRITE] Address=00000085,Data=ab
+#  [WRITE] Address=00000086,Data=ff
+#  [WRITE] Address=00000087,Data=af
+# 
+#  [READ] Address=0000008c,Data=xx
+#  [READ] Address=0000008d,Data=xx
+#  [READ] Address=0000008e,Data=xx
+#  [READ] Address=0000008f,Data=xx
+run
+#  [WRITE] Address=00000040,Data=ce
+# 
+#  [WRITE] Address=00000040,Data=78
+# 
+#  [WRITE] Address=00000041,Data=78
+# 
+#  [WRITE] Address=00000042,Data=78
+# 
+#  [WRITE] Address=00000043,Data=78
+# 
+#  [WRITE] Address=00000044,Data=78
+# 
+#  [WRITE] Address=00000045,Data=78
+# 
+#  [WRITE] Address=00000046,Data=78
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:16:45 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:16:46 on Jul 20,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000084,Data=c1
+#  [WRITE] Address=00000085,Data=ab
+#  [WRITE] Address=00000086,Data=ff
+#  [WRITE] Address=00000087,Data=af
+# 
+#  [READ] Address=0000008c,Data=xx
+#  [READ] Address=0000008d,Data=xx
+#  [READ] Address=0000008e,Data=xx
+#  [READ] Address=0000008f,Data=xx
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:17:35 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:17:35 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000084,Data=c1
+#  [WRITE] Address=00000085,Data=ab
+#  [WRITE] Address=00000086,Data=ff
+#  [WRITE] Address=00000087,Data=af
+# 
+#  [READ] Address=0000008c,Data=xx
+#  [READ] Address=0000008d,Data=xx
+#  [READ] Address=0000008e,Data=xx
+#  [READ] Address=0000008f,Data=xx
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:19:30 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:19:31 on Jul 20,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000020,Data=c1
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:21:47 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:21:48 on Jul 20,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_master(fast)".
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000020,Data=c1
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:22:51 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:22:51 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_master(fast)".
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000020,Data=ce
+# 
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 23:25:34 on Jul 20,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 23:25:34 on Jul 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_master(fast)".
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000020,Data=ce
+# 
+restar
+# ambiguous command name "restar": restart restartCmd restartDone restartError restartParse
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run -all
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [READ] Address=00000060,Data=xx
+#  [WRITE] Address=00000040,Data=ce
+# 
+#  [WRITE] Address=00000040,Data=78
+# 
+#  [WRITE] Address=00000041,Data=78
+# 
+#  [WRITE] Address=00000042,Data=78
+# 
+#  [WRITE] Address=00000043,Data=78
+# 
+#  [WRITE] Address=00000044,Data=78
+# 
+#  [WRITE] Address=00000045,Data=78
+# 
+#  [WRITE] Address=00000046,Data=78
+# 
+#  [WRITE] Address=00000048,Data=78
+# 
+#  [READ] Address=0000004a,Data=xx
+#  [WRITE] Address=0000004c,Data=78
+# 
+#  [WRITE] Address=0000004f,Data=78
+# 
+#  [WRITE] Address=00000050,Data=78
+# 
+#  [WRITE] Address=00000051,Data=78
+# 
+#  [WRITE] Address=00000052,Data=78
+# 
+#  [WRITE] Address=00000053,Data=78
+# 
+#  [WRITE] Address=00000054,Data=78
+# 
+#  [WRITE] Address=00000055,Data=78
+# 
+#  [WRITE] Address=00000056,Data=78
+# 
+# ** Note: $stop    : ahb_master_tb .sv(223)
+#    Time: 675 ns  Iteration: 1  Instance: /ahb_master_tb
+# Break in Module ahb_master_tb at ahb_master_tb .sv line 223
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 00:00:08 on Jul 21,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 00:00:09 on Jul 21,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_master(fast)".
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+run
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+run
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [READ] Address=00000060,Data=xx
+# A time value could not be extracted from the current line
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 00:03:21 on Jul 21,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 00:03:21 on Jul 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run -all
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [READ] Address=00000060,Data=xx
+#  [WRITE] Address=00000040,Data=ce
+# 
+#  [WRITE] Address=00000040,Data=78
+# 
+#  [WRITE] Address=00000041,Data=78
+# 
+#  [WRITE] Address=00000042,Data=78
+# 
+#  [WRITE] Address=00000043,Data=78
+# 
+#  [WRITE] Address=00000044,Data=78
+# 
+#  [WRITE] Address=00000045,Data=78
+# 
+#  [WRITE] Address=00000046,Data=78
+# 
+#  [WRITE] Address=00000048,Data=78
+# 
+#  [READ] Address=0000004a,Data=xx
+#  [WRITE] Address=0000004c,Data=78
+# 
+#  [WRITE] Address=0000004f,Data=78
+# 
+#  [WRITE] Address=00000050,Data=78
+# 
+#  [WRITE] Address=00000051,Data=78
+# 
+#  [WRITE] Address=00000052,Data=78
+# 
+#  [WRITE] Address=00000053,Data=78
+# 
+#  [WRITE] Address=00000054,Data=78
+# 
+#  [WRITE] Address=00000055,Data=78
+# 
+#  [WRITE] Address=00000056,Data=78
+# 
+# ** Note: $stop    : ahb_master_tb .sv(224)
+#    Time: 675 ns  Iteration: 1  Instance: /ahb_master_tb
+# Break in Module ahb_master_tb at ahb_master_tb .sv line 224
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 00:07:15 on Jul 21,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 00:07:15 on Jul 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run -all
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [WRITE] Address=00000040,Data=ce
+# 
+#  [WRITE] Address=00000040,Data=78
+# 
+#  [WRITE] Address=00000041,Data=78
+# 
+#  [WRITE] Address=00000042,Data=78
+# 
+#  [WRITE] Address=00000043,Data=78
+# 
+#  [WRITE] Address=00000044,Data=78
+# 
+#  [WRITE] Address=00000045,Data=78
+# 
+#  [WRITE] Address=00000046,Data=78
+# 
+#  [WRITE] Address=00000048,Data=78
+# 
+#  [READ] Address=0000004a,Data=xx
+#  [WRITE] Address=0000004c,Data=78
+# 
+#  [WRITE] Address=0000004f,Data=78
+# 
+#  [WRITE] Address=00000050,Data=78
+# 
+#  [WRITE] Address=00000051,Data=78
+# 
+#  [WRITE] Address=00000052,Data=78
+# 
+#  [WRITE] Address=00000053,Data=78
+# 
+#  [WRITE] Address=00000054,Data=78
+# 
+#  [WRITE] Address=00000055,Data=78
+# 
+#  [WRITE] Address=00000056,Data=78
+# 
+# ** Note: $stop    : ahb_master_tb .sv(214)
+#    Time: 625 ns  Iteration: 1  Instance: /ahb_master_tb
+# Break in Module ahb_master_tb at ahb_master_tb .sv line 214
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 00:09:40 on Jul 21,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 00:09:40 on Jul 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run -all
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [WRITE] Address=00000040,Data=ce
+# 
+#  [WRITE] Address=00000040,Data=78
+# 
+#  [WRITE] Address=00000041,Data=78
+# 
+#  [WRITE] Address=00000042,Data=78
+# 
+#  [WRITE] Address=00000043,Data=78
+# 
+#  [WRITE] Address=00000044,Data=78
+# 
+#  [WRITE] Address=00000045,Data=78
+# 
+#  [WRITE] Address=00000046,Data=78
+# 
+# ** Note: $stop    : ahb_master_tb .sv(184)
+#    Time: 445 ns  Iteration: 1  Instance: /ahb_master_tb
+# Break in Module ahb_master_tb at ahb_master_tb .sv line 184
+vlog *.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 00:11:13 on Jul 21,2026
+# vlog -reportprogress 300 ahb_decoder.sv ahb_master.sv ahb_master_tb .sv ahb_mux.sv ahb_pkg.sv ahb_slave.sv tb.sv top.sv 
+# -- Compiling module ahb_decoder
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_master_tb20_sv_unit
+# -- Compiling module ahb_master_tb
+# -- Compiling module ahb_mux
+# -- Compiling package ahb_pkg
+# -- Compiling module ahb_top
+# 
+# Top level modules:
+# 	ahb_master_tb
+# 	ahb_top
+# End time: 00:11:13 on Jul 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.ahb_master_tb20_sv_unit(fast)
+# Loading work.ahb_master_tb(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+run -all
+#  [WRITE] Address=00000000,Data=ef
+#  [WRITE] Address=00000001,Data=be
+#  [WRITE] Address=00000002,Data=ad
+#  [WRITE] Address=00000003,Data=de
+# 
+#  [WRITE] Address=00000004,Data=be
+#  [WRITE] Address=00000005,Data=ba
+#  [WRITE] Address=00000006,Data=fe
+#  [WRITE] Address=00000007,Data=ca
+# 
+#  [WRITE] Address=00000008,Data=aa
+#  [WRITE] Address=00000009,Data=55
+# 
+#  [WRITE] Address=00000010,Data=a1
+#  [WRITE] Address=00000011,Data=a1
+#  [WRITE] Address=00000012,Data=a1
+#  [WRITE] Address=00000013,Data=a1
+# 
+#  [WRITE] Address=00000014,Data=a1
+#  [WRITE] Address=00000015,Data=a1
+#  [WRITE] Address=00000016,Data=a1
+#  [WRITE] Address=00000017,Data=a1
+# 
+#  [WRITE] Address=00000018,Data=a1
+#  [WRITE] Address=00000019,Data=a1
+#  [WRITE] Address=0000001a,Data=a1
+#  [WRITE] Address=0000001b,Data=a1
+# 
+#  [WRITE] Address=0000001c,Data=a1
+#  [WRITE] Address=0000001d,Data=a1
+#  [WRITE] Address=0000001e,Data=a1
+#  [WRITE] Address=0000001f,Data=a1
+# 
+#  [WRITE] Address=00000080,Data=2f
+#  [WRITE] Address=00000081,Data=2f
+#  [WRITE] Address=00000082,Data=2f
+#  [WRITE] Address=00000083,Data=2f
+# 
+#  [WRITE] Address=00000084,Data=2f
+#  [WRITE] Address=00000085,Data=2f
+#  [WRITE] Address=00000086,Data=2f
+#  [WRITE] Address=00000087,Data=2f
+# 
+#  [WRITE] Address=00000088,Data=2f
+#  [WRITE] Address=00000089,Data=2f
+#  [WRITE] Address=0000008a,Data=2f
+#  [WRITE] Address=0000008b,Data=2f
+# 
+#  [WRITE] Address=0000008c,Data=2f
+#  [WRITE] Address=0000008d,Data=2f
+#  [WRITE] Address=0000008e,Data=2f
+#  [WRITE] Address=0000008f,Data=2f
+# 
+#  [READ] Address=00000080,Data=2f
+#  [READ] Address=00000081,Data=2f
+#  [READ] Address=00000082,Data=2f
+#  [READ] Address=00000083,Data=2f
+#  [READ] Address=00000084,Data=2f
+#  [READ] Address=00000085,Data=2f
+#  [READ] Address=00000086,Data=2f
+#  [READ] Address=00000087,Data=2f
+#  [READ] Address=00000088,Data=2f
+#  [READ] Address=00000089,Data=2f
+#  [READ] Address=0000008a,Data=2f
+#  [READ] Address=0000008b,Data=2f
+#  [READ] Address=0000008c,Data=2f
+#  [READ] Address=0000008d,Data=2f
+#  [READ] Address=0000008e,Data=2f
+#  [READ] Address=0000008f,Data=2f
+#  [WRITE] Address=00000020,Data=ce
+# 
+#  [WRITE] Address=00000040,Data=78
+# 
+#  [WRITE] Address=00000041,Data=78
+# 
+#  [WRITE] Address=00000042,Data=78
+# 
+#  [WRITE] Address=00000043,Data=78
+# 
+#  [WRITE] Address=00000044,Data=78
+# 
+#  [WRITE] Address=00000045,Data=78
+# 
+#  [WRITE] Address=00000046,Data=78
+# 
+#  [WRITE] Address=00000047,Data=78
+# 
+# ** Note: $stop    : ahb_master_tb .sv(184)
+#    Time: 460 ns  Iteration: 1  Instance: /ahb_master_tb
+# Break in Module ahb_master_tb at ahb_master_tb .sv line 184

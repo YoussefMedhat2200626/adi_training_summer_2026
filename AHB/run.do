@@ -1,0 +1,34 @@
+vsim -voptargs="+acc" ahb_master_tb 
+add wave -position end  sim:/ahb_master_tb/req_write
+add wave -position end  sim:/ahb_master_tb/req_wdata
+add wave -position end  sim:/ahb_master_tb/req_valid
+add wave -position end  sim:/ahb_master_tb/req_size
+add wave -position end  sim:/ahb_master_tb/req_rdata
+add wave -position end  sim:/ahb_master_tb/req_error
+add wave -position end  sim:/ahb_master_tb/req_done
+add wave -position end  sim:/ahb_master_tb/req_burst
+add wave -position end  sim:/ahb_master_tb/req_addr
+add wave -position end  sim:/ahb_master_tb/rdata_reg
+add wave -position end  sim:/ahb_master_tb/queue
+add wave -position end  sim:/ahb_master_tb/mem
+add wave -position end  sim:/ahb_master_tb/iterations
+add wave -position end  sim:/ahb_master_tb/increment
+add wave -position end  sim:/ahb_master_tb/i_beats_num
+add wave -position end  sim:/ahb_master_tb/hwrite
+add wave -position end  sim:/ahb_master_tb/hwdata
+add wave -position end  sim:/ahb_master_tb/htrans
+add wave -position end  sim:/ahb_master_tb/hsize
+add wave -position end  sim:/ahb_master_tb/hresp
+add wave -position end  sim:/ahb_master_tb/hresetn
+add wave -position end  sim:/ahb_master_tb/hready
+add wave -position end  sim:/ahb_master_tb/hrdata
+add wave -position end  sim:/ahb_master_tb/hprot
+add wave -position end  sim:/ahb_master_tb/hmastlock
+add wave -position end  sim:/ahb_master_tb/hclk
+add wave -position end  sim:/ahb_master_tb/hburst
+add wave -position end  sim:/ahb_master_tb/haddr
+add wave -position 5  sim:/ahb_master_tb/dut/current_state
+add wave -position 6  sim:/ahb_master_tb/dut/beats_counter
+add wave -position 7  sim:/ahb_master_tb/dut/beats_req
+add wave -position 6  sim:/ahb_master_tb/dut/next_state
+run -all
