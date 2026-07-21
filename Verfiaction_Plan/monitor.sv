@@ -1,12 +1,15 @@
 class monitor;
     virtual alu_if.MONITOR vif;
     mailbox #(alu_transaction) mon2scb;
+    mailbox #(alu_transaction) mon2cvg;   // optional: functional coverage tap
     int transaction_count = 0;
     alu_transaction pending;
 
-    function new(virtual alu_if.MONITOR vif, mailbox #(alu_transaction) mon2scb);
+    function new(virtual alu_if.MONITOR vif, mailbox #(alu_transaction) mon2scb,
+                 mailbox #(alu_transaction) mon2cvg = null);
         this.vif = vif;
         this.mon2scb = mon2scb;
+        this.mon2cvg = mon2cvg;
         this.pending = null;
     endfunction
 
@@ -18,6 +21,14 @@ class monitor;
             #1step;
             
             if (vif.mon_cb.RST === 1'b0) begin
+                // Reset is asserted: no valid transaction to give the
+                // scoreboard, but tell coverage a reset happened so
+                // reset_cg can see the rst_n=0 bin.
+                if (mon2cvg != null) begin
+                    alu_transaction rst_marker = new();
+                    rst_marker.rst_n = 1'b0;
+                    mon2cvg.put(rst_marker);
+                end
                 pending = null;
                 first = 1'b1;
                 continue;
@@ -35,6 +46,8 @@ class monitor;
                     $display("[MON] Captured %0d transactions so far @ %0t", 
                              transaction_count, $time);
                 mon2scb.put(pending);
+                if (mon2cvg != null)
+                    mon2cvg.put(pending);
             end
 
             pending = new();

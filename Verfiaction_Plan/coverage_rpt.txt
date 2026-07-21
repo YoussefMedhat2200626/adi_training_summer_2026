@@ -16,27 +16,27 @@ Statement Coverage for instance /tb_top/vif --
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File alu_if.sv
-    3                                                interface alu_if #(parameter WIDTH = 4) (input bit CLK);
-    4                                                
-    5                                                    logic [WIDTH-1:0] A;
-    6                                                    logic [WIDTH-1:0] B;
-    7                                                    logic [1:0]       OP;
-    8                                                    logic              RST;
-    9                                                
-    10                                                   logic              Zero_Flag;
-    11                                                   logic              Arithm_FLag;
-    12                                                   logic              Logic_Flag;
-    13                                                   logic              Carry_Flag;
-    14                                                   logic [WIDTH-1:0] Result;
-    15                                               
-    16              1                          1         clocking drv_cb @(posedge CLK);
-    17                                                       default input #1step output #2;
-    18                                                       output A, B, OP, RST;
-    19                                                   endclocking
-    20                                               
-    21              1                          1         clocking mon_cb @(posedge CLK);
-    22                                                       default input #1step output #2;
-    23              1                          1             input A, B, OP, RST, Zero_Flag, Arithm_FLag, Logic_Flag, Carry_Flag, Result;
+    3                                                interface alu_if #(parameter WIDTH = 4) (input bit CLK);
+    4                                                
+    5                                                    logic [WIDTH-1:0] A;
+    6                                                    logic [WIDTH-1:0] B;
+    7                                                    logic [1:0]       OP;
+    8                                                    logic              RST;
+    9                                                
+    10                                                   logic              Zero_Flag;
+    11                                                   logic              Arithm_FLag;
+    12                                                   logic              Logic_Flag;
+    13                                                   logic              Carry_Flag;
+    14                                                   logic [WIDTH-1:0] Result;
+    15                                               
+    16              1                          1         clocking drv_cb @(posedge CLK);
+    17                                                       default input #1step output #2;
+    18                                                       output A, B, OP, RST;
+    19                                                   endclocking
+    20                                               
+    21              1                          1         clocking mon_cb @(posedge CLK);
+    22                                                       default input #1step output #2;
+    23              1                          1             input A, B, OP, RST, Zero_Flag, Arithm_FLag, Logic_Flag, Carry_Flag, Result;
     23              2                          1     
     23              3                          1     
     23              4                          1     
@@ -102,16 +102,16 @@ Branch Coverage for instance /tb_top/dut
   File alu.sv
 ------------------------------------IF Branch------------------------------------
     25                                      1996     Count coming in to IF
-    25              1                          2         if(!RST) begin
-    31              1                       1994         else begin
+    25              1                          2         if(!RST) begin
+    31              1                       1994         else begin
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------CASE Branch------------------------------------
     41                                      1023     Count coming in to CASE
-    42              1                        258             2'b00: begin
-    47              1                        264             2'b01: begin
-    52              1                        259             2'b10: begin
-    57              1                        242             2'b11: begin
+    42              1                        258             2'b00: begin
+    47              1                        264             2'b01: begin
+    52              1                        259             2'b10: begin
+    57              1                        242             2'b11: begin
                                          ***0***     All False Count
 Branch totals: 4 hits of 5 branches = 80.00%
 
@@ -152,64 +152,64 @@ Statement Coverage for instance /tb_top/dut --
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File alu.sv
-    3                                                module ALU #(parameter WIDTH = 4)(
-    4                                                    input  wire [WIDTH-1:0] A,
-    5                                                    input  wire [WIDTH-1:0] B,
-    6                                                    input  wire [1:0]       OP,
-    7                                                    input  wire             CLK,
-    8                                                    input  wire             RST,
-    9                                                
-    10                                                   output                    Zero_Flag,
-    11                                                   output reg                Arithm_FLag,
-    12                                                   output reg                Logic_Flag,
-    13                                                   output reg                Carry_Flag,
-    14                                                   output reg [WIDTH-1:0]    Result
-    15                                               );
-    16                                               
-    17                                               reg [WIDTH-1:0] Comp_Result;
-    18                                               reg Comp_Carry_Flag;
-    19                                               reg Comp_Arithm_Flag;
-    20                                               reg Comp_Logic_Flag;
-    21                                               
-    22              1                        935     assign Zero_Flag = (Result == 0);
-    23                                               
-    24              1                       1996     always @(posedge CLK, negedge RST) begin
-    25                                                   if(!RST) begin
-    26              1                          2             Result          <= 'b0000;
-    27              1                          2             Carry_Flag      <= 1'b0;
-    28              1                          2             Arithm_FLag     <= 1'b0;
-    29              1                          2             Logic_Flag      <= 1'b0;
-    30                                                   end
-    31                                                   else begin
-    32              1                       1994             Result         <= Comp_Result;
-    33              1                       1994             Carry_Flag     <= Comp_Carry_Flag;
-    34              1                       1994             Arithm_FLag    <= Comp_Arithm_Flag;
-    35              1                       1994             Logic_Flag     <= Comp_Logic_Flag;
-    36                                                   end
-    37                                               end
-    38                                               
-    39              1                       1023     always @(*) begin
-    40              1                       1023         Comp_Result = 'b0000;
-    41                                                   case (OP)
-    42                                                       2'b00: begin
-    43              1                        258                 {Comp_Carry_Flag,Comp_Result} = A + B;
-    44              1                        258                 Comp_Arithm_Flag = 1'b1;
-    45              1                        258                 Comp_Logic_Flag  = 1'b0;
-    46                                                       end
-    47                                                       2'b01: begin
-    48              1                        264                 {Comp_Carry_Flag,Comp_Result} = A - B;
-    49              1                        264                 Comp_Arithm_Flag = 1'b1;
-    50              1                        264                 Comp_Logic_Flag  = 1'b0;
-    51                                                       end
-    52                                                       2'b10: begin
-    53              1                        259                 {Comp_Carry_Flag,Comp_Result} = A & B;
-    54              1                        259                 Comp_Arithm_Flag = 1'b0;
-    55              1                        259                 Comp_Logic_Flag  = 1'b1;
-    56                                                       end
-    57                                                       2'b11: begin
-    58              1                        242                 {Comp_Carry_Flag,Comp_Result} = A | B;
-    59              1                        242                 Comp_Arithm_Flag = 1'b0;
-    60              1                        242                 Comp_Logic_Flag  = 1'b1;
+    3                                                module ALU #(parameter WIDTH = 4)(
+    4                                                    input  wire [WIDTH-1:0] A,
+    5                                                    input  wire [WIDTH-1:0] B,
+    6                                                    input  wire [1:0]       OP,
+    7                                                    input  wire             CLK,
+    8                                                    input  wire             RST,
+    9                                                
+    10                                                   output                    Zero_Flag,
+    11                                                   output reg                Arithm_FLag,
+    12                                                   output reg                Logic_Flag,
+    13                                                   output reg                Carry_Flag,
+    14                                                   output reg [WIDTH-1:0]    Result
+    15                                               );
+    16                                               
+    17                                               reg [WIDTH-1:0] Comp_Result;
+    18                                               reg Comp_Carry_Flag;
+    19                                               reg Comp_Arithm_Flag;
+    20                                               reg Comp_Logic_Flag;
+    21                                               
+    22              1                        935     assign Zero_Flag = (Result == 0);
+    23                                               
+    24              1                       1996     always @(posedge CLK, negedge RST) begin
+    25                                                   if(!RST) begin
+    26              1                          2             Result          <= 'b0000;
+    27              1                          2             Carry_Flag      <= 1'b0;
+    28              1                          2             Arithm_FLag     <= 1'b0;
+    29              1                          2             Logic_Flag      <= 1'b0;
+    30                                                   end
+    31                                                   else begin
+    32              1                       1994             Result         <= Comp_Result;
+    33              1                       1994             Carry_Flag     <= Comp_Carry_Flag;
+    34              1                       1994             Arithm_FLag    <= Comp_Arithm_Flag;
+    35              1                       1994             Logic_Flag     <= Comp_Logic_Flag;
+    36                                                   end
+    37                                               end
+    38                                               
+    39              1                       1023     always @(*) begin
+    40              1                       1023         Comp_Result = 'b0000;
+    41                                                   case (OP)
+    42                                                       2'b00: begin
+    43              1                        258                 {Comp_Carry_Flag,Comp_Result} = A + B;
+    44              1                        258                 Comp_Arithm_Flag = 1'b1;
+    45              1                        258                 Comp_Logic_Flag  = 1'b0;
+    46                                                       end
+    47                                                       2'b01: begin
+    48              1                        264                 {Comp_Carry_Flag,Comp_Result} = A - B;
+    49              1                        264                 Comp_Arithm_Flag = 1'b1;
+    50              1                        264                 Comp_Logic_Flag  = 1'b0;
+    51                                                       end
+    52                                                       2'b10: begin
+    53              1                        259                 {Comp_Carry_Flag,Comp_Result} = A & B;
+    54              1                        259                 Comp_Arithm_Flag = 1'b0;
+    55              1                        259                 Comp_Logic_Flag  = 1'b1;
+    56                                                       end
+    57                                                       2'b11: begin
+    58              1                        242                 {Comp_Carry_Flag,Comp_Result} = A | B;
+    59              1                        242                 Comp_Arithm_Flag = 1'b0;
+    60              1                        242                 Comp_Logic_Flag  = 1'b1;
 
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
@@ -271,7 +271,7 @@ Branch Coverage for instance /tb_top
   File tb_top.sv
 ------------------------------------IF Branch------------------------------------
     39                                         1     Count coming in to IF
-    39              1                          1             if (!$value$plusargs("NUM_TXNS=%d", num_txns))
+    39              1                          1             if (!$value$plusargs("NUM_TXNS=%d", num_txns))
                                          ***0***     All False Count
 Branch totals: 1 hit of 2 branches = 50.00%
 
@@ -288,56 +288,56 @@ Statement Coverage for instance /tb_top --
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File tb_top.sv
-    8                                                module tb_top;
-    9                                                
-    10                                                   localparam WIDTH = alu_pkg::WIDTH;
-    11                                                   localparam CLK_PERIOD = 10;
-    12                                               
-    13                                                   bit CLK;
-    14              1                       4138         always #(CLK_PERIOD/2) CLK = ~CLK;
+    8                                                module tb_top;
+    9                                                
+    10                                                   localparam WIDTH = alu_pkg::WIDTH;
+    11                                                   localparam CLK_PERIOD = 10;
+    12                                               
+    13                                                   bit CLK;
+    14              1                       4138         always #(CLK_PERIOD/2) CLK = ~CLK;
     14              2                       4137     
-    15                                               
-    16                                                   alu_if #(.WIDTH(WIDTH)) vif (.CLK(CLK));
-    17                                               
-    18                                                   ALU #(.WIDTH(WIDTH)) dut (
-    19                                                       .A           (vif.A),
-    20                                                       .B           (vif.B),
-    21                                                       .OP          (vif.OP),
-    22                                                       .CLK         (vif.CLK),
-    23                                                       .RST         (vif.RST),
-    24                                                       .Zero_Flag   (vif.Zero_Flag),
-    25                                                       .Arithm_FLag (vif.Arithm_FLag),
-    26                                                       .Logic_Flag  (vif.Logic_Flag),
-    27                                                       .Carry_Flag  (vif.Carry_Flag),
-    28                                                       .Result      (vif.Result)
-    29                                                   );
-    30                                               
-    31                                                   wire [31:0] tb_error_count = alu_pkg::error_count;
-    32                                                   wire [31:0] tb_correct_count = alu_pkg::correct_count;
-    33                                                   wire tb_test_finished = alu_pkg::test_finished;
-    34                                               
-    35                                                   initial begin
-    36                                                       test t;
-    37                                                       int  num_txns;
-    38                                               
-    39                                                       if (!$value$plusargs("NUM_TXNS=%d", num_txns))
-    40              1                          1                 num_txns = 1000;
-    41                                                       
-    42              1                          1             $display("[TB] Starting test with %0d transactions", num_txns);
-    43              1                          1             t = new(vif.DRIVER, vif.MONITOR, num_txns);
-    44              1                          1             t.run();
-    45                                                   end
-    46                                               
-    47                                                   initial begin
-    48              1                          1             #5000000;
-    49              1                    ***0***             $display("[TB] ERROR: watchdog timeout - simulation did not finish");
-    50              1                    ***0***             $display("[TB] Total time: %0t", $time);
-    51              1                    ***0***             $finish;
-    52                                                   end
-    53                                               
-    54                                                   initial begin
-    55              1                          1             $dumpfile("alu_tb.vcd");
-    56              1                          1             $dumpvars(0, tb_top);
+    15                                               
+    16                                                   alu_if #(.WIDTH(WIDTH)) vif (.CLK(CLK));
+    17                                               
+    18                                                   ALU #(.WIDTH(WIDTH)) dut (
+    19                                                       .A           (vif.A),
+    20                                                       .B           (vif.B),
+    21                                                       .OP          (vif.OP),
+    22                                                       .CLK         (vif.CLK),
+    23                                                       .RST         (vif.RST),
+    24                                                       .Zero_Flag   (vif.Zero_Flag),
+    25                                                       .Arithm_FLag (vif.Arithm_FLag),
+    26                                                       .Logic_Flag  (vif.Logic_Flag),
+    27                                                       .Carry_Flag  (vif.Carry_Flag),
+    28                                                       .Result      (vif.Result)
+    29                                                   );
+    30                                               
+    31                                                   wire [31:0] tb_error_count = alu_pkg::error_count;
+    32                                                   wire [31:0] tb_correct_count = alu_pkg::correct_count;
+    33                                                   wire tb_test_finished = alu_pkg::test_finished;
+    34                                               
+    35                                                   initial begin
+    36                                                       test t;
+    37                                                       int  num_txns;
+    38                                               
+    39                                                       if (!$value$plusargs("NUM_TXNS=%d", num_txns))
+    40              1                          1                 num_txns = 1000;
+    41                                                       
+    42              1                          1             $display("[TB] Starting test with %0d transactions", num_txns);
+    43              1                          1             t = new(vif.DRIVER, vif.MONITOR, num_txns);
+    44              1                          1             t.run();
+    45                                                   end
+    46                                               
+    47                                                   initial begin
+    48              1                          1             #5000000;
+    49              1                    ***0***             $display("[TB] ERROR: watchdog timeout - simulation did not finish");
+    50              1                    ***0***             $display("[TB] Total time: %0t", $time);
+    51              1                    ***0***             $finish;
+    52                                                   end
+    53                                               
+    54                                                   initial begin
+    55              1                          1             $dumpfile("alu_tb.vcd");
+    56              1                          1             $dumpvars(0, tb_top);
 
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
@@ -380,29 +380,30 @@ Toggle Coverage      =       7.47% (26 of 348 bins)
 Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Branches                        28        22         6    78.57%
+    Branches                        30        23         7    76.66%
 
 ================================Branch Details================================
 
 Branch Coverage for instance /alu_pkg
+NOTE: The modification timestamp for source file 'alu_pkg.sv' has been altered since compilation.
 
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File alu_pkg.sv
 ------------------------------------CASE Branch------------------------------------
     57                                        65     Count coming in to CASE
-    58              1                         18                     OP_ADD: return "ADD";
-    59              1                         19                     OP_SUB: return "SUB";
-    60              1                         16                     OP_AND: return "AND";
-    61              1                         12                     OP_OR : return "OR";
-    62              1                    ***0***                     default: return "??";
+    58              1                         18                 bins or_to_and  = (OP_OR  => OP_AND);
+    59              1                         19                 bins same_op    = (OP_ADD => OP_ADD), (OP_SUB => OP_SUB),
+    60              1                         16                                    (OP_AND => OP_AND), (OP_OR  => OP_OR);
+    61              1                         12             }
+    62              1                    ***0***         endgroup
 Branch totals: 4 hits of 5 branches = 80.00%
 
 
   File generator.sv
 ------------------------------------IF Branch------------------------------------
     44                                      1000     Count coming in to IF
-    44              1                    ***0***                 if (!t.randomize())
+    44              1                    ***0***             // takes corner_case_cg to 100% deterministically.
                                             1000     All False Count
 Branch totals: 1 hit of 2 branches = 50.00%
 
@@ -423,22 +424,28 @@ Branch totals: 2 hits of 2 branches = 100.00%
 
   File monitor.sv
 ------------------------------------IF Branch------------------------------------
-    20                                      2064     Count coming in to IF
-    20              1                    ***0***                 if (vif.mon_cb.RST === 1'b0) begin
+    23                                      2064     Count coming in to IF
+    23              1                    ***0***                 if (vif.mon_cb.RST === 1'b0) begin
                                             2064     All False Count
 Branch totals: 1 hit of 2 branches = 50.00%
 
 ------------------------------------IF Branch------------------------------------
-    26                                      2064     Count coming in to IF
-    26              1                       2063                 if (!first && pending != null) begin
+    29                                      2064     Count coming in to IF
+    29              1                       2063                         rst_marker.rst_n = 1'b0;
                                                1     All False Count
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    34                                      2063     Count coming in to IF
-    34              1                         41                     if (transaction_count % 50 == 0)
+    37                                      2063     Count coming in to IF
+    37              1                         41                 if (!first && pending != null) begin
                                             2022     All False Count
 Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    41                                      2063     Count coming in to IF
+    41              1                       2063                     pending.Arithm_FLag = vif.mon_cb.Arithm_FLag;
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
 
 
   File scoreboard.sv
@@ -473,7 +480,7 @@ Branch totals: 1 hit of 2 branches = 50.00%
 Condition Coverage:
     Enabled Coverage              Bins   Covered    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Conditions                      12         4         8    33.33%
+    Conditions                      13         4         9    30.76%
 
 ================================Condition Details================================
 
@@ -495,7 +502,7 @@ Condition totals: 1 of 1 input term covered = 100.00%
 
 
 ----------------Focused Condition View-------------------
-Line       20 Item    1  (this.vif.mon_cb.RST === 1'b0)
+Line       23 Item    1  (this.vif.mon_cb.RST === 1'b0)
 Condition totals: 0 of 1 input term covered = 0.00%
 
                       Input Term   Covered  Reason for no coverage   Hint
@@ -508,7 +515,7 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:    ***0***  (this.vif.mon_cb.RST === 1'b0)_1  -                             
 
 ----------------Focused Condition View-------------------
-Line       26 Item    1  (~first && (this.pending != null))
+Line       29 Item    1  (~first && (this.pending != null))
 Condition totals: 1 of 2 input terms covered = 50.00%
 
               Input Term   Covered  Reason for no coverage   Hint
@@ -524,7 +531,7 @@ Condition totals: 1 of 2 input terms covered = 50.00%
   Row   4:          1  (this.pending != null)_1  ~first                        
 
 ----------------Focused Condition View-------------------
-Line       34 Item    1  ((this.transaction_count % 50) == 0)
+Line       37 Item    1  ((this.transaction_count % 50) == 0)
 Condition totals: 1 of 1 input term covered = 100.00%
 
                             Input Term   Covered  Reason for no coverage   Hint
@@ -535,6 +542,19 @@ Condition totals: 1 of 1 input term covered = 100.00%
  ---------  ---------  --------------------                    -------------------------     
   Row   1:          1  ((this.transaction_count % 50) == 0)_0  -                             
   Row   2:          1  ((this.transaction_count % 50) == 0)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       41 Item    1  (this.mon2cvg != null)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+              Input Term   Covered  Reason for no coverage   Hint
+             -----------  --------  -----------------------  --------------
+  (this.mon2cvg != null)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                Non-masking condition(s)      
+ ---------  ---------  --------------------      -------------------------     
+  Row   1:    ***0***  (this.mon2cvg != null)_0  -                             
+  Row   2:          1  (this.mon2cvg != null)_1  -                             
 
 
 ----------------Focused Condition View-------------------
@@ -589,7 +609,6 @@ Condition totals: 0 of 1 input term covered = 0.00%
   Row   2:          1  (this.fail_cnt == 0)_1  -                             
 
 
-
 Expression Coverage:
     Enabled Coverage              Bins   Covered    Misses  Coverage
     ----------------              ----      ----    ------  --------
@@ -614,81 +633,81 @@ Expression totals: 1 of 1 input term covered = 100.00%
   Row   2:          1  (result == 0)_1       -                             
 
 
-
 Statement Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                     165       142        23    86.06%
+    Statements                     148       125        23    84.45%
 
 ================================Statement Details================================
 
 Statement Coverage for instance /alu_pkg --
+NOTE: The modification timestamp for source file 'alu_pkg.sv' has been altered since compilation.
 
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File alu_pkg.sv
-    6                                                package alu_pkg;
-    7                                                
-    8                                                    parameter int WIDTH   = 4;
-    9                                                    parameter int OP_ADD  = 2'b00;
-    10                                                   parameter int OP_SUB  = 2'b01;
-    11                                                   parameter int OP_AND  = 2'b10;
-    12                                                   parameter int OP_OR   = 2'b11;
-    13                                                   
-    14                                                   // Global variables for test monitoring
-    15                                                   static int error_count = 0;
-    16                                                   static int correct_count = 0;
-    17                                                   static bit test_finished = 0;
-    18                                               
-    19                                                   //-----------------------------------------------------------------
-    20                                                   // Transaction
-    21                                                   //-----------------------------------------------------------------
-    22                                                   class alu_transaction;
-    23                                                       rand bit [WIDTH-1:0] A;
-    24                                                       rand bit [WIDTH-1:0] B;
-    25                                                       rand bit [1:0]       OP;
-    26                                                       bit                  rst_n;
-    27                                               
-    28                                                       // corner-case weighting: mostly uniform random, with extra
-    29                                                       // weight on 0 and all-ones so corners get hit often
-    30                                                       constraint c_operands {
-    31                                                           A dist { 0 := 2, {WIDTH{1'b1}} := 2, [1:(1<<WIDTH)-2] :/ 6 };
-    32                                                           B dist { 0 := 2, {WIDTH{1'b1}} := 2, [1:(1<<WIDTH)-2] :/ 6 };
-    33                                                       }
-    34                                                       constraint c_op { OP inside {OP_ADD, OP_SUB, OP_AND, OP_OR}; }
-    35                                               
-    36                                                       // filled in by monitor after the DUT produces its (delayed) result
-    37                                                       bit [WIDTH-1:0] Result;
-    38                                                       bit             Zero_Flag;
-    39                                                       bit             Arithm_FLag;
-    40                                                       bit             Logic_Flag;
-    41                                                       bit             Carry_Flag;
-    42                                               
-    43                                                       function alu_transaction clone();
-    44              1                    ***0***                 clone = new();
-    45              1                    ***0***                 clone.A = A; 
-    46              1                    ***0***                 clone.B = B; 
-    47              1                    ***0***                 clone.OP = OP;
-    48              1                    ***0***                 clone.Result = Result;
-    49              1                    ***0***                 clone.Zero_Flag = Zero_Flag;
-    50              1                    ***0***                 clone.Arithm_FLag = Arithm_FLag;
-    51              1                    ***0***                 clone.Logic_Flag = Logic_Flag;
-    52              1                    ***0***                 clone.Carry_Flag = Carry_Flag;
-    53              1                    ***0***                 clone.rst_n = rst_n;
-    54                                                       endfunction
-    55                                               
-    56                                                       function string op_name();
-    57                                                           case (OP)
-    58              1                         18                     OP_ADD: return "ADD";
-    59              1                         19                     OP_SUB: return "SUB";
-    60              1                         16                     OP_AND: return "AND";
-    61              1                         12                     OP_OR : return "OR";
-    62              1                    ***0***                     default: return "??";
-    63                                                           endcase
-    64                                                       endfunction
-    65                                               
-    66                                                       function void display(string tag = "");
-    67              1                         41                 $display("[%0s] A=%0d B=%0d OP=%0s Result=%0d Zero=%0b Carry=%0b Arithm=%0b Logic=%0b",
+    6                                                // separate package (rather than folded into alu_pkg) so that
+    7                                                // alu_pkg has no dependency back on this file -- alu_agent.sv and
+    8                                                // test.sv import both packages instead.
+    9                                                //=====================================================================
+    10                                               package alu_cvg_pkg;
+    11                                               
+    12                                               import alu_pkg::*;
+    13                                               
+    14                                               class alu_coverage;
+    15                                                   // Transaction handle for coverage sampling
+    16                                                   alu_transaction txn_cvg;
+    17                                               
+    18                                                   // Mailbox fed by the monitor (or any tap point) with sampled txns
+    19                                                   mailbox #(alu_transaction) cvg_mail;
+    20                                               
+    21                                                   // Coverage counters
+    22                                                   int total_samples = 0;
+    23                                                   int op_count[4] = '{0, 0, 0, 0};
+    24                                               
+    25                                                   //-----------------------------------------------------------------
+    26                                                   // Functional Coverage Groups
+    27                                                   // NOTE: these covergroups have no sampling event of their own --
+    28                                                   // they are sampled explicitly via .sample() from run_coverage()
+    29                                                   // once per transaction pulled off cvg_mail. (A covergroup's
+    30                                                   // event-control cannot be a mailbox method call, only a genuine
+    31                                                   // SystemVerilog event/signal edge, so explicit sampling is used.)
+    32                                                   //-----------------------------------------------------------------
+    33                                               
+    34                                                   // 1. OPCODE Coverage - Ensure all operations are tested
+    35                                                   covergroup opcode_cg;
+    36                                                       option.per_instance = 1;
+    37                                               
+    38                                                       opcode_cp: coverpoint txn_cvg.OP {
+    39                                                           bins ADD     = {OP_ADD};
+    40                                                           bins SUB     = {OP_SUB};
+    41                                                           bins AND     = {OP_AND};
+    42                                                           bins OR      = {OP_OR};
+    43                                                       }
+    44              1                    ***0***     
+    45              1                    ***0***             // Transition coverage between opcodes
+    46              1                    ***0***             opcode_trans: coverpoint txn_cvg.OP {
+    47              1                    ***0***                 bins add_to_sub = (OP_ADD => OP_SUB);
+    48              1                    ***0***                 bins add_to_and = (OP_ADD => OP_AND);
+    49              1                    ***0***                 bins add_to_or  = (OP_ADD => OP_OR);
+    50              1                    ***0***                 bins sub_to_add = (OP_SUB => OP_ADD);
+    51              1                    ***0***                 bins sub_to_and = (OP_SUB => OP_AND);
+    52              1                    ***0***                 bins sub_to_or  = (OP_SUB => OP_OR);
+    53              1                    ***0***                 bins and_to_add = (OP_AND => OP_ADD);
+    54                                                           bins and_to_sub = (OP_AND => OP_SUB);
+    55                                                           bins and_to_or  = (OP_AND => OP_OR);
+    56                                                           bins or_to_add  = (OP_OR  => OP_ADD);
+    57                                                           bins or_to_sub  = (OP_OR  => OP_SUB);
+    58              1                         18                 bins or_to_and  = (OP_OR  => OP_AND);
+    59              1                         19                 bins same_op    = (OP_ADD => OP_ADD), (OP_SUB => OP_SUB),
+    60              1                         16                                    (OP_AND => OP_AND), (OP_OR  => OP_OR);
+    61              1                         12             }
+    62              1                    ***0***         endgroup
+    63                                               
+    64                                                   // 2. Input Value Coverage - Ensure all input ranges are tested
+    65                                                   covergroup input_cg;
+    66                                                       option.per_instance = 1;
+    67              1                         41     
 
   File generator.sv
     5               1                          1         bit   is_done = 1'b0; 
@@ -698,7 +717,7 @@ Statement Coverage for instance /alu_pkg --
     9                                                    function new(mailbox #(alu_transaction) gen2drv, int num_random_txns = 200);
     10              1                          1             this.gen2drv = gen2drv;
     11              1                          1             this.num_random_txns = num_random_txns;
-    12              1                          1             this.total_txns = 24 + num_random_txns;
+    12              1                          1             this.total_txns = 24 + 4 + num_random_txns;  // 24 directed + 4 extra corners + random
     13                                                   endfunction
     14                                               
     15                                                   task run_directed();
@@ -724,28 +743,28 @@ Statement Coverage for instance /alu_pkg --
     35              1                          1             $display("[GEN] Directed tests complete. Total directed: %0d", $size(corners_a) * $size(ops));
     36                                                   endtask
     37                                               
-    38                                                   task run_random();
-    39                                                       alu_transaction t;
-    40              1                          1             $display("[GEN] Starting %0d random tests...", num_random_txns);
-    41              1                       1000             repeat (num_random_txns) begin
-    42              1                       1000                 t = new();
-    43              1                       1000                 t.rst_n = 1;
-    44                                                           if (!t.randomize())
-    45              1                    ***0***                     $error("[GEN] randomize() failed");
-    46              1                       1000                 gen2drv.put(t);
-    47              1                       1000                 @(gen_handover);
-    48                                                       end
-    49              1                          1             $display("[GEN] Completed %0d random tests", num_random_txns);
-    50                                                   endtask
-    51                                               
-    52                                                   task run();
-    53              1                          1             $display("[GEN] Generator started at time %0t", $time);
-    54              1                          1             run_directed();
-    55              1                          1             run_random();
-    56              1                          1             is_done = 1'b1;
-    57              1                          1             test_finished = 1;
-    58              1                          1             -> done;
-    59              1                          1             $display("[GEN] All transactions generated. Total: %0d transactions", total_txns);
+    38                                                   task run_extra_corners();
+    39                                                       // Specific (A, B, OP) combos that alu_cvg_pkg's corner_case_cg
+    40              1                          1             // bins target directly but that the pair-sweep in run_directed()
+    41              1                       1000             // (and the weighted random distribution) don't reliably hit,
+    42              1                       1000             // e.g. a carry out of a non-boundary ADD, or a specific SUB
+    43              1                       1000             // equal/negative-result case. Driving them explicitly is what
+    44                                                       // takes corner_case_cg to 100% deterministically.
+    45              1                    ***0***             alu_transaction t;
+    46              1                       1000             bit [WIDTH-1:0] extra_a[$]  = '{15, 5, 0, 15};
+    47              1                       1000             bit [WIDTH-1:0] extra_b[$]  = '{1,  5, 1, 10};
+    48                                                       bit [1:0]       extra_op[$] = '{OP_ADD, OP_SUB, OP_SUB, OP_AND};
+    49              1                          1     
+    50                                                       $display("[GEN] Starting extra corner-case tests...");
+    51                                                       foreach (extra_a[i]) begin
+    52                                                           t = new();
+    53              1                          1                 t.A = extra_a[i];
+    54              1                          1                 t.B = extra_b[i];
+    55              1                          1                 t.OP = extra_op[i];
+    56              1                          1                 t.rst_n = 1;
+    57              1                          1                 $display("[GEN] Extra corner: A=%0d B=%0d OP=%0s", t.A, t.B, t.op_name());
+    58              1                          1                 gen2drv.put(t);
+    59              1                          1                 @(gen_handover);
 
   File driver.sv
     5               1                          1         int transaction_count = 0;
@@ -787,47 +806,52 @@ Statement Coverage for instance /alu_pkg --
     40              1                       1024                 @(vif.drv_cb);
 
   File monitor.sv
-    4               1                          1         int transaction_count = 0;
-    6                                                
-    7                                                    function new(virtual alu_if.MONITOR vif, mailbox #(alu_transaction) mon2scb);
-    8               1                          1             this.vif = vif;
-    9               1                          1             this.mon2scb = mon2scb;
-    10              1                          1             this.pending = null;
-    11                                                   endfunction
-    12                                               
-    13                                                   task run();
-    14              1                          1             bit first = 1'b1;
-    15                                               
-    16              1                          1             forever begin
-    17              1                       2065                 @(vif.mon_cb);
-    18              1                       2064                 #1step;
-    19                                                           
-    20                                                           if (vif.mon_cb.RST === 1'b0) begin
-    21              1                    ***0***                     pending = null;
-    22              1                    ***0***                     first = 1'b1;
-    23              1                    ***0***                     continue;
-    24                                                           end
-    25                                               
-    26                                                           if (!first && pending != null) begin
-    27              1                       2063                     pending.Result = vif.mon_cb.Result;
-    28              1                       2063                     pending.Zero_Flag = vif.mon_cb.Zero_Flag;
-    29              1                       2063                     pending.Carry_Flag = vif.mon_cb.Carry_Flag;
-    30              1                       2063                     pending.Arithm_FLag = vif.mon_cb.Arithm_FLag;
-    31              1                       2063                     pending.Logic_Flag = vif.mon_cb.Logic_Flag;
-    32                                                               
-    33              1                       2063                     transaction_count++;
-    34                                                               if (transaction_count % 50 == 0)
-    35              1                         41                         $display("[MON] Captured %0d transactions so far @ %0t", 
-    36                                                                            transaction_count, $time);
-    37              1                       2063                     mon2scb.put(pending);
-    38                                                           end
-    39                                               
-    40              1                       2064                 pending = new();
-    41              1                       2064                 pending.rst_n = vif.mon_cb.RST;
-    42              1                       2064                 pending.A = vif.mon_cb.A;
-    43              1                       2064                 pending.B = vif.mon_cb.B;
-    44              1                       2064                 pending.OP = vif.mon_cb.OP;
-    45              1                       2064                 first = 1'b0;
+    5               1                          1         int transaction_count = 0;
+    6                                                    alu_transaction pending;
+    7                                                
+    8                                                    function new(virtual alu_if.MONITOR vif, mailbox #(alu_transaction) mon2scb,
+    9                                                                 mailbox #(alu_transaction) mon2cvg = null);
+    10              1                          1             this.vif = vif;
+    11              1                          1             this.mon2scb = mon2scb;
+    12              1                          1             this.mon2cvg = mon2cvg;
+    13              1                          1             this.pending = null;
+    14                                                   endfunction
+    15                                               
+    16                                                   task run();
+    17              1                          1             bit first = 1'b1;
+    18                                               
+    19              1                          1             forever begin
+    20              1                       2065                 @(vif.mon_cb);
+    21              1                       2064                 #1step;
+    22                                                           
+    23                                                           if (vif.mon_cb.RST === 1'b0) begin
+    24              1                    ***0***                     // Reset is asserted: no valid transaction to give the
+    25              1                    ***0***                     // scoreboard, but tell coverage a reset happened so
+    26              1                    ***0***                     // reset_cg can see the rst_n=0 bin.
+    27                                                               if (mon2cvg != null) begin
+    28                                                                   alu_transaction rst_marker = new();
+    29                                                                   rst_marker.rst_n = 1'b0;
+    30              1                       2063                         mon2cvg.put(rst_marker);
+    31              1                       2063                     end
+    32              1                       2063                     pending = null;
+    33              1                       2063                     first = 1'b1;
+    34              1                       2063                     continue;
+    35                                                           end
+    36              1                       2063     
+    37                                                           if (!first && pending != null) begin
+    38              1                         41                     pending.Result = vif.mon_cb.Result;
+    39                                                               pending.Zero_Flag = vif.mon_cb.Zero_Flag;
+    40              1                       2063                     pending.Carry_Flag = vif.mon_cb.Carry_Flag;
+    41                                                               pending.Arithm_FLag = vif.mon_cb.Arithm_FLag;
+    42              1                       2063                     pending.Logic_Flag = vif.mon_cb.Logic_Flag;
+    43                                                               
+    44                                                               transaction_count++;
+    45              1                       2064                     if (transaction_count % 50 == 0)
+    46              1                       2064                         $display("[MON] Captured %0d transactions so far @ %0t", 
+    47              1                       2064                                  transaction_count, $time);
+    48              1                       2064                     mon2scb.put(pending);
+    49              1                       2064                     if (mon2cvg != null)
+    50              1                       2064                         mon2cvg.put(pending);
 
   File scoreboard.sv
     3               1                          1         int pass_cnt = 0;
@@ -901,47 +925,1203 @@ Statement Coverage for instance /alu_pkg --
     55              1                          1             $display(" RESULT: %0s", (fail_cnt == 0) ? "*** TEST PASSED ***" : "*** TEST FAILED ***");
     56              1                          1             $display("===============================================================\n");
 
-  File test.sv
-    6                                                    monitor    mon;
-    7                                                    scoreboard scb;
-    8                                                
-    9                                                    mailbox #(alu_transaction) gen2drv;
-    10                                                   mailbox #(alu_transaction) mon2scb;
+
+=================================================================================
+=== Instance: /alu_cvg_pkg
+=== Design Unit: work.alu_cvg_pkg
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         6         3         3    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /alu_cvg_pkg
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File alu_cvg_pkg.sv
+------------------------------------IF Branch------------------------------------
+    209                                     2063     Count coming in to IF
+    209             1                       2063                 if (txn_cvg.rst_n) begin
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    211                                     2063     Count coming in to IF
+    211             1                       2063                     if (txn_cvg.OP inside {OP_ADD, OP_SUB, OP_AND, OP_OR}) begin
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    234                                        1     Count coming in to IF
+    234             1                          1             if (total_samples > 0) begin
+    239             1                    ***0***             end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       1         0         1     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /alu_cvg_pkg --
+
+  File alu_cvg_pkg.sv
+----------------Focused Condition View-------------------
+Line       234 Item    1  (this.total_samples > 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                Input Term   Covered  Reason for no coverage   Hint
+               -----------  --------  -----------------------  --------------
+  (this.total_samples > 0)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                  Non-masking condition(s)      
+ ---------  ---------  --------------------        -------------------------     
+  Row   1:    ***0***  (this.total_samples > 0)_0  -                             
+  Row   2:          1  (this.total_samples > 0)_1  -                             
+
+
+
+Covergroup Coverage:
+    Covergroups                      5        na        na    89.00%
+        Coverpoints/Crosses         18        na        na        na
+            Covergroup Bins        101        99         2    98.01%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /alu_cvg_pkg/alu_coverage/opcode_cg             100.00%        100          -    Covered              
+    covered/total bins:                                    17         17          -                      
+    missing/total bins:                                     0         17          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint opcode_trans                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::opcode_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    17         17          -                      
+    missing/total bins:                                     0         17          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin ADD                                           531          1          -    Covered              
+        bin SUB                                           528          1          -    Covered              
+        bin AND                                           520          1          -    Covered              
+        bin OR                                            484          1          -    Covered              
+    Coverpoint opcode_trans                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin add_to_sub                                     75          1          -    Covered              
+        bin add_to_and                                     55          1          -    Covered              
+        bin add_to_or                                      59          1          -    Covered              
+        bin sub_to_add                                     58          1          -    Covered              
+        bin sub_to_and                                     76          1          -    Covered              
+        bin sub_to_or                                      59          1          -    Covered              
+        bin and_to_add                                     63          1          -    Covered              
+        bin and_to_sub                                     62          1          -    Covered              
+        bin and_to_or                                      69          1          -    Covered              
+        bin or_to_add                                      68          1          -    Covered              
+        bin or_to_sub                                      56          1          -    Covered              
+        bin or_to_and                                      63          1          -    Covered              
+        bin same_op                                      1299          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/input_cg              100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          428          1          -    Covered              
+        bin low                                           360          1          -    Covered              
+        bin mid                                           606          1          -    Covered              
+        bin high                                          241          1          -    Covered              
+        bin all_ones                                      428          1          -    Covered              
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          412          1          -    Covered              
+        bin low                                           372          1          -    Covered              
+        bin mid                                           590          1          -    Covered              
+        bin high                                          265          1          -    Covered              
+        bin all_ones                                      424          1          -    Covered              
+    Coverpoint A_walking_ones                         100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin single_bit[1]                                  40          1          -    Covered              
+        bin single_bit[2]                                  42          1          -    Covered              
+        bin single_bit[4]                                  56          1          -    Covered              
+        bin single_bit[8]                                  50          1          -    Covered              
+        bin two_bits[3]                                    28          1          -    Covered              
+        bin two_bits[5]                                    46          1          -    Covered              
+        bin two_bits[6]                                    46          1          -    Covered              
+        bin two_bits[9]                                    48          1          -    Covered              
+        bin two_bits[10]                                   38          1          -    Covered              
+        bin two_bits[12]                                   48          1          -    Covered              
+        bin all_ones                                      222          1          -    Covered              
+    Cross A_B_cross                                   100.00%        100          -    Covered              
+        covered/total bins:                                25         25          -                      
+        missing/total bins:                                 0         25          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_ones,all_ones>                       106          1          -    Covered              
+            bin <high,all_ones>                            52          1          -    Covered              
+            bin <mid,all_ones>                            116          1          -    Covered              
+            bin <low,all_ones>                             66          1          -    Covered              
+            bin <zero,all_ones>                            84          1          -    Covered              
+            bin <all_ones,high>                            44          1          -    Covered              
+            bin <high,high>                                39          1          -    Covered              
+            bin <mid,high>                                 84          1          -    Covered              
+            bin <low,high>                                 48          1          -    Covered              
+            bin <zero,high>                                50          1          -    Covered              
+            bin <all_ones,mid>                            118          1          -    Covered              
+            bin <high,mid>                                 84          1          -    Covered              
+            bin <mid,mid>                                 162          1          -    Covered              
+            bin <low,mid>                                 104          1          -    Covered              
+            bin <zero,mid>                                122          1          -    Covered              
+            bin <all_ones,low>                             68          1          -    Covered              
+            bin <high,low>                                 32          1          -    Covered              
+            bin <mid,low>                                 136          1          -    Covered              
+            bin <low,low>                                  70          1          -    Covered              
+            bin <zero,low>                                 66          1          -    Covered              
+            bin <all_ones,zero>                            92          1          -    Covered              
+            bin <high,zero>                                34          1          -    Covered              
+            bin <mid,zero>                                108          1          -    Covered              
+            bin <low,zero>                                 72          1          -    Covered              
+            bin <zero,zero>                               106          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::input_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          428          1          -    Covered              
+        bin low                                           360          1          -    Covered              
+        bin mid                                           606          1          -    Covered              
+        bin high                                          241          1          -    Covered              
+        bin all_ones                                      428          1          -    Covered              
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          412          1          -    Covered              
+        bin low                                           372          1          -    Covered              
+        bin mid                                           590          1          -    Covered              
+        bin high                                          265          1          -    Covered              
+        bin all_ones                                      424          1          -    Covered              
+    Coverpoint A_walking_ones                         100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin single_bit[1]                                  40          1          -    Covered              
+        bin single_bit[2]                                  42          1          -    Covered              
+        bin single_bit[4]                                  56          1          -    Covered              
+        bin single_bit[8]                                  50          1          -    Covered              
+        bin two_bits[3]                                    28          1          -    Covered              
+        bin two_bits[5]                                    46          1          -    Covered              
+        bin two_bits[6]                                    46          1          -    Covered              
+        bin two_bits[9]                                    48          1          -    Covered              
+        bin two_bits[10]                                   38          1          -    Covered              
+        bin two_bits[12]                                   48          1          -    Covered              
+        bin all_ones                                      222          1          -    Covered              
+    Cross A_B_cross                                   100.00%        100          -    Covered              
+        covered/total bins:                                25         25          -                      
+        missing/total bins:                                 0         25          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_ones,all_ones>                       106          1          -    Covered              
+            bin <high,all_ones>                            52          1          -    Covered              
+            bin <mid,all_ones>                            116          1          -    Covered              
+            bin <low,all_ones>                             66          1          -    Covered              
+            bin <zero,all_ones>                            84          1          -    Covered              
+            bin <all_ones,high>                            44          1          -    Covered              
+            bin <high,high>                                39          1          -    Covered              
+            bin <mid,high>                                 84          1          -    Covered              
+            bin <low,high>                                 48          1          -    Covered              
+            bin <zero,high>                                50          1          -    Covered              
+            bin <all_ones,mid>                            118          1          -    Covered              
+            bin <high,mid>                                 84          1          -    Covered              
+            bin <mid,mid>                                 162          1          -    Covered              
+            bin <low,mid>                                 104          1          -    Covered              
+            bin <zero,mid>                                122          1          -    Covered              
+            bin <all_ones,low>                             68          1          -    Covered              
+            bin <high,low>                                 32          1          -    Covered              
+            bin <mid,low>                                 136          1          -    Covered              
+            bin <low,low>                                  70          1          -    Covered              
+            bin <zero,low>                                 66          1          -    Covered              
+            bin <all_ones,zero>                            92          1          -    Covered              
+            bin <high,zero>                                34          1          -    Covered              
+            bin <mid,zero>                                108          1          -    Covered              
+            bin <low,zero>                                 72          1          -    Covered              
+            bin <zero,zero>                               106          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/op_specific_cg        100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint carry_gen                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin carry_0                                       582          1          -    Covered              
+        bin carry_1                                       477          1          -    Covered              
+    Coverpoint overflow_check                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_overflow                                   288          1          -    Covered              
+        bin overflow                                      243          1          -    Covered              
+    Coverpoint zero_flag_logic                        100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_false                                    730          1          -    Covered              
+        bin zero_true                                     274          1          -    Covered              
+    Coverpoint result_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          390          1          -    Covered              
+        bin low                                           260          1          -    Covered              
+        bin mid                                           757          1          -    Covered              
+        bin high                                          288          1          -    Covered              
+        bin all_ones                                      368          1          -    Covered              
+    Coverpoint carry_flag_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1586          1          -    Covered              
+        bin auto[1]                                       477          1          -    Covered              
+    Coverpoint zero_flag_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1673          1          -    Covered              
+        bin auto[1]                                       390          1          -    Covered              
+    Cross carry_zero_cross                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                          16          1          -    Covered              
+            bin <auto[0],auto[1]>                         374          1          -    Covered              
+            bin <auto[1],auto[0]>                         461          1          -    Covered              
+            bin <auto[0],auto[0]>                        1212          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::op_specific_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint carry_gen                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin carry_0                                       582          1          -    Covered              
+        bin carry_1                                       477          1          -    Covered              
+    Coverpoint overflow_check                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_overflow                                   288          1          -    Covered              
+        bin overflow                                      243          1          -    Covered              
+    Coverpoint zero_flag_logic                        100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_false                                    730          1          -    Covered              
+        bin zero_true                                     274          1          -    Covered              
+    Coverpoint result_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          390          1          -    Covered              
+        bin low                                           260          1          -    Covered              
+        bin mid                                           757          1          -    Covered              
+        bin high                                          288          1          -    Covered              
+        bin all_ones                                      368          1          -    Covered              
+    Coverpoint carry_flag_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1586          1          -    Covered              
+        bin auto[1]                                       477          1          -    Covered              
+    Coverpoint zero_flag_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1673          1          -    Covered              
+        bin auto[1]                                       390          1          -    Covered              
+    Cross carry_zero_cross                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                          16          1          -    Covered              
+            bin <auto[0],auto[1]>                         374          1          -    Covered              
+            bin <auto[1],auto[0]>                         461          1          -    Covered              
+            bin <auto[0],auto[0]>                        1212          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/corner_case_cg         95.00%        100          -    Uncovered            
+    covered/total bins:                                    16         17          -                      
+    missing/total bins:                                     1         17          -                      
+    % Hit:                                             94.11%        100          -                      
+    Coverpoint add_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_add                                       28          1          -    Covered              
+        bin max_add_1                                      22          1          -    Covered              
+        bin max_add_2                                      26          1          -    Covered              
+        bin max_add_max                                    26          1          -    Covered              
+        bin carry_add                                       2          1          -    Covered              
+    Coverpoint sub_corners                             80.00%        100          -    Uncovered            
+        covered/total bins:                                 4          5          -                      
+        missing/total bins:                                 1          5          -                      
+        % Hit:                                         80.00%        100          -                      
+        bin zero_sub                                       26          1          -    Covered              
+        bin max_sub_0                                      24          1          -    Covered              
+        bin sub_equal                                       0          1          -    ZERO                 
+        bin sub_neg                                        14          1          -    Covered              
+        bin sub_borrow                                     14          1          -    Covered              
+    Coverpoint and_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_and                                       26          1          -    Covered              
+        bin max_and                                        32          1          -    Covered              
+        bin and_all_zero                                   26          1          -    Covered              
+        bin and_result                                      6          1          -    Covered              
+    Coverpoint or_corners                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_or                                        20          1          -    Covered              
+        bin max_or                                         18          1          -    Covered              
+        bin or_all_one                                     24          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::corner_case_cg  
+                                                       95.00%        100          -    Uncovered            
+    covered/total bins:                                    16         17          -                      
+    missing/total bins:                                     1         17          -                      
+    % Hit:                                             94.11%        100          -                      
+    Coverpoint add_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_add                                       28          1          -    Covered              
+        bin max_add_1                                      22          1          -    Covered              
+        bin max_add_2                                      26          1          -    Covered              
+        bin max_add_max                                    26          1          -    Covered              
+        bin carry_add                                       2          1          -    Covered              
+    Coverpoint sub_corners                             80.00%        100          -    Uncovered            
+        covered/total bins:                                 4          5          -                      
+        missing/total bins:                                 1          5          -                      
+        % Hit:                                         80.00%        100          -                      
+        bin zero_sub                                       26          1          -    Covered              
+        bin max_sub_0                                      24          1          -    Covered              
+        bin sub_equal                                       0          1          -    ZERO                 
+        bin sub_neg                                        14          1          -    Covered              
+        bin sub_borrow                                     14          1          -    Covered              
+    Coverpoint and_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_and                                       26          1          -    Covered              
+        bin max_and                                        32          1          -    Covered              
+        bin and_all_zero                                   26          1          -    Covered              
+        bin and_result                                      6          1          -    Covered              
+    Coverpoint or_corners                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_or                                        20          1          -    Covered              
+        bin max_or                                         18          1          -    Covered              
+        bin or_all_one                                     24          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/reset_cg               50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint reset_behavior                          50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin reset_active                                    0          1          -    ZERO                 
+        bin reset_inactive                               2063          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::reset_cg  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint reset_behavior                          50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin reset_active                                    0          1          -    ZERO                 
+        bin reset_inactive                               2063          1          -    Covered              
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      34        33         1    97.05%
+
+================================Statement Details================================
+
+Statement Coverage for instance /alu_cvg_pkg --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File alu_cvg_pkg.sv
+    10                                               package alu_cvg_pkg;
     11                                               
-    12                                                   function new(virtual alu_if.DRIVER drv_vif, virtual alu_if.MONITOR mon_vif,
-    13                                                                int num_random_txns = 200);
-    14              1                          1             gen2drv = new();
-    15              1                          1             mon2scb = new();
-    16                                               
-    17              1                          1             gen = new(gen2drv, num_random_txns);
-    18              1                          1             drv = new(drv_vif, gen2drv);
-    19              1                          1             mon = new(mon_vif, mon2scb);
-    20              1                          1             scb = new(mon2scb);
-    21                                                       
-    22              1                          1             gen.gen_handover = drv.driver_handover;
-    23                                                   endfunction
+    12                                               import alu_pkg::*;
+    13                                               
+    14                                               class alu_coverage;
+    15                                                   // Transaction handle for coverage sampling
+    16                                                   alu_transaction txn_cvg;
+    17                                               
+    18                                                   // Mailbox fed by the monitor (or any tap point) with sampled txns
+    19                                                   mailbox #(alu_transaction) cvg_mail;
+    20                                               
+    21                                                   // Coverage counters
+    22              1                          1         int total_samples = 0;
+    23              1                          1         int op_count[4] = '{0, 0, 0, 0};
     24                                               
-    25                                                   task run();
-    26              1                          1             drv.reset_dut();
-    27                                               
-    28                                                       fork
-    29              1                          1                 drv.run();
-    30              1                          1                 mon.run();
-    31              1                          1                 scb.run();
-    32                                                       join_none
+    25                                                   //-----------------------------------------------------------------
+    26                                                   // Functional Coverage Groups
+    27                                                   // NOTE: these covergroups have no sampling event of their own --
+    28                                                   // they are sampled explicitly via .sample() from run_coverage()
+    29                                                   // once per transaction pulled off cvg_mail. (A covergroup's
+    30                                                   // event-control cannot be a mailbox method call, only a genuine
+    31                                                   // SystemVerilog event/signal edge, so explicit sampling is used.)
+    32                                                   //-----------------------------------------------------------------
     33                                               
-    34              1                          1             gen.run();
-    35              1                          1             wait (gen.is_done);
-    36              1                         20             repeat (20) @(drv.vif.drv_cb);
-    36              2                         20     
+    34                                                   // 1. OPCODE Coverage - Ensure all operations are tested
+    35                                                   covergroup opcode_cg;
+    36                                                       option.per_instance = 1;
     37                                               
-    38              1                          1             scb.report();
-    39                                                       
-    40              1                          1             $display("[TEST] Simulation complete at time %0t", $time);
-    41              1                          1             $display("[TEST] error_count=%0d correct_count=%0d", error_count, correct_count);
-    42              1                          1             $finish;
+    38                                                       opcode_cp: coverpoint txn_cvg.OP {
+    39                                                           bins ADD     = {OP_ADD};
+    40                                                           bins SUB     = {OP_SUB};
+    41                                                           bins AND     = {OP_AND};
+    42                                                           bins OR      = {OP_OR};
+    43                                                       }
+    44                                               
+    45                                                       // Transition coverage between opcodes
+    46                                                       opcode_trans: coverpoint txn_cvg.OP {
+    47                                                           bins add_to_sub = (OP_ADD => OP_SUB);
+    48                                                           bins add_to_and = (OP_ADD => OP_AND);
+    49                                                           bins add_to_or  = (OP_ADD => OP_OR);
+    50                                                           bins sub_to_add = (OP_SUB => OP_ADD);
+    51                                                           bins sub_to_and = (OP_SUB => OP_AND);
+    52                                                           bins sub_to_or  = (OP_SUB => OP_OR);
+    53                                                           bins and_to_add = (OP_AND => OP_ADD);
+    54                                                           bins and_to_sub = (OP_AND => OP_SUB);
+    55                                                           bins and_to_or  = (OP_AND => OP_OR);
+    56                                                           bins or_to_add  = (OP_OR  => OP_ADD);
+    57                                                           bins or_to_sub  = (OP_OR  => OP_SUB);
+    58                                                           bins or_to_and  = (OP_OR  => OP_AND);
+    59                                                           bins same_op    = (OP_ADD => OP_ADD), (OP_SUB => OP_SUB),
+    60                                                                              (OP_AND => OP_AND), (OP_OR  => OP_OR);
+    61                                                       }
+    62                                                   endgroup
+    63                                               
+    64                                                   // 2. Input Value Coverage - Ensure all input ranges are tested
+    65                                                   covergroup input_cg;
+    66                                                       option.per_instance = 1;
+    67                                               
+    68                                                       // A value ranges (WIDTH = 4 -> range 0..15)
+    69                                                       A_cp: coverpoint txn_cvg.A {
+    70                                                           bins zero      = {0};
+    71                                                           bins low       = {[1:4]};
+    72                                                           bins mid       = {[5:11]};
+    73                                                           bins high      = {[12:14]};
+    74                                                           bins all_ones  = {(1<<WIDTH)-1};
+    75                                                       }
+    76                                               
+    77                                                       // B value ranges
+    78                                                       B_cp: coverpoint txn_cvg.B {
+    79                                                           bins zero      = {0};
+    80                                                           bins low       = {[1:4]};
+    81                                                           bins mid       = {[5:11]};
+    82                                                           bins high      = {[12:14]};
+    83                                                           bins all_ones  = {(1<<WIDTH)-1};
+    84                                                       }
+    85                                               
+    86                                                       // Walking ones / bit-combinations for logical operations (AND/OR)
+    87                                                       A_walking_ones: coverpoint txn_cvg.A iff (txn_cvg.OP inside {OP_AND, OP_OR}) {
+    88                                                           bins single_bit[] = {1, 2, 4, 8};
+    89                                                           bins two_bits[]   = {3, 5, 6, 9, 10, 12};
+    90                                                           bins all_ones     = {(1<<WIDTH)-1};
+    91                                                       }
+    92                                               
+    93                                                       // Cross coverage between A and B ranges
+    94                                                       A_B_cross: cross A_cp, B_cp {
+    95                                                           // A=0,B=0 is a legitimate (if trivial) stimulus - not excluded
+    96                                                       }
+    97                                                   endgroup
+    98                                               
+    99                                                   // 3. Operation-Specific Coverage
+    100                                                  covergroup op_specific_cg;
+    101                                                      option.per_instance = 1;
+    102                                              
+    103                                                      // For ADD/SUB operations - check carry generation
+    104                                                      carry_gen: coverpoint txn_cvg.Carry_Flag iff (txn_cvg.OP inside {OP_ADD, OP_SUB}) {
+    105                                                          bins carry_0 = {0};
+    106                                                          bins carry_1 = {1};
+    107                                                      }
+    108                                              
+    109                                                      // For ADD - check overflow of the true (unwrapped) sum
+    110                                                      overflow_check: coverpoint (int'(txn_cvg.A) + int'(txn_cvg.B)) iff (txn_cvg.OP == OP_ADD) {
+    111                                                          bins no_overflow = {[0:15]};
+    112                                                          bins overflow    = {[16:30]};
+    113                                                      }
+    114                                              
+    115                                                      // For AND/OR operations - check zero flag behavior
+    116                                                      zero_flag_logic: coverpoint txn_cvg.Zero_Flag iff (txn_cvg.OP inside {OP_AND, OP_OR}) {
+    117                                                          bins zero_false = {0};
+    118                                                          bins zero_true  = {1};
+    119                                                      }
+    120                                              
+    121                                                      // Result value ranges
+    122                                                      result_cp: coverpoint txn_cvg.Result {
+    123                                                          bins zero     = {0};
+    124                                                          bins low      = {[1:3]};
+    125                                                          bins mid      = {[4:11]};
+    126                                                          bins high     = {[12:14]};
+    127                                                          bins all_ones = {(1<<WIDTH)-1};
+    128                                                      }
+    129                                              
+    130                                                      // Plain (unconditional) flag coverpoints, used for the cross below
+    131                                                      carry_flag_cp: coverpoint txn_cvg.Carry_Flag;
+    132                                                      zero_flag_cp:  coverpoint txn_cvg.Zero_Flag;
+    133                                              
+    134                                                      // Carry and zero flag combination
+    135                                                      carry_zero_cross: cross carry_flag_cp, zero_flag_cp;
+    136                                                  endgroup
+    137                                              
+    138                                                  // 4. Corner Case Coverage
+    139                                                  covergroup corner_case_cg;
+    140                                                      option.per_instance = 1;
+    141                                              
+    142                                                      add_corners: coverpoint {txn_cvg.A, txn_cvg.B} iff (txn_cvg.OP == OP_ADD) {
+    143                                                          bins zero_add    = {{4'd0,  4'd0}};
+    144                                                          bins max_add_1   = {{4'd15, 4'd0}};
+    145                                                          bins max_add_2   = {{4'd0,  4'd15}};
+    146                                                          bins max_add_max = {{4'd15, 4'd15}};
+    147                                                          bins carry_add   = {{4'd15, 4'd1}};
+    148                                                      }
+    149                                              
+    150                                                      sub_corners: coverpoint {txn_cvg.A, txn_cvg.B} iff (txn_cvg.OP == OP_SUB) {
+    151                                                          bins zero_sub   = {{4'd0,  4'd0}};
+    152                                                          bins max_sub_0  = {{4'd15, 4'd0}};
+    153                                                          bins sub_equal  = {{4'd5,  4'd5}};
+    154                                                          bins sub_neg    = {{4'd0,  4'd1}};
+    155                                                          bins sub_borrow = {{4'd0,  4'd15}};
+    156                                                      }
+    157                                              
+    158                                                      and_corners: coverpoint {txn_cvg.A, txn_cvg.B} iff (txn_cvg.OP == OP_AND) {
+    159                                                          bins zero_and     = {{4'd0,  4'd0}};
+    160                                                          bins max_and      = {{4'd15, 4'd15}};
+    161                                                          bins and_all_zero = {{4'd0,  4'd15}};
+    162                                                          bins and_result   = {{4'd15, 4'd10}};
+    163                                                      }
+    164                                              
+    165                                                      or_corners: coverpoint {txn_cvg.A, txn_cvg.B} iff (txn_cvg.OP == OP_OR) {
+    166                                                          bins zero_or    = {{4'd0,  4'd0}};
+    167                                                          bins max_or     = {{4'd15, 4'd15}};
+    168                                                          bins or_all_one = {{4'd15, 4'd0}};
+    169                                                      }
+    170                                                  endgroup
+    171                                              
+    172                                                  // 5. Reset Behavior Coverage
+    173                                                  covergroup reset_cg;
+    174                                                      option.per_instance = 1;
+    175                                              
+    176                                                      reset_behavior: coverpoint txn_cvg.rst_n {
+    177                                                          bins reset_active   = {0};
+    178                                                          bins reset_inactive = {1};
+    179                                                      }
+    180                                                  endgroup
+    181                                              
+    182                                                  //-----------------------------------------------------------------
+    183                                                  // Constructor
+    184                                                  //-----------------------------------------------------------------
+    185                                                  function new();
+    186             1                          1             cvg_mail       = new();
+    187             1                          1             opcode_cg      = new();
+    188             1                          1             input_cg       = new();
+    189             1                          1             op_specific_cg = new();
+    190             1                          1             corner_case_cg = new();
+    191             1                          1             reset_cg       = new();
+    192                                                  endfunction
+    193                                              
+    194                                                  //-----------------------------------------------------------------
+    195                                                  // Coverage Sampling Task - run in its own thread (fork/join_none)
+    196                                                  //-----------------------------------------------------------------
+    197                                                  task run_coverage();
+    198             1                          1             forever begin
+    199             1                       2064                 cvg_mail.get(txn_cvg);
+    200                                              
+    201                                                          // reset_cg always samples -- this is what sees both the
+    202                                                          // rst_n=0 (reset-marker) and rst_n=1 (valid transaction)
+    203                                                          // values coming from the monitor.
+    204             1                       2063                 reset_cg.sample();
+    205                                              
+    206                                                          // A reset marker has no meaningful A/B/OP/Result, so only
+    207                                                          // feed the transaction-content covergroups real (rst_n=1)
+    208                                                          // transactions.
+    209                                                          if (txn_cvg.rst_n) begin
+    210             1                       2063                     total_samples++;
+    211                                                              if (txn_cvg.OP inside {OP_ADD, OP_SUB, OP_AND, OP_OR}) begin
+    212             1                       2063                         op_count[txn_cvg.OP]++;
+    213                                                              end
+    214                                              
+    215             1                       2063                     opcode_cg.sample();
+    216             1                       2063                     input_cg.sample();
+    217             1                       2063                     op_specific_cg.sample();
+    218             1                       2063                     corner_case_cg.sample();
+    219                                                          end
+    220                                                      end
+    221                                                  endtask
+    222                                              
+    223                                                  //-----------------------------------------------------------------
+    224                                                  // Coverage Reporting
+    225                                                  //-----------------------------------------------------------------
+    226                                                  function void report();
+    227                                                      real overall_cvg;
+    228                                              
+    229             1                          1             $display("\n===================== FUNCTIONAL COVERAGE REPORT =====================");
+    230             1                          1             $display("Total Transactions Sampled: %0d", total_samples);
+    231                                              
+    232                                                      // Operation counts
+    233             1                          1             $display("\n--- Operation Distribution ---");
+    234                                                      if (total_samples > 0) begin
+    235             1                          1                 $display("ADD: %0d (%.1f%%)", op_count[OP_ADD], (op_count[OP_ADD] * 100.0 / total_samples));
+    236             1                          1                 $display("SUB: %0d (%.1f%%)", op_count[OP_SUB], (op_count[OP_SUB] * 100.0 / total_samples));
+    237             1                          1                 $display("AND: %0d (%.1f%%)", op_count[OP_AND], (op_count[OP_AND] * 100.0 / total_samples));
+    238             1                          1                 $display("OR : %0d (%.1f%%)", op_count[OP_OR],  (op_count[OP_OR]  * 100.0 / total_samples));
+    239                                                      end else begin
+    240             1                    ***0***                 $display("No transactions sampled!");
+    241                                                      end
+    242                                              
+    243                                                      // Coverage group results
+    244             1                          1             $display("\n--- Coverage Group Results ---");
+    245             1                          1             $display("Opcode Coverage     : %0.1f%%", opcode_cg.get_coverage());
+    246             1                          1             $display("Input Coverage      : %0.1f%%", input_cg.get_coverage());
+    247             1                          1             $display("Op-Specific Coverage: %0.1f%%", op_specific_cg.get_coverage());
+    248             1                          1             $display("Corner Case Coverage: %0.1f%%", corner_case_cg.get_coverage());
+    249             1                          1             $display("Reset Coverage      : %0.1f%%", reset_cg.get_coverage());
+    250                                              
+    251                                                      // Overall functional coverage
+    252             1                          1             overall_cvg = (opcode_cg.get_coverage() + input_cg.get_coverage() +
+    253                                                                     op_specific_cg.get_coverage() + corner_case_cg.get_coverage() +
+    254                                                                     reset_cg.get_coverage()) / 5.0;
+    255             1                          1             $display("\n--- Overall Functional Coverage: %.1f%% ---", overall_cvg);
+    256             1                          1             $display("==========================================================================\n");
 
 
+=================================================================================
+=== Instance: /alu_if_sv_unit
+=== Design Unit: work.alu_if_sv_unit
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      29        29         0   100.00%
 
-Total Coverage By Instance (filtered view): 65.13%
+================================Statement Details================================
+
+Statement Coverage for instance /alu_if_sv_unit --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File alu_agent.sv
+    13                                               import alu_pkg::*;
+    14                                               import alu_cvg_pkg::*;
+    15                                               
+    16                                               class alu_agent;
+    17                                                   // Virtual interface handles (driver side / monitor side)
+    18                                                   virtual alu_if.DRIVER  drv_vif;
+    19                                                   virtual alu_if.MONITOR mon_vif;
+    20                                               
+    21                                                   // Sub-components
+    22                                                   driver       drv;
+    23                                                   monitor      mon;
+    24                                                   alu_coverage cvg;
+    25                                               
+    26                                                   // Boundary mailboxes
+    27                                                   mailbox #(alu_transaction) gen2drv;  // in:  generator -> agent (driver)
+    28                                                   mailbox #(alu_transaction) mon2scb;  // out: agent (monitor) -> scoreboard
+    29                                               
+    30                                                   function new(virtual alu_if.DRIVER  drv_vif,
+    31                                                                virtual alu_if.MONITOR mon_vif,
+    32                                                                mailbox #(alu_transaction) gen2drv);
+    33              1                          1             this.drv_vif = drv_vif;
+    34              1                          1             this.mon_vif = mon_vif;
+    35              1                          1             this.gen2drv = gen2drv;
+    36                                               
+    37              1                          1             mon2scb = new();
+    38              1                          1             cvg     = new();   // allocates its own cvg_mail
+    39                                               
+    40              1                          1             drv = new(drv_vif, gen2drv);
+    41              1                          1             mon = new(mon_vif, mon2scb, cvg.cvg_mail);  // monitor fans out to scb + cvg
+    42                                                   endfunction
+    43                                               
+    44                                                   task reset_dut();
+    45              1                          1             drv.reset_dut();
+    46                                                   endtask
+    47                                               
+    48                                                   task run();
+    49                                                       fork
+    50              1                          1                 drv.run();
+    51              1                          1                 mon.run();
+    52              1                          1                 cvg.run_coverage();
+    53                                                       join_none
+    54                                                   endtask
+    55                                               
+    56                                                   function void report();
+    57              1                          1             cvg.report();
+
+  File test.sv
+    13                                               import alu_cvg_pkg::*;
+    14                                               
+    15                                               class test;
+    16                                                   generator  gen;
+    17                                                   alu_agent  agnt;
+    18                                                   scoreboard scb;
+    19                                               
+    20                                                   mailbox #(alu_transaction) gen2drv;
+    21                                               
+    22                                                   function new(virtual alu_if.DRIVER drv_vif, virtual alu_if.MONITOR mon_vif,
+    23                                                                int num_random_txns = 200);
+    24              1                          1             gen2drv = new();
+    25                                               
+    26              1                          1             gen  = new(gen2drv, num_random_txns);
+    27              1                          1             agnt = new(drv_vif, mon_vif, gen2drv);
+    28              1                          1             scb  = new(agnt.mon2scb);
+    29                                               
+    30              1                          1             gen.gen_handover = agnt.drv.driver_handover;
+    31                                                   endfunction
+    32                                               
+    33                                                   task run();
+    34              1                          1             agnt.reset_dut();
+    35                                               
+    36                                                       fork
+    37              1                          1                 agnt.run();
+    38              1                          1                 scb.run();
+    39                                                       join_none
+    40                                               
+    41              1                          1             gen.run();
+    42              1                          1             wait (gen.is_done);
+    43              1                         20             repeat (20) @(agnt.drv_vif.drv_cb);
+    43              2                         20     
+    44                                               
+    45              1                          1             scb.report();
+    46              1                          1             agnt.report();
+    47                                               
+    48              1                          1             $display("[TEST] Simulation complete at time %0t", $time);
+    49              1                          1             $display("[TEST] error_count=%0d correct_count=%0d", error_count, correct_count);
+    50              1                          1             $finish;
+
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /alu_cvg_pkg/alu_coverage/opcode_cg             100.00%        100          -    Covered              
+    covered/total bins:                                    17         17          -                      
+    missing/total bins:                                     0         17          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint opcode_trans                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::opcode_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    17         17          -                      
+    missing/total bins:                                     0         17          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin ADD                                           531          1          -    Covered              
+        bin SUB                                           528          1          -    Covered              
+        bin AND                                           520          1          -    Covered              
+        bin OR                                            484          1          -    Covered              
+    Coverpoint opcode_trans                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin add_to_sub                                     75          1          -    Covered              
+        bin add_to_and                                     55          1          -    Covered              
+        bin add_to_or                                      59          1          -    Covered              
+        bin sub_to_add                                     58          1          -    Covered              
+        bin sub_to_and                                     76          1          -    Covered              
+        bin sub_to_or                                      59          1          -    Covered              
+        bin and_to_add                                     63          1          -    Covered              
+        bin and_to_sub                                     62          1          -    Covered              
+        bin and_to_or                                      69          1          -    Covered              
+        bin or_to_add                                      68          1          -    Covered              
+        bin or_to_sub                                      56          1          -    Covered              
+        bin or_to_and                                      63          1          -    Covered              
+        bin same_op                                      1299          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/input_cg              100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          428          1          -    Covered              
+        bin low                                           360          1          -    Covered              
+        bin mid                                           606          1          -    Covered              
+        bin high                                          241          1          -    Covered              
+        bin all_ones                                      428          1          -    Covered              
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          412          1          -    Covered              
+        bin low                                           372          1          -    Covered              
+        bin mid                                           590          1          -    Covered              
+        bin high                                          265          1          -    Covered              
+        bin all_ones                                      424          1          -    Covered              
+    Coverpoint A_walking_ones                         100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin single_bit[1]                                  40          1          -    Covered              
+        bin single_bit[2]                                  42          1          -    Covered              
+        bin single_bit[4]                                  56          1          -    Covered              
+        bin single_bit[8]                                  50          1          -    Covered              
+        bin two_bits[3]                                    28          1          -    Covered              
+        bin two_bits[5]                                    46          1          -    Covered              
+        bin two_bits[6]                                    46          1          -    Covered              
+        bin two_bits[9]                                    48          1          -    Covered              
+        bin two_bits[10]                                   38          1          -    Covered              
+        bin two_bits[12]                                   48          1          -    Covered              
+        bin all_ones                                      222          1          -    Covered              
+    Cross A_B_cross                                   100.00%        100          -    Covered              
+        covered/total bins:                                25         25          -                      
+        missing/total bins:                                 0         25          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_ones,all_ones>                       106          1          -    Covered              
+            bin <high,all_ones>                            52          1          -    Covered              
+            bin <mid,all_ones>                            116          1          -    Covered              
+            bin <low,all_ones>                             66          1          -    Covered              
+            bin <zero,all_ones>                            84          1          -    Covered              
+            bin <all_ones,high>                            44          1          -    Covered              
+            bin <high,high>                                39          1          -    Covered              
+            bin <mid,high>                                 84          1          -    Covered              
+            bin <low,high>                                 48          1          -    Covered              
+            bin <zero,high>                                50          1          -    Covered              
+            bin <all_ones,mid>                            118          1          -    Covered              
+            bin <high,mid>                                 84          1          -    Covered              
+            bin <mid,mid>                                 162          1          -    Covered              
+            bin <low,mid>                                 104          1          -    Covered              
+            bin <zero,mid>                                122          1          -    Covered              
+            bin <all_ones,low>                             68          1          -    Covered              
+            bin <high,low>                                 32          1          -    Covered              
+            bin <mid,low>                                 136          1          -    Covered              
+            bin <low,low>                                  70          1          -    Covered              
+            bin <zero,low>                                 66          1          -    Covered              
+            bin <all_ones,zero>                            92          1          -    Covered              
+            bin <high,zero>                                34          1          -    Covered              
+            bin <mid,zero>                                108          1          -    Covered              
+            bin <low,zero>                                 72          1          -    Covered              
+            bin <zero,zero>                               106          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::input_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          428          1          -    Covered              
+        bin low                                           360          1          -    Covered              
+        bin mid                                           606          1          -    Covered              
+        bin high                                          241          1          -    Covered              
+        bin all_ones                                      428          1          -    Covered              
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          412          1          -    Covered              
+        bin low                                           372          1          -    Covered              
+        bin mid                                           590          1          -    Covered              
+        bin high                                          265          1          -    Covered              
+        bin all_ones                                      424          1          -    Covered              
+    Coverpoint A_walking_ones                         100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin single_bit[1]                                  40          1          -    Covered              
+        bin single_bit[2]                                  42          1          -    Covered              
+        bin single_bit[4]                                  56          1          -    Covered              
+        bin single_bit[8]                                  50          1          -    Covered              
+        bin two_bits[3]                                    28          1          -    Covered              
+        bin two_bits[5]                                    46          1          -    Covered              
+        bin two_bits[6]                                    46          1          -    Covered              
+        bin two_bits[9]                                    48          1          -    Covered              
+        bin two_bits[10]                                   38          1          -    Covered              
+        bin two_bits[12]                                   48          1          -    Covered              
+        bin all_ones                                      222          1          -    Covered              
+    Cross A_B_cross                                   100.00%        100          -    Covered              
+        covered/total bins:                                25         25          -                      
+        missing/total bins:                                 0         25          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_ones,all_ones>                       106          1          -    Covered              
+            bin <high,all_ones>                            52          1          -    Covered              
+            bin <mid,all_ones>                            116          1          -    Covered              
+            bin <low,all_ones>                             66          1          -    Covered              
+            bin <zero,all_ones>                            84          1          -    Covered              
+            bin <all_ones,high>                            44          1          -    Covered              
+            bin <high,high>                                39          1          -    Covered              
+            bin <mid,high>                                 84          1          -    Covered              
+            bin <low,high>                                 48          1          -    Covered              
+            bin <zero,high>                                50          1          -    Covered              
+            bin <all_ones,mid>                            118          1          -    Covered              
+            bin <high,mid>                                 84          1          -    Covered              
+            bin <mid,mid>                                 162          1          -    Covered              
+            bin <low,mid>                                 104          1          -    Covered              
+            bin <zero,mid>                                122          1          -    Covered              
+            bin <all_ones,low>                             68          1          -    Covered              
+            bin <high,low>                                 32          1          -    Covered              
+            bin <mid,low>                                 136          1          -    Covered              
+            bin <low,low>                                  70          1          -    Covered              
+            bin <zero,low>                                 66          1          -    Covered              
+            bin <all_ones,zero>                            92          1          -    Covered              
+            bin <high,zero>                                34          1          -    Covered              
+            bin <mid,zero>                                108          1          -    Covered              
+            bin <low,zero>                                 72          1          -    Covered              
+            bin <zero,zero>                               106          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/op_specific_cg        100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint carry_gen                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin carry_0                                       582          1          -    Covered              
+        bin carry_1                                       477          1          -    Covered              
+    Coverpoint overflow_check                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_overflow                                   288          1          -    Covered              
+        bin overflow                                      243          1          -    Covered              
+    Coverpoint zero_flag_logic                        100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_false                                    730          1          -    Covered              
+        bin zero_true                                     274          1          -    Covered              
+    Coverpoint result_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          390          1          -    Covered              
+        bin low                                           260          1          -    Covered              
+        bin mid                                           757          1          -    Covered              
+        bin high                                          288          1          -    Covered              
+        bin all_ones                                      368          1          -    Covered              
+    Coverpoint carry_flag_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1586          1          -    Covered              
+        bin auto[1]                                       477          1          -    Covered              
+    Coverpoint zero_flag_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1673          1          -    Covered              
+        bin auto[1]                                       390          1          -    Covered              
+    Cross carry_zero_cross                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                          16          1          -    Covered              
+            bin <auto[0],auto[1]>                         374          1          -    Covered              
+            bin <auto[1],auto[0]>                         461          1          -    Covered              
+            bin <auto[0],auto[0]>                        1212          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::op_specific_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint carry_gen                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin carry_0                                       582          1          -    Covered              
+        bin carry_1                                       477          1          -    Covered              
+    Coverpoint overflow_check                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_overflow                                   288          1          -    Covered              
+        bin overflow                                      243          1          -    Covered              
+    Coverpoint zero_flag_logic                        100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_false                                    730          1          -    Covered              
+        bin zero_true                                     274          1          -    Covered              
+    Coverpoint result_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          390          1          -    Covered              
+        bin low                                           260          1          -    Covered              
+        bin mid                                           757          1          -    Covered              
+        bin high                                          288          1          -    Covered              
+        bin all_ones                                      368          1          -    Covered              
+    Coverpoint carry_flag_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1586          1          -    Covered              
+        bin auto[1]                                       477          1          -    Covered              
+    Coverpoint zero_flag_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1673          1          -    Covered              
+        bin auto[1]                                       390          1          -    Covered              
+    Cross carry_zero_cross                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                          16          1          -    Covered              
+            bin <auto[0],auto[1]>                         374          1          -    Covered              
+            bin <auto[1],auto[0]>                         461          1          -    Covered              
+            bin <auto[0],auto[0]>                        1212          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/corner_case_cg         95.00%        100          -    Uncovered            
+    covered/total bins:                                    16         17          -                      
+    missing/total bins:                                     1         17          -                      
+    % Hit:                                             94.11%        100          -                      
+    Coverpoint add_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_add                                       28          1          -    Covered              
+        bin max_add_1                                      22          1          -    Covered              
+        bin max_add_2                                      26          1          -    Covered              
+        bin max_add_max                                    26          1          -    Covered              
+        bin carry_add                                       2          1          -    Covered              
+    Coverpoint sub_corners                             80.00%        100          -    Uncovered            
+        covered/total bins:                                 4          5          -                      
+        missing/total bins:                                 1          5          -                      
+        % Hit:                                         80.00%        100          -                      
+        bin zero_sub                                       26          1          -    Covered              
+        bin max_sub_0                                      24          1          -    Covered              
+        bin sub_equal                                       0          1          -    ZERO                 
+        bin sub_neg                                        14          1          -    Covered              
+        bin sub_borrow                                     14          1          -    Covered              
+    Coverpoint and_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_and                                       26          1          -    Covered              
+        bin max_and                                        32          1          -    Covered              
+        bin and_all_zero                                   26          1          -    Covered              
+        bin and_result                                      6          1          -    Covered              
+    Coverpoint or_corners                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_or                                        20          1          -    Covered              
+        bin max_or                                         18          1          -    Covered              
+        bin or_all_one                                     24          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::corner_case_cg  
+                                                       95.00%        100          -    Uncovered            
+    covered/total bins:                                    16         17          -                      
+    missing/total bins:                                     1         17          -                      
+    % Hit:                                             94.11%        100          -                      
+    Coverpoint add_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_add                                       28          1          -    Covered              
+        bin max_add_1                                      22          1          -    Covered              
+        bin max_add_2                                      26          1          -    Covered              
+        bin max_add_max                                    26          1          -    Covered              
+        bin carry_add                                       2          1          -    Covered              
+    Coverpoint sub_corners                             80.00%        100          -    Uncovered            
+        covered/total bins:                                 4          5          -                      
+        missing/total bins:                                 1          5          -                      
+        % Hit:                                         80.00%        100          -                      
+        bin zero_sub                                       26          1          -    Covered              
+        bin max_sub_0                                      24          1          -    Covered              
+        bin sub_equal                                       0          1          -    ZERO                 
+        bin sub_neg                                        14          1          -    Covered              
+        bin sub_borrow                                     14          1          -    Covered              
+    Coverpoint and_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_and                                       26          1          -    Covered              
+        bin max_and                                        32          1          -    Covered              
+        bin and_all_zero                                   26          1          -    Covered              
+        bin and_result                                      6          1          -    Covered              
+    Coverpoint or_corners                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_or                                        20          1          -    Covered              
+        bin max_or                                         18          1          -    Covered              
+        bin or_all_one                                     24          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/reset_cg               50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint reset_behavior                          50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin reset_active                                    0          1          -    ZERO                 
+        bin reset_inactive                               2063          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::reset_cg  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint reset_behavior                          50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin reset_active                                    0          1          -    ZERO                 
+        bin reset_inactive                               2063          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 89.00%  COVERGROUP TYPES: 5
+
+Total Coverage By Instance (filtered view): 67.77%
 

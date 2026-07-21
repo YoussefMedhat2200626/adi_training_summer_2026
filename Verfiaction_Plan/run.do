@@ -3,6 +3,9 @@ vlib work
 vlog -sv -mfcu +incdir+. \
     alu_if.sv \
     alu_pkg.sv \
+    alu_cvg_pkg.sv \
+    alu_agent.sv \
+    test.sv \
     alu.sv \
     tb_top.sv \
     +cover=bcesfx +define+SIM

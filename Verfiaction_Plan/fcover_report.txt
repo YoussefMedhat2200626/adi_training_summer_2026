@@ -1,0 +1,782 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /alu_cvg_pkg
+=== Design Unit: work.alu_cvg_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      5        na        na    89.00%
+        Coverpoints/Crosses         18        na        na        na
+            Covergroup Bins        101        99         2    98.01%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /alu_cvg_pkg/alu_coverage/opcode_cg             100.00%        100          -    Covered              
+    covered/total bins:                                    17         17          -                      
+    missing/total bins:                                     0         17          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint opcode_trans                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::opcode_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    17         17          -                      
+    missing/total bins:                                     0         17          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin ADD                                           531          1          -    Covered              
+        bin SUB                                           528          1          -    Covered              
+        bin AND                                           520          1          -    Covered              
+        bin OR                                            484          1          -    Covered              
+    Coverpoint opcode_trans                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin add_to_sub                                     75          1          -    Covered              
+        bin add_to_and                                     55          1          -    Covered              
+        bin add_to_or                                      59          1          -    Covered              
+        bin sub_to_add                                     58          1          -    Covered              
+        bin sub_to_and                                     76          1          -    Covered              
+        bin sub_to_or                                      59          1          -    Covered              
+        bin and_to_add                                     63          1          -    Covered              
+        bin and_to_sub                                     62          1          -    Covered              
+        bin and_to_or                                      69          1          -    Covered              
+        bin or_to_add                                      68          1          -    Covered              
+        bin or_to_sub                                      56          1          -    Covered              
+        bin or_to_and                                      63          1          -    Covered              
+        bin same_op                                      1299          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/input_cg              100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          428          1          -    Covered              
+        bin low                                           360          1          -    Covered              
+        bin mid                                           606          1          -    Covered              
+        bin high                                          241          1          -    Covered              
+        bin all_ones                                      428          1          -    Covered              
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          412          1          -    Covered              
+        bin low                                           372          1          -    Covered              
+        bin mid                                           590          1          -    Covered              
+        bin high                                          265          1          -    Covered              
+        bin all_ones                                      424          1          -    Covered              
+    Coverpoint A_walking_ones                         100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin single_bit[1]                                  40          1          -    Covered              
+        bin single_bit[2]                                  42          1          -    Covered              
+        bin single_bit[4]                                  56          1          -    Covered              
+        bin single_bit[8]                                  50          1          -    Covered              
+        bin two_bits[3]                                    28          1          -    Covered              
+        bin two_bits[5]                                    46          1          -    Covered              
+        bin two_bits[6]                                    46          1          -    Covered              
+        bin two_bits[9]                                    48          1          -    Covered              
+        bin two_bits[10]                                   38          1          -    Covered              
+        bin two_bits[12]                                   48          1          -    Covered              
+        bin all_ones                                      222          1          -    Covered              
+    Cross A_B_cross                                   100.00%        100          -    Covered              
+        covered/total bins:                                25         25          -                      
+        missing/total bins:                                 0         25          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_ones,all_ones>                       106          1          -    Covered              
+            bin <high,all_ones>                            52          1          -    Covered              
+            bin <mid,all_ones>                            116          1          -    Covered              
+            bin <low,all_ones>                             66          1          -    Covered              
+            bin <zero,all_ones>                            84          1          -    Covered              
+            bin <all_ones,high>                            44          1          -    Covered              
+            bin <high,high>                                39          1          -    Covered              
+            bin <mid,high>                                 84          1          -    Covered              
+            bin <low,high>                                 48          1          -    Covered              
+            bin <zero,high>                                50          1          -    Covered              
+            bin <all_ones,mid>                            118          1          -    Covered              
+            bin <high,mid>                                 84          1          -    Covered              
+            bin <mid,mid>                                 162          1          -    Covered              
+            bin <low,mid>                                 104          1          -    Covered              
+            bin <zero,mid>                                122          1          -    Covered              
+            bin <all_ones,low>                             68          1          -    Covered              
+            bin <high,low>                                 32          1          -    Covered              
+            bin <mid,low>                                 136          1          -    Covered              
+            bin <low,low>                                  70          1          -    Covered              
+            bin <zero,low>                                 66          1          -    Covered              
+            bin <all_ones,zero>                            92          1          -    Covered              
+            bin <high,zero>                                34          1          -    Covered              
+            bin <mid,zero>                                108          1          -    Covered              
+            bin <low,zero>                                 72          1          -    Covered              
+            bin <zero,zero>                               106          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::input_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          428          1          -    Covered              
+        bin low                                           360          1          -    Covered              
+        bin mid                                           606          1          -    Covered              
+        bin high                                          241          1          -    Covered              
+        bin all_ones                                      428          1          -    Covered              
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          412          1          -    Covered              
+        bin low                                           372          1          -    Covered              
+        bin mid                                           590          1          -    Covered              
+        bin high                                          265          1          -    Covered              
+        bin all_ones                                      424          1          -    Covered              
+    Coverpoint A_walking_ones                         100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin single_bit[1]                                  40          1          -    Covered              
+        bin single_bit[2]                                  42          1          -    Covered              
+        bin single_bit[4]                                  56          1          -    Covered              
+        bin single_bit[8]                                  50          1          -    Covered              
+        bin two_bits[3]                                    28          1          -    Covered              
+        bin two_bits[5]                                    46          1          -    Covered              
+        bin two_bits[6]                                    46          1          -    Covered              
+        bin two_bits[9]                                    48          1          -    Covered              
+        bin two_bits[10]                                   38          1          -    Covered              
+        bin two_bits[12]                                   48          1          -    Covered              
+        bin all_ones                                      222          1          -    Covered              
+    Cross A_B_cross                                   100.00%        100          -    Covered              
+        covered/total bins:                                25         25          -                      
+        missing/total bins:                                 0         25          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_ones,all_ones>                       106          1          -    Covered              
+            bin <high,all_ones>                            52          1          -    Covered              
+            bin <mid,all_ones>                            116          1          -    Covered              
+            bin <low,all_ones>                             66          1          -    Covered              
+            bin <zero,all_ones>                            84          1          -    Covered              
+            bin <all_ones,high>                            44          1          -    Covered              
+            bin <high,high>                                39          1          -    Covered              
+            bin <mid,high>                                 84          1          -    Covered              
+            bin <low,high>                                 48          1          -    Covered              
+            bin <zero,high>                                50          1          -    Covered              
+            bin <all_ones,mid>                            118          1          -    Covered              
+            bin <high,mid>                                 84          1          -    Covered              
+            bin <mid,mid>                                 162          1          -    Covered              
+            bin <low,mid>                                 104          1          -    Covered              
+            bin <zero,mid>                                122          1          -    Covered              
+            bin <all_ones,low>                             68          1          -    Covered              
+            bin <high,low>                                 32          1          -    Covered              
+            bin <mid,low>                                 136          1          -    Covered              
+            bin <low,low>                                  70          1          -    Covered              
+            bin <zero,low>                                 66          1          -    Covered              
+            bin <all_ones,zero>                            92          1          -    Covered              
+            bin <high,zero>                                34          1          -    Covered              
+            bin <mid,zero>                                108          1          -    Covered              
+            bin <low,zero>                                 72          1          -    Covered              
+            bin <zero,zero>                               106          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/op_specific_cg        100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint carry_gen                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin carry_0                                       582          1          -    Covered              
+        bin carry_1                                       477          1          -    Covered              
+    Coverpoint overflow_check                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_overflow                                   288          1          -    Covered              
+        bin overflow                                      243          1          -    Covered              
+    Coverpoint zero_flag_logic                        100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_false                                    730          1          -    Covered              
+        bin zero_true                                     274          1          -    Covered              
+    Coverpoint result_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          390          1          -    Covered              
+        bin low                                           260          1          -    Covered              
+        bin mid                                           757          1          -    Covered              
+        bin high                                          288          1          -    Covered              
+        bin all_ones                                      368          1          -    Covered              
+    Coverpoint carry_flag_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1586          1          -    Covered              
+        bin auto[1]                                       477          1          -    Covered              
+    Coverpoint zero_flag_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1673          1          -    Covered              
+        bin auto[1]                                       390          1          -    Covered              
+    Cross carry_zero_cross                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                          16          1          -    Covered              
+            bin <auto[0],auto[1]>                         374          1          -    Covered              
+            bin <auto[1],auto[0]>                         461          1          -    Covered              
+            bin <auto[0],auto[0]>                        1212          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::op_specific_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint carry_gen                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin carry_0                                       582          1          -    Covered              
+        bin carry_1                                       477          1          -    Covered              
+    Coverpoint overflow_check                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_overflow                                   288          1          -    Covered              
+        bin overflow                                      243          1          -    Covered              
+    Coverpoint zero_flag_logic                        100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_false                                    730          1          -    Covered              
+        bin zero_true                                     274          1          -    Covered              
+    Coverpoint result_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          390          1          -    Covered              
+        bin low                                           260          1          -    Covered              
+        bin mid                                           757          1          -    Covered              
+        bin high                                          288          1          -    Covered              
+        bin all_ones                                      368          1          -    Covered              
+    Coverpoint carry_flag_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1586          1          -    Covered              
+        bin auto[1]                                       477          1          -    Covered              
+    Coverpoint zero_flag_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1673          1          -    Covered              
+        bin auto[1]                                       390          1          -    Covered              
+    Cross carry_zero_cross                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                          16          1          -    Covered              
+            bin <auto[0],auto[1]>                         374          1          -    Covered              
+            bin <auto[1],auto[0]>                         461          1          -    Covered              
+            bin <auto[0],auto[0]>                        1212          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/corner_case_cg         95.00%        100          -    Uncovered            
+    covered/total bins:                                    16         17          -                      
+    missing/total bins:                                     1         17          -                      
+    % Hit:                                             94.11%        100          -                      
+    Coverpoint add_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_add                                       28          1          -    Covered              
+        bin max_add_1                                      22          1          -    Covered              
+        bin max_add_2                                      26          1          -    Covered              
+        bin max_add_max                                    26          1          -    Covered              
+        bin carry_add                                       2          1          -    Covered              
+    Coverpoint sub_corners                             80.00%        100          -    Uncovered            
+        covered/total bins:                                 4          5          -                      
+        missing/total bins:                                 1          5          -                      
+        % Hit:                                         80.00%        100          -                      
+        bin zero_sub                                       26          1          -    Covered              
+        bin max_sub_0                                      24          1          -    Covered              
+        bin sub_equal                                       0          1          -    ZERO                 
+        bin sub_neg                                        14          1          -    Covered              
+        bin sub_borrow                                     14          1          -    Covered              
+    Coverpoint and_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_and                                       26          1          -    Covered              
+        bin max_and                                        32          1          -    Covered              
+        bin and_all_zero                                   26          1          -    Covered              
+        bin and_result                                      6          1          -    Covered              
+    Coverpoint or_corners                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_or                                        20          1          -    Covered              
+        bin max_or                                         18          1          -    Covered              
+        bin or_all_one                                     24          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::corner_case_cg  
+                                                       95.00%        100          -    Uncovered            
+    covered/total bins:                                    16         17          -                      
+    missing/total bins:                                     1         17          -                      
+    % Hit:                                             94.11%        100          -                      
+    Coverpoint add_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_add                                       28          1          -    Covered              
+        bin max_add_1                                      22          1          -    Covered              
+        bin max_add_2                                      26          1          -    Covered              
+        bin max_add_max                                    26          1          -    Covered              
+        bin carry_add                                       2          1          -    Covered              
+    Coverpoint sub_corners                             80.00%        100          -    Uncovered            
+        covered/total bins:                                 4          5          -                      
+        missing/total bins:                                 1          5          -                      
+        % Hit:                                         80.00%        100          -                      
+        bin zero_sub                                       26          1          -    Covered              
+        bin max_sub_0                                      24          1          -    Covered              
+        bin sub_equal                                       0          1          -    ZERO                 
+        bin sub_neg                                        14          1          -    Covered              
+        bin sub_borrow                                     14          1          -    Covered              
+    Coverpoint and_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_and                                       26          1          -    Covered              
+        bin max_and                                        32          1          -    Covered              
+        bin and_all_zero                                   26          1          -    Covered              
+        bin and_result                                      6          1          -    Covered              
+    Coverpoint or_corners                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_or                                        20          1          -    Covered              
+        bin max_or                                         18          1          -    Covered              
+        bin or_all_one                                     24          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/reset_cg               50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint reset_behavior                          50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin reset_active                                    0          1          -    ZERO                 
+        bin reset_inactive                               2063          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::reset_cg  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint reset_behavior                          50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin reset_active                                    0          1          -    ZERO                 
+        bin reset_inactive                               2063          1          -    Covered              
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /alu_cvg_pkg/alu_coverage/opcode_cg             100.00%        100          -    Covered              
+    covered/total bins:                                    17         17          -                      
+    missing/total bins:                                     0         17          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint opcode_trans                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::opcode_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    17         17          -                      
+    missing/total bins:                                     0         17          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin ADD                                           531          1          -    Covered              
+        bin SUB                                           528          1          -    Covered              
+        bin AND                                           520          1          -    Covered              
+        bin OR                                            484          1          -    Covered              
+    Coverpoint opcode_trans                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin add_to_sub                                     75          1          -    Covered              
+        bin add_to_and                                     55          1          -    Covered              
+        bin add_to_or                                      59          1          -    Covered              
+        bin sub_to_add                                     58          1          -    Covered              
+        bin sub_to_and                                     76          1          -    Covered              
+        bin sub_to_or                                      59          1          -    Covered              
+        bin and_to_add                                     63          1          -    Covered              
+        bin and_to_sub                                     62          1          -    Covered              
+        bin and_to_or                                      69          1          -    Covered              
+        bin or_to_add                                      68          1          -    Covered              
+        bin or_to_sub                                      56          1          -    Covered              
+        bin or_to_and                                      63          1          -    Covered              
+        bin same_op                                      1299          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/input_cg              100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          428          1          -    Covered              
+        bin low                                           360          1          -    Covered              
+        bin mid                                           606          1          -    Covered              
+        bin high                                          241          1          -    Covered              
+        bin all_ones                                      428          1          -    Covered              
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          412          1          -    Covered              
+        bin low                                           372          1          -    Covered              
+        bin mid                                           590          1          -    Covered              
+        bin high                                          265          1          -    Covered              
+        bin all_ones                                      424          1          -    Covered              
+    Coverpoint A_walking_ones                         100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin single_bit[1]                                  40          1          -    Covered              
+        bin single_bit[2]                                  42          1          -    Covered              
+        bin single_bit[4]                                  56          1          -    Covered              
+        bin single_bit[8]                                  50          1          -    Covered              
+        bin two_bits[3]                                    28          1          -    Covered              
+        bin two_bits[5]                                    46          1          -    Covered              
+        bin two_bits[6]                                    46          1          -    Covered              
+        bin two_bits[9]                                    48          1          -    Covered              
+        bin two_bits[10]                                   38          1          -    Covered              
+        bin two_bits[12]                                   48          1          -    Covered              
+        bin all_ones                                      222          1          -    Covered              
+    Cross A_B_cross                                   100.00%        100          -    Covered              
+        covered/total bins:                                25         25          -                      
+        missing/total bins:                                 0         25          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_ones,all_ones>                       106          1          -    Covered              
+            bin <high,all_ones>                            52          1          -    Covered              
+            bin <mid,all_ones>                            116          1          -    Covered              
+            bin <low,all_ones>                             66          1          -    Covered              
+            bin <zero,all_ones>                            84          1          -    Covered              
+            bin <all_ones,high>                            44          1          -    Covered              
+            bin <high,high>                                39          1          -    Covered              
+            bin <mid,high>                                 84          1          -    Covered              
+            bin <low,high>                                 48          1          -    Covered              
+            bin <zero,high>                                50          1          -    Covered              
+            bin <all_ones,mid>                            118          1          -    Covered              
+            bin <high,mid>                                 84          1          -    Covered              
+            bin <mid,mid>                                 162          1          -    Covered              
+            bin <low,mid>                                 104          1          -    Covered              
+            bin <zero,mid>                                122          1          -    Covered              
+            bin <all_ones,low>                             68          1          -    Covered              
+            bin <high,low>                                 32          1          -    Covered              
+            bin <mid,low>                                 136          1          -    Covered              
+            bin <low,low>                                  70          1          -    Covered              
+            bin <zero,low>                                 66          1          -    Covered              
+            bin <all_ones,zero>                            92          1          -    Covered              
+            bin <high,zero>                                34          1          -    Covered              
+            bin <mid,zero>                                108          1          -    Covered              
+            bin <low,zero>                                 72          1          -    Covered              
+            bin <zero,zero>                               106          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::input_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          428          1          -    Covered              
+        bin low                                           360          1          -    Covered              
+        bin mid                                           606          1          -    Covered              
+        bin high                                          241          1          -    Covered              
+        bin all_ones                                      428          1          -    Covered              
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          412          1          -    Covered              
+        bin low                                           372          1          -    Covered              
+        bin mid                                           590          1          -    Covered              
+        bin high                                          265          1          -    Covered              
+        bin all_ones                                      424          1          -    Covered              
+    Coverpoint A_walking_ones                         100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin single_bit[1]                                  40          1          -    Covered              
+        bin single_bit[2]                                  42          1          -    Covered              
+        bin single_bit[4]                                  56          1          -    Covered              
+        bin single_bit[8]                                  50          1          -    Covered              
+        bin two_bits[3]                                    28          1          -    Covered              
+        bin two_bits[5]                                    46          1          -    Covered              
+        bin two_bits[6]                                    46          1          -    Covered              
+        bin two_bits[9]                                    48          1          -    Covered              
+        bin two_bits[10]                                   38          1          -    Covered              
+        bin two_bits[12]                                   48          1          -    Covered              
+        bin all_ones                                      222          1          -    Covered              
+    Cross A_B_cross                                   100.00%        100          -    Covered              
+        covered/total bins:                                25         25          -                      
+        missing/total bins:                                 0         25          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_ones,all_ones>                       106          1          -    Covered              
+            bin <high,all_ones>                            52          1          -    Covered              
+            bin <mid,all_ones>                            116          1          -    Covered              
+            bin <low,all_ones>                             66          1          -    Covered              
+            bin <zero,all_ones>                            84          1          -    Covered              
+            bin <all_ones,high>                            44          1          -    Covered              
+            bin <high,high>                                39          1          -    Covered              
+            bin <mid,high>                                 84          1          -    Covered              
+            bin <low,high>                                 48          1          -    Covered              
+            bin <zero,high>                                50          1          -    Covered              
+            bin <all_ones,mid>                            118          1          -    Covered              
+            bin <high,mid>                                 84          1          -    Covered              
+            bin <mid,mid>                                 162          1          -    Covered              
+            bin <low,mid>                                 104          1          -    Covered              
+            bin <zero,mid>                                122          1          -    Covered              
+            bin <all_ones,low>                             68          1          -    Covered              
+            bin <high,low>                                 32          1          -    Covered              
+            bin <mid,low>                                 136          1          -    Covered              
+            bin <low,low>                                  70          1          -    Covered              
+            bin <zero,low>                                 66          1          -    Covered              
+            bin <all_ones,zero>                            92          1          -    Covered              
+            bin <high,zero>                                34          1          -    Covered              
+            bin <mid,zero>                                108          1          -    Covered              
+            bin <low,zero>                                 72          1          -    Covered              
+            bin <zero,zero>                               106          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/op_specific_cg        100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint carry_gen                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin carry_0                                       582          1          -    Covered              
+        bin carry_1                                       477          1          -    Covered              
+    Coverpoint overflow_check                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_overflow                                   288          1          -    Covered              
+        bin overflow                                      243          1          -    Covered              
+    Coverpoint zero_flag_logic                        100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_false                                    730          1          -    Covered              
+        bin zero_true                                     274          1          -    Covered              
+    Coverpoint result_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          390          1          -    Covered              
+        bin low                                           260          1          -    Covered              
+        bin mid                                           757          1          -    Covered              
+        bin high                                          288          1          -    Covered              
+        bin all_ones                                      368          1          -    Covered              
+    Coverpoint carry_flag_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1586          1          -    Covered              
+        bin auto[1]                                       477          1          -    Covered              
+    Coverpoint zero_flag_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1673          1          -    Covered              
+        bin auto[1]                                       390          1          -    Covered              
+    Cross carry_zero_cross                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                          16          1          -    Covered              
+            bin <auto[0],auto[1]>                         374          1          -    Covered              
+            bin <auto[1],auto[0]>                         461          1          -    Covered              
+            bin <auto[0],auto[0]>                        1212          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::op_specific_cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint carry_gen                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin carry_0                                       582          1          -    Covered              
+        bin carry_1                                       477          1          -    Covered              
+    Coverpoint overflow_check                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_overflow                                   288          1          -    Covered              
+        bin overflow                                      243          1          -    Covered              
+    Coverpoint zero_flag_logic                        100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_false                                    730          1          -    Covered              
+        bin zero_true                                     274          1          -    Covered              
+    Coverpoint result_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                          390          1          -    Covered              
+        bin low                                           260          1          -    Covered              
+        bin mid                                           757          1          -    Covered              
+        bin high                                          288          1          -    Covered              
+        bin all_ones                                      368          1          -    Covered              
+    Coverpoint carry_flag_cp                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1586          1          -    Covered              
+        bin auto[1]                                       477          1          -    Covered              
+    Coverpoint zero_flag_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      1673          1          -    Covered              
+        bin auto[1]                                       390          1          -    Covered              
+    Cross carry_zero_cross                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                          16          1          -    Covered              
+            bin <auto[0],auto[1]>                         374          1          -    Covered              
+            bin <auto[1],auto[0]>                         461          1          -    Covered              
+            bin <auto[0],auto[0]>                        1212          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/corner_case_cg         95.00%        100          -    Uncovered            
+    covered/total bins:                                    16         17          -                      
+    missing/total bins:                                     1         17          -                      
+    % Hit:                                             94.11%        100          -                      
+    Coverpoint add_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_add                                       28          1          -    Covered              
+        bin max_add_1                                      22          1          -    Covered              
+        bin max_add_2                                      26          1          -    Covered              
+        bin max_add_max                                    26          1          -    Covered              
+        bin carry_add                                       2          1          -    Covered              
+    Coverpoint sub_corners                             80.00%        100          -    Uncovered            
+        covered/total bins:                                 4          5          -                      
+        missing/total bins:                                 1          5          -                      
+        % Hit:                                         80.00%        100          -                      
+        bin zero_sub                                       26          1          -    Covered              
+        bin max_sub_0                                      24          1          -    Covered              
+        bin sub_equal                                       0          1          -    ZERO                 
+        bin sub_neg                                        14          1          -    Covered              
+        bin sub_borrow                                     14          1          -    Covered              
+    Coverpoint and_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_and                                       26          1          -    Covered              
+        bin max_and                                        32          1          -    Covered              
+        bin and_all_zero                                   26          1          -    Covered              
+        bin and_result                                      6          1          -    Covered              
+    Coverpoint or_corners                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_or                                        20          1          -    Covered              
+        bin max_or                                         18          1          -    Covered              
+        bin or_all_one                                     24          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::corner_case_cg  
+                                                       95.00%        100          -    Uncovered            
+    covered/total bins:                                    16         17          -                      
+    missing/total bins:                                     1         17          -                      
+    % Hit:                                             94.11%        100          -                      
+    Coverpoint add_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_add                                       28          1          -    Covered              
+        bin max_add_1                                      22          1          -    Covered              
+        bin max_add_2                                      26          1          -    Covered              
+        bin max_add_max                                    26          1          -    Covered              
+        bin carry_add                                       2          1          -    Covered              
+    Coverpoint sub_corners                             80.00%        100          -    Uncovered            
+        covered/total bins:                                 4          5          -                      
+        missing/total bins:                                 1          5          -                      
+        % Hit:                                         80.00%        100          -                      
+        bin zero_sub                                       26          1          -    Covered              
+        bin max_sub_0                                      24          1          -    Covered              
+        bin sub_equal                                       0          1          -    ZERO                 
+        bin sub_neg                                        14          1          -    Covered              
+        bin sub_borrow                                     14          1          -    Covered              
+    Coverpoint and_corners                            100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_and                                       26          1          -    Covered              
+        bin max_and                                        32          1          -    Covered              
+        bin and_all_zero                                   26          1          -    Covered              
+        bin and_result                                      6          1          -    Covered              
+    Coverpoint or_corners                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero_or                                        20          1          -    Covered              
+        bin max_or                                         18          1          -    Covered              
+        bin or_all_one                                     24          1          -    Covered              
+ TYPE /alu_cvg_pkg/alu_coverage/reset_cg               50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint reset_behavior                          50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin reset_active                                    0          1          -    ZERO                 
+        bin reset_inactive                               2063          1          -    Covered              
+ Covergroup instance \/alu_cvg_pkg::alu_coverage::reset_cg  
+                                                       50.00%        100          -    Uncovered            
+    covered/total bins:                                     1          2          -                      
+    missing/total bins:                                     1          2          -                      
+    % Hit:                                             50.00%        100          -                      
+    Coverpoint reset_behavior                          50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin reset_active                                    0          1          -    ZERO                 
+        bin reset_inactive                               2063          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 89.00%  COVERGROUP TYPES: 5
+
+Total Coverage By Instance (filtered view): 89.00%
+
