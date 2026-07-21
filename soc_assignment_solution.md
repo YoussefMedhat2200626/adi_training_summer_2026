@@ -4,24 +4,27 @@
 
 ```mermaid
 graph TD
-    subgraph "System-on-Chip (SoC)"
-        CPU[Processor Core<br/>Handles Control Flow & Software Algorithms]
-        MEM[Memory SRAM<br/>Stores Program, Audio Samples, and FFT Results]
-        UART[Serial Interface UART/SPI<br/>Receives Audio & Sends Results]
-        DMA[DMA Controller<br/>Offloads Data Transfers from CPU]
-        FFT[FFT Hardware Accelerator<br/>Computes Fast Fourier Transform]
+    subgraph "Audio Processing SoC (Abstract Architecture)"
+        %% Memory
+        MEM[Memory Banks<br/>SRAM]
         
-        BUS{System Bus AMBA AXI/AHB}
+        %% Main Interconnect
+        BUS[System Bus / Interconnect<br/>AXI or TCDM]
         
-        CPU <--> BUS
+        %% Core components (The 3 main functional blocks)
+        DMA[uDMA & I/O<br/>Handles UART Audio]
+        CPU[RISCY Processor<br/>Control Logic]
+        FFT[HWPE Accelerator<br/>Computes FFT Math]
+        
+        %% Connections
         MEM <--> BUS
-        UART <--> BUS
         DMA <--> BUS
+        CPU <--> BUS
         FFT <--> BUS
     end
     
-    Host[Host Device] -- Audio Samples --> UART
-    UART -- Dominant Freq Index --> Host
+    Host[Host Device] -- Serial Audio --> DMA
+    DMA -- Result Index --> Host
 ```
 
 ### Component Descriptions:
