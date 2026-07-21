@@ -1,0 +1,389 @@
+[2026-07-19 21:22:56 UTC] chmod +x run.bash; sed -i -e 's/\r//g' run.bash; ./run.bash  
+rm -f results.xml
+make -f Makefile results.xml
+make[1]: Entering directory `/home/runner'
+mkdir -p sim_build
+/usr/local/bin/iverilog -o sim_build/sim.vvp -D COCOTB_SIM=1 -s simple_alu -f sim_build/cmds.f -g2012   /home/runner/design.sv
+rm -f results.xml
+MODULE=testbench TESTCASE= TOPLEVEL=simple_alu TOPLEVEL_LANG=verilog \
+         /usr/local/bin/vvp -M /usr/local/lib64/python3.6/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:78   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.8.1 from /usr/local/lib64/python3.6/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1784496187
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test testbench.simple_alu_test
+     0.00ns INFO     cocotb.regression                  running simple_alu_test (1/1)
+                                                          Testbench for simple_alu using Directed Sequences
+
+--- STARTING ARITHMETIC TESTS ---
+Opcode: 000 | A: 077 | B: 038 | Res: 115 (Exp: 115) | Status: PASS
+Opcode: 001 | A: 183 | B: 127 | Res: 056 (Exp: 056) | Status: PASS
+Opcode: 001 | A: 124 | B: 134 | Res: 246 (Exp: 246) | Status: PASS
+Opcode: 000 | A: 187 | B: 254 | Res: 185 (Exp: 185) | Status: PASS
+Opcode: 001 | A: 192 | B: 171 | Res: 021 (Exp: 021) | Status: PASS
+Opcode: 001 | A: 216 | B: 203 | Res: 013 (Exp: 013) | Status: PASS
+Opcode: 000 | A: 175 | B: 143 | Res: 062 (Exp: 062) | Status: PASS
+Opcode: 001 | A: 028 | B: 215 | Res: 069 (Exp: 069) | Status: PASS
+Opcode: 000 | A: 232 | B: 114 | Res: 090 (Exp: 090) | Status: PASS
+Opcode: 001 | A: 100 | B: 195 | Res: 161 (Exp: 161) | Status: PASS
+Opcode: 001 | A: 178 | B: 052 | Res: 126 (Exp: 126) | Status: PASS
+Opcode: 001 | A: 149 | B: 193 | Res: 212 (Exp: 212) | Status: PASS
+Opcode: 001 | A: 071 | B: 056 | Res: 015 (Exp: 015) | Status: PASS
+Opcode: 000 | A: 073 | B: 209 | Res: 026 (Exp: 026) | Status: PASS
+Opcode: 000 | A: 187 | B: 106 | Res: 037 (Exp: 037) | Status: PASS
+Opcode: 001 | A: 151 | B: 033 | Res: 118 (Exp: 118) | Status: PASS
+Opcode: 001 | A: 116 | B: 082 | Res: 034 (Exp: 034) | Status: PASS
+Opcode: 000 | A: 100 | B: 145 | Res: 245 (Exp: 245) | Status: PASS
+Opcode: 000 | A: 121 | B: 005 | Res: 126 (Exp: 126) | Status: PASS
+Opcode: 001 | A: 044 | B: 224 | Res: 076 (Exp: 076) | Status: PASS
+Opcode: 001 | A: 161 | B: 126 | Res: 035 (Exp: 035) | Status: PASS
+Opcode: 001 | A: 191 | B: 155 | Res: 036 (Exp: 036) | Status: PASS
+Opcode: 000 | A: 000 | B: 019 | Res: 019 (Exp: 019) | Status: PASS
+Opcode: 000 | A: 224 | B: 225 | Res: 193 (Exp: 193) | Status: PASS
+Opcode: 000 | A: 180 | B: 093 | Res: 017 (Exp: 017) | Status: PASS
+Opcode: 001 | A: 006 | B: 232 | Res: 030 (Exp: 030) | Status: PASS
+Opcode: 000 | A: 176 | B: 046 | Res: 222 (Exp: 222) | Status: PASS
+Opcode: 000 | A: 250 | B: 252 | Res: 246 (Exp: 246) | Status: PASS
+Opcode: 000 | A: 247 | B: 156 | Res: 147 (Exp: 147) | Status: PASS
+Opcode: 001 | A: 144 | B: 030 | Res: 114 (Exp: 114) | Status: PASS
+Opcode: 000 | A: 086 | B: 125 | Res: 211 (Exp: 211) | Status: PASS
+Opcode: 001 | A: 135 | B: 209 | Res: 182 (Exp: 182) | Status: PASS
+Opcode: 000 | A: 006 | B: 080 | Res: 086 (Exp: 086) | Status: PASS
+Opcode: 001 | A: 128 | B: 004 | Res: 124 (Exp: 124) | Status: PASS
+Opcode: 000 | A: 080 | B: 172 | Res: 252 (Exp: 252) | Status: PASS
+Opcode: 001 | A: 098 | B: 205 | Res: 149 (Exp: 149) | Status: PASS
+Opcode: 001 | A: 200 | B: 123 | Res: 077 (Exp: 077) | Status: PASS
+Opcode: 000 | A: 174 | B: 086 | Res: 004 (Exp: 004) | Status: PASS
+Opcode: 001 | A: 027 | B: 193 | Res: 090 (Exp: 090) | Status: PASS
+Opcode: 001 | A: 136 | B: 068 | Res: 068 (Exp: 068) | Status: PASS
+Opcode: 000 | A: 117 | B: 052 | Res: 169 (Exp: 169) | Status: PASS
+Opcode: 001 | A: 021 | B: 005 | Res: 016 (Exp: 016) | Status: PASS
+Opcode: 001 | A: 048 | B: 083 | Res: 221 (Exp: 221) | Status: PASS
+Opcode: 000 | A: 032 | B: 162 | Res: 194 (Exp: 194) | Status: PASS
+Opcode: 001 | A: 116 | B: 013 | Res: 103 (Exp: 103) | Status: PASS
+Opcode: 001 | A: 034 | B: 044 | Res: 246 (Exp: 246) | Status: PASS
+Opcode: 001 | A: 105 | B: 231 | Res: 130 (Exp: 130) | Status: PASS
+Opcode: 001 | A: 230 | B: 013 | Res: 217 (Exp: 217) | Status: PASS
+Opcode: 000 | A: 023 | B: 174 | Res: 197 (Exp: 197) | Status: PASS
+Opcode: 001 | A: 061 | B: 160 | Res: 157 (Exp: 157) | Status: PASS
+Opcode: 001 | A: 158 | B: 058 | Res: 100 (Exp: 100) | Status: PASS
+Opcode: 000 | A: 149 | B: 187 | Res: 080 (Exp: 080) | Status: PASS
+Opcode: 000 | A: 207 | B: 197 | Res: 148 (Exp: 148) | Status: PASS
+Opcode: 001 | A: 090 | B: 002 | Res: 088 (Exp: 088) | Status: PASS
+Opcode: 001 | A: 237 | B: 085 | Res: 152 (Exp: 152) | Status: PASS
+Opcode: 000 | A: 181 | B: 090 | Res: 015 (Exp: 015) | Status: PASS
+Opcode: 000 | A: 065 | B: 119 | Res: 184 (Exp: 184) | Status: PASS
+Opcode: 001 | A: 019 | B: 031 | Res: 244 (Exp: 244) | Status: PASS
+Opcode: 001 | A: 243 | B: 238 | Res: 005 (Exp: 005) | Status: PASS
+Opcode: 000 | A: 169 | B: 005 | Res: 174 (Exp: 174) | Status: PASS
+Opcode: 001 | A: 058 | B: 063 | Res: 251 (Exp: 251) | Status: PASS
+Opcode: 000 | A: 070 | B: 039 | Res: 109 (Exp: 109) | Status: PASS
+Opcode: 001 | A: 237 | B: 141 | Res: 096 (Exp: 096) | Status: PASS
+Opcode: 001 | A: 082 | B: 247 | Res: 091 (Exp: 091) | Status: PASS
+Opcode: 000 | A: 203 | B: 153 | Res: 100 (Exp: 100) | Status: PASS
+Opcode: 000 | A: 057 | B: 032 | Res: 089 (Exp: 089) | Status: PASS
+Opcode: 000 | A: 193 | B: 159 | Res: 096 (Exp: 096) | Status: PASS
+Opcode: 000 | A: 103 | B: 021 | Res: 124 (Exp: 124) | Status: PASS
+Opcode: 000 | A: 105 | B: 004 | Res: 109 (Exp: 109) | Status: PASS
+Opcode: 000 | A: 065 | B: 166 | Res: 231 (Exp: 231) | Status: PASS
+Opcode: 001 | A: 199 | B: 203 | Res: 252 (Exp: 252) | Status: PASS
+Opcode: 000 | A: 244 | B: 188 | Res: 176 (Exp: 176) | Status: PASS
+Opcode: 001 | A: 088 | B: 167 | Res: 177 (Exp: 177) | Status: PASS
+Opcode: 000 | A: 128 | B: 096 | Res: 224 (Exp: 224) | Status: PASS
+Opcode: 001 | A: 037 | B: 195 | Res: 098 (Exp: 098) | Status: PASS
+Opcode: 000 | A: 017 | B: 123 | Res: 140 (Exp: 140) | Status: PASS
+Opcode: 000 | A: 194 | B: 006 | Res: 200 (Exp: 200) | Status: PASS
+Opcode: 000 | A: 155 | B: 143 | Res: 042 (Exp: 042) | Status: PASS
+Opcode: 000 | A: 221 | B: 246 | Res: 211 (Exp: 211) | Status: PASS
+Opcode: 000 | A: 112 | B: 196 | Res: 052 (Exp: 052) | Status: PASS
+Opcode: 001 | A: 009 | B: 014 | Res: 251 (Exp: 251) | Status: PASS
+Opcode: 000 | A: 243 | B: 027 | Res: 014 (Exp: 014) | Status: PASS
+Opcode: 001 | A: 088 | B: 097 | Res: 247 (Exp: 247) | Status: PASS
+Opcode: 000 | A: 128 | B: 141 | Res: 013 (Exp: 013) | Status: PASS
+Opcode: 001 | A: 046 | B: 069 | Res: 233 (Exp: 233) | Status: PASS
+Opcode: 000 | A: 108 | B: 113 | Res: 221 (Exp: 221) | Status: PASS
+Opcode: 000 | A: 134 | B: 051 | Res: 185 (Exp: 185) | Status: PASS
+Opcode: 001 | A: 183 | B: 250 | Res: 189 (Exp: 189) | Status: PASS
+Opcode: 000 | A: 036 | B: 182 | Res: 218 (Exp: 218) | Status: PASS
+Opcode: 001 | A: 154 | B: 030 | Res: 124 (Exp: 124) | Status: PASS
+Opcode: 000 | A: 149 | B: 198 | Res: 091 (Exp: 091) | Status: PASS
+Opcode: 000 | A: 252 | B: 121 | Res: 117 (Exp: 117) | Status: PASS
+Opcode: 000 | A: 159 | B: 228 | Res: 131 (Exp: 131) | Status: PASS
+Opcode: 001 | A: 121 | B: 242 | Res: 135 (Exp: 135) | Status: PASS
+Opcode: 001 | A: 220 | B: 254 | Res: 222 (Exp: 222) | Status: PASS
+Opcode: 001 | A: 008 | B: 058 | Res: 206 (Exp: 206) | Status: PASS
+Opcode: 000 | A: 235 | B: 124 | Res: 103 (Exp: 103) | Status: PASS
+Opcode: 000 | A: 170 | B: 164 | Res: 078 (Exp: 078) | Status: PASS
+Opcode: 001 | A: 118 | B: 029 | Res: 089 (Exp: 089) | Status: PASS
+Opcode: 001 | A: 244 | B: 119 | Res: 125 (Exp: 125) | Status: PASS
+
+==============================================================
+[ARITHMETIC (ADD/SUB) SUMMARY] PASSED: 100 | FAILED: 0
+==============================================================
+
+
+--- STARTING LOGIC TESTS ---
+Opcode: 001 | A: 244 | B: 119 | Res: 125 (Exp: 125) | Status: PASS
+Opcode: 001 | A: 244 | B: 119 | Res: 125 (Exp: 125) | Status: PASS
+Opcode: 011 | A: 127 | B: 058 | Res: 127 (Exp: 127) | Status: PASS
+Opcode: 010 | A: 132 | B: 209 | Res: 128 (Exp: 128) | Status: PASS
+Opcode: 010 | A: 101 | B: 088 | Res: 064 (Exp: 064) | Status: PASS
+Opcode: 011 | A: 026 | B: 142 | Res: 158 (Exp: 158) | Status: PASS
+Opcode: 011 | A: 154 | B: 125 | Res: 255 (Exp: 255) | Status: PASS
+Opcode: 010 | A: 148 | B: 082 | Res: 016 (Exp: 016) | Status: PASS
+Opcode: 011 | A: 106 | B: 219 | Res: 251 (Exp: 251) | Status: PASS
+Opcode: 011 | A: 085 | B: 065 | Res: 085 (Exp: 085) | Status: PASS
+Opcode: 010 | A: 052 | B: 120 | Res: 048 (Exp: 048) | Status: PASS
+Opcode: 011 | A: 115 | B: 247 | Res: 247 (Exp: 247) | Status: PASS
+Opcode: 011 | A: 164 | B: 205 | Res: 237 (Exp: 237) | Status: PASS
+Opcode: 011 | A: 064 | B: 254 | Res: 254 (Exp: 254) | Status: PASS
+Opcode: 011 | A: 255 | B: 072 | Res: 255 (Exp: 255) | Status: PASS
+Opcode: 010 | A: 081 | B: 088 | Res: 080 (Exp: 080) | Status: PASS
+Opcode: 010 | A: 058 | B: 105 | Res: 040 (Exp: 040) | Status: PASS
+Opcode: 010 | A: 236 | B: 211 | Res: 192 (Exp: 192) | Status: PASS
+Opcode: 010 | A: 156 | B: 150 | Res: 148 (Exp: 148) | Status: PASS
+Opcode: 011 | A: 006 | B: 036 | Res: 038 (Exp: 038) | Status: PASS
+Opcode: 010 | A: 211 | B: 048 | Res: 016 (Exp: 016) | Status: PASS
+Opcode: 010 | A: 119 | B: 083 | Res: 083 (Exp: 083) | Status: PASS
+Opcode: 010 | A: 243 | B: 240 | Res: 240 (Exp: 240) | Status: PASS
+Opcode: 011 | A: 084 | B: 229 | Res: 245 (Exp: 245) | Status: PASS
+Opcode: 011 | A: 032 | B: 020 | Res: 052 (Exp: 052) | Status: PASS
+Opcode: 011 | A: 095 | B: 076 | Res: 095 (Exp: 095) | Status: PASS
+Opcode: 011 | A: 147 | B: 000 | Res: 147 (Exp: 147) | Status: PASS
+Opcode: 010 | A: 022 | B: 052 | Res: 020 (Exp: 020) | Status: PASS
+Opcode: 011 | A: 003 | B: 173 | Res: 175 (Exp: 175) | Status: PASS
+Opcode: 010 | A: 147 | B: 096 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 011 | A: 198 | B: 221 | Res: 223 (Exp: 223) | Status: PASS
+Opcode: 011 | A: 012 | B: 060 | Res: 060 (Exp: 060) | Status: PASS
+Opcode: 011 | A: 169 | B: 093 | Res: 253 (Exp: 253) | Status: PASS
+Opcode: 011 | A: 052 | B: 154 | Res: 190 (Exp: 190) | Status: PASS
+Opcode: 011 | A: 008 | B: 212 | Res: 220 (Exp: 220) | Status: PASS
+Opcode: 011 | A: 125 | B: 176 | Res: 253 (Exp: 253) | Status: PASS
+Opcode: 011 | A: 000 | B: 028 | Res: 028 (Exp: 028) | Status: PASS
+Opcode: 010 | A: 137 | B: 041 | Res: 009 (Exp: 009) | Status: PASS
+Opcode: 011 | A: 162 | B: 168 | Res: 170 (Exp: 170) | Status: PASS
+Opcode: 011 | A: 143 | B: 099 | Res: 239 (Exp: 239) | Status: PASS
+Opcode: 010 | A: 121 | B: 017 | Res: 017 (Exp: 017) | Status: PASS
+Opcode: 010 | A: 000 | B: 115 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 010 | A: 248 | B: 178 | Res: 176 (Exp: 176) | Status: PASS
+Opcode: 011 | A: 057 | B: 022 | Res: 063 (Exp: 063) | Status: PASS
+Opcode: 011 | A: 006 | B: 088 | Res: 094 (Exp: 094) | Status: PASS
+Opcode: 010 | A: 160 | B: 066 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 011 | A: 199 | B: 164 | Res: 231 (Exp: 231) | Status: PASS
+Opcode: 010 | A: 125 | B: 161 | Res: 033 (Exp: 033) | Status: PASS
+Opcode: 010 | A: 160 | B: 094 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 010 | A: 110 | B: 109 | Res: 108 (Exp: 108) | Status: PASS
+Opcode: 010 | A: 253 | B: 222 | Res: 220 (Exp: 220) | Status: PASS
+Opcode: 010 | A: 175 | B: 207 | Res: 143 (Exp: 143) | Status: PASS
+Opcode: 011 | A: 137 | B: 002 | Res: 139 (Exp: 139) | Status: PASS
+Opcode: 011 | A: 137 | B: 120 | Res: 249 (Exp: 249) | Status: PASS
+Opcode: 011 | A: 215 | B: 217 | Res: 223 (Exp: 223) | Status: PASS
+Opcode: 011 | A: 009 | B: 138 | Res: 139 (Exp: 139) | Status: PASS
+Opcode: 011 | A: 122 | B: 161 | Res: 251 (Exp: 251) | Status: PASS
+Opcode: 011 | A: 253 | B: 091 | Res: 255 (Exp: 255) | Status: PASS
+Opcode: 011 | A: 213 | B: 027 | Res: 223 (Exp: 223) | Status: PASS
+Opcode: 010 | A: 106 | B: 213 | Res: 064 (Exp: 064) | Status: PASS
+Opcode: 011 | A: 255 | B: 240 | Res: 255 (Exp: 255) | Status: PASS
+Opcode: 011 | A: 211 | B: 173 | Res: 255 (Exp: 255) | Status: PASS
+Opcode: 010 | A: 076 | B: 131 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 010 | A: 161 | B: 109 | Res: 033 (Exp: 033) | Status: PASS
+Opcode: 011 | A: 010 | B: 002 | Res: 010 (Exp: 010) | Status: PASS
+Opcode: 011 | A: 061 | B: 119 | Res: 127 (Exp: 127) | Status: PASS
+Opcode: 011 | A: 167 | B: 126 | Res: 255 (Exp: 255) | Status: PASS
+Opcode: 010 | A: 014 | B: 207 | Res: 014 (Exp: 014) | Status: PASS
+Opcode: 011 | A: 208 | B: 125 | Res: 253 (Exp: 253) | Status: PASS
+Opcode: 010 | A: 115 | B: 200 | Res: 064 (Exp: 064) | Status: PASS
+Opcode: 010 | A: 180 | B: 150 | Res: 148 (Exp: 148) | Status: PASS
+Opcode: 010 | A: 122 | B: 216 | Res: 088 (Exp: 088) | Status: PASS
+Opcode: 010 | A: 112 | B: 170 | Res: 032 (Exp: 032) | Status: PASS
+Opcode: 010 | A: 220 | B: 133 | Res: 132 (Exp: 132) | Status: PASS
+Opcode: 010 | A: 005 | B: 099 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 011 | A: 212 | B: 203 | Res: 223 (Exp: 223) | Status: PASS
+Opcode: 011 | A: 037 | B: 027 | Res: 063 (Exp: 063) | Status: PASS
+Opcode: 010 | A: 126 | B: 127 | Res: 126 (Exp: 126) | Status: PASS
+Opcode: 011 | A: 019 | B: 209 | Res: 211 (Exp: 211) | Status: PASS
+Opcode: 010 | A: 032 | B: 153 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 010 | A: 001 | B: 048 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 010 | A: 001 | B: 207 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 011 | A: 179 | B: 180 | Res: 183 (Exp: 183) | Status: PASS
+Opcode: 011 | A: 096 | B: 203 | Res: 235 (Exp: 235) | Status: PASS
+Opcode: 010 | A: 181 | B: 203 | Res: 129 (Exp: 129) | Status: PASS
+Opcode: 011 | A: 084 | B: 062 | Res: 126 (Exp: 126) | Status: PASS
+Opcode: 010 | A: 202 | B: 022 | Res: 002 (Exp: 002) | Status: PASS
+Opcode: 010 | A: 221 | B: 229 | Res: 197 (Exp: 197) | Status: PASS
+Opcode: 010 | A: 034 | B: 013 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 010 | A: 060 | B: 059 | Res: 056 (Exp: 056) | Status: PASS
+Opcode: 010 | A: 087 | B: 020 | Res: 020 (Exp: 020) | Status: PASS
+Opcode: 011 | A: 059 | B: 135 | Res: 191 (Exp: 191) | Status: PASS
+Opcode: 010 | A: 043 | B: 136 | Res: 008 (Exp: 008) | Status: PASS
+Opcode: 010 | A: 086 | B: 070 | Res: 070 (Exp: 070) | Status: PASS
+Opcode: 010 | A: 232 | B: 189 | Res: 168 (Exp: 168) | Status: PASS
+Opcode: 010 | A: 006 | B: 196 | Res: 004 (Exp: 004) | Status: PASS
+Opcode: 010 | A: 019 | B: 150 | Res: 018 (Exp: 018) | Status: PASS
+Opcode: 011 | A: 116 | B: 210 | Res: 246 (Exp: 246) | Status: PASS
+Opcode: 010 | A: 097 | B: 180 | Res: 032 (Exp: 032) | Status: PASS
+Opcode: 011 | A: 198 | B: 021 | Res: 215 (Exp: 215) | Status: PASS
+
+==============================================================
+[LOGIC (AND/OR) SUMMARY] PASSED: 100 | FAILED: 0
+==============================================================
+
+
+--- STARTING SHIFT TESTS ---
+Opcode: 011 | A: 254 | B: 068 | Res: 254 (Exp: 254) | Status: PASS
+Opcode: 010 | A: 006 | B: 184 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 100 | A: 087 | B: 127 | Res: 128 (Exp: 128) | Status: PASS
+Opcode: 101 | A: 041 | B: 139 | Res: 005 (Exp: 005) | Status: PASS
+Opcode: 101 | A: 007 | B: 076 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 100 | A: 001 | B: 089 | Res: 002 (Exp: 002) | Status: PASS
+Opcode: 101 | A: 025 | B: 235 | Res: 003 (Exp: 003) | Status: PASS
+Opcode: 100 | A: 037 | B: 106 | Res: 148 (Exp: 148) | Status: PASS
+Opcode: 101 | A: 038 | B: 042 | Res: 009 (Exp: 009) | Status: PASS
+Opcode: 101 | A: 146 | B: 050 | Res: 036 (Exp: 036) | Status: PASS
+Opcode: 101 | A: 232 | B: 020 | Res: 014 (Exp: 014) | Status: PASS
+Opcode: 100 | A: 182 | B: 177 | Res: 108 (Exp: 108) | Status: PASS
+Opcode: 100 | A: 120 | B: 062 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 100 | A: 106 | B: 058 | Res: 168 (Exp: 168) | Status: PASS
+Opcode: 101 | A: 060 | B: 051 | Res: 007 (Exp: 007) | Status: PASS
+Opcode: 101 | A: 035 | B: 205 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 100 | A: 255 | B: 078 | Res: 192 (Exp: 192) | Status: PASS
+Opcode: 100 | A: 213 | B: 075 | Res: 168 (Exp: 168) | Status: PASS
+Opcode: 100 | A: 222 | B: 113 | Res: 188 (Exp: 188) | Status: PASS
+Opcode: 101 | A: 231 | B: 219 | Res: 028 (Exp: 028) | Status: PASS
+Opcode: 100 | A: 137 | B: 060 | Res: 144 (Exp: 144) | Status: PASS
+Opcode: 101 | A: 038 | B: 008 | Res: 038 (Exp: 038) | Status: PASS
+Opcode: 101 | A: 052 | B: 074 | Res: 013 (Exp: 013) | Status: PASS
+Opcode: 100 | A: 045 | B: 100 | Res: 208 (Exp: 208) | Status: PASS
+Opcode: 101 | A: 132 | B: 207 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 100 | A: 132 | B: 188 | Res: 064 (Exp: 064) | Status: PASS
+Opcode: 100 | A: 211 | B: 198 | Res: 192 (Exp: 192) | Status: PASS
+Opcode: 101 | A: 130 | B: 050 | Res: 032 (Exp: 032) | Status: PASS
+Opcode: 101 | A: 140 | B: 048 | Res: 140 (Exp: 140) | Status: PASS
+Opcode: 100 | A: 041 | B: 122 | Res: 164 (Exp: 164) | Status: PASS
+Opcode: 101 | A: 049 | B: 173 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 101 | A: 224 | B: 054 | Res: 003 (Exp: 003) | Status: PASS
+Opcode: 100 | A: 180 | B: 166 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 101 | A: 123 | B: 060 | Res: 007 (Exp: 007) | Status: PASS
+Opcode: 101 | A: 173 | B: 125 | Res: 005 (Exp: 005) | Status: PASS
+Opcode: 101 | A: 010 | B: 060 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 101 | A: 184 | B: 144 | Res: 184 (Exp: 184) | Status: PASS
+Opcode: 100 | A: 121 | B: 134 | Res: 064 (Exp: 064) | Status: PASS
+Opcode: 101 | A: 149 | B: 231 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 101 | A: 091 | B: 215 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 101 | A: 119 | B: 116 | Res: 007 (Exp: 007) | Status: PASS
+Opcode: 100 | A: 064 | B: 126 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 100 | A: 009 | B: 254 | Res: 064 (Exp: 064) | Status: PASS
+Opcode: 100 | A: 179 | B: 050 | Res: 204 (Exp: 204) | Status: PASS
+Opcode: 100 | A: 212 | B: 055 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 101 | A: 103 | B: 190 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 101 | A: 051 | B: 221 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 100 | A: 016 | B: 046 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 101 | A: 229 | B: 065 | Res: 114 (Exp: 114) | Status: PASS
+Opcode: 101 | A: 245 | B: 100 | Res: 015 (Exp: 015) | Status: PASS
+Opcode: 100 | A: 236 | B: 120 | Res: 236 (Exp: 236) | Status: PASS
+Opcode: 101 | A: 226 | B: 041 | Res: 113 (Exp: 113) | Status: PASS
+Opcode: 100 | A: 175 | B: 107 | Res: 120 (Exp: 120) | Status: PASS
+Opcode: 101 | A: 121 | B: 074 | Res: 030 (Exp: 030) | Status: PASS
+Opcode: 100 | A: 088 | B: 005 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 101 | A: 097 | B: 010 | Res: 024 (Exp: 024) | Status: PASS
+Opcode: 100 | A: 190 | B: 249 | Res: 124 (Exp: 124) | Status: PASS
+Opcode: 100 | A: 225 | B: 095 | Res: 128 (Exp: 128) | Status: PASS
+Opcode: 100 | A: 148 | B: 079 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 100 | A: 243 | B: 009 | Res: 230 (Exp: 230) | Status: PASS
+Opcode: 100 | A: 039 | B: 238 | Res: 192 (Exp: 192) | Status: PASS
+Opcode: 100 | A: 059 | B: 251 | Res: 216 (Exp: 216) | Status: PASS
+Opcode: 101 | A: 110 | B: 243 | Res: 013 (Exp: 013) | Status: PASS
+Opcode: 100 | A: 233 | B: 215 | Res: 128 (Exp: 128) | Status: PASS
+Opcode: 100 | A: 026 | B: 069 | Res: 064 (Exp: 064) | Status: PASS
+Opcode: 101 | A: 255 | B: 004 | Res: 015 (Exp: 015) | Status: PASS
+Opcode: 100 | A: 012 | B: 207 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 101 | A: 034 | B: 225 | Res: 017 (Exp: 017) | Status: PASS
+Opcode: 100 | A: 117 | B: 162 | Res: 212 (Exp: 212) | Status: PASS
+Opcode: 100 | A: 028 | B: 010 | Res: 112 (Exp: 112) | Status: PASS
+Opcode: 101 | A: 185 | B: 167 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 100 | A: 057 | B: 018 | Res: 228 (Exp: 228) | Status: PASS
+Opcode: 101 | A: 251 | B: 196 | Res: 015 (Exp: 015) | Status: PASS
+Opcode: 100 | A: 170 | B: 139 | Res: 080 (Exp: 080) | Status: PASS
+Opcode: 101 | A: 205 | B: 208 | Res: 205 (Exp: 205) | Status: PASS
+Opcode: 100 | A: 054 | B: 153 | Res: 108 (Exp: 108) | Status: PASS
+Opcode: 101 | A: 159 | B: 124 | Res: 009 (Exp: 009) | Status: PASS
+Opcode: 101 | A: 102 | B: 126 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 100 | A: 044 | B: 100 | Res: 192 (Exp: 192) | Status: PASS
+Opcode: 101 | A: 223 | B: 150 | Res: 003 (Exp: 003) | Status: PASS
+Opcode: 101 | A: 246 | B: 167 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 101 | A: 111 | B: 079 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 101 | A: 081 | B: 252 | Res: 005 (Exp: 005) | Status: PASS
+Opcode: 100 | A: 023 | B: 069 | Res: 224 (Exp: 224) | Status: PASS
+Opcode: 100 | A: 164 | B: 049 | Res: 072 (Exp: 072) | Status: PASS
+Opcode: 101 | A: 020 | B: 220 | Res: 001 (Exp: 001) | Status: PASS
+Opcode: 100 | A: 057 | B: 219 | Res: 200 (Exp: 200) | Status: PASS
+Opcode: 101 | A: 164 | B: 028 | Res: 010 (Exp: 010) | Status: PASS
+Opcode: 100 | A: 083 | B: 165 | Res: 096 (Exp: 096) | Status: PASS
+Opcode: 101 | A: 054 | B: 150 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 101 | A: 123 | B: 179 | Res: 015 (Exp: 015) | Status: PASS
+Opcode: 101 | A: 175 | B: 176 | Res: 175 (Exp: 175) | Status: PASS
+Opcode: 100 | A: 068 | B: 151 | Res: 000 (Exp: 000) | Status: PASS
+Opcode: 101 | A: 097 | B: 249 | Res: 048 (Exp: 048) | Status: PASS
+Opcode: 100 | A: 187 | B: 136 | Res: 187 (Exp: 187) | Status: PASS
+Opcode: 100 | A: 198 | B: 053 | Res: 192 (Exp: 192) | Status: PASS
+Opcode: 101 | A: 141 | B: 053 | Res: 004 (Exp: 004) | Status: PASS
+Opcode: 101 | A: 138 | B: 244 | Res: 008 (Exp: 008) | Status: PASS
+Opcode: 101 | A: 095 | B: 160 | Res: 095 (Exp: 095) | Status: PASS
+Opcode: 101 | A: 196 | B: 133 | Res: 006 (Exp: 006) | Status: PASS
+
+==============================================================
+[SHIFT (SHL/SHR) SUMMARY] PASSED: 100 | FAILED: 0
+==============================================================
+
+
+*****************************************
+*** FINAL TOTAL SUMMARY               ***
+*** TOTAL PASSED: 300                 ***
+*** TOTAL FAILED: 0                   ***
+*****************************************
+
+  1510.00ns INFO     cocotb.regression                  simple_alu_test passed
+  1510.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** testbench.simple_alu_test      PASS        1510.00           0.14      10986.53  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0               1510.00           0.16       9356.18  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory `/home/runner'
+Creating result.zip...
+  adding: __pycache__/ (stored 0%)
+  adding: __pycache__/agent.cpython-36.pyc (deflated 43%)
+  adding: __pycache__/transaction.cpython-36.pyc (deflated 39%)
+  adding: __pycache__/driver.cpython-36.pyc (deflated 38%)
+  adding: __pycache__/monitor.cpython-36.pyc (deflated 40%)
+  adding: __pycache__/testbench.cpython-36.pyc (deflated 28%)
+  adding: __pycache__/generator.cpython-36.pyc (deflated 39%)
+  adding: __pycache__/scoreboard.cpython-36.pyc (deflated 51%)
+  adding: __pycache__/environment.cpython-36.pyc (deflated 46%)
+  adding: run.bash (stored 0%)
+  adding: results.xml (deflated 37%)
+  adding: sim_build/ (stored 0%)
+  adding: sim_build/cmds.f (stored 0%)
+  adding: sim_build/sim.vvp (deflated 78%)
+  adding: environment.py (deflated 67%)
+  adding: testbench.py (deflated 36%)
+  adding: scoreboard.py (deflated 72%)
+  adding: work/ (stored 0%)
+  adding: driver.py (deflated 53%)
+  adding: monitor.py (deflated 62%)
+  adding: agent.py (deflated 59%)
+  adding: Makefile (deflated 13%)
+  adding: design.sv (deflated 66%)
+  adding: generator.py (deflated 53%)
+  adding: transaction.py (deflated 53%)
+  adding: ACCELLERA_OVL_VHDL_LIB/ (stored 0%)
+  adding: run.sh (deflated 35%)
+  adding: .bash_profile (deflated 21%)
+  adding: .bash_logout (stored 0%)
+  adding: .bashrc (deflated 23%)
+[2026-07-19 21:23:07 UTC] Waiting for download...
+Done
