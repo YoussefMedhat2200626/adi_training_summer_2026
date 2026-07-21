@@ -1,0 +1,221 @@
+m255
+K3
+z0
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+!s11f MIXED_VERSIONS
+13
+cModel Technology
+Z1 dC:\ADI\adi_training_summer_2026\Verfiaction_Plan
+T_opt
+Z2 !s11d alu_pkg C:/ADI/adi_training_summer_2026/Verfiaction_Plan/work 1 alu_if 1 C:/ADI/adi_training_summer_2026/Verfiaction_Plan/work 
+!s110 1784650241
+Vj80Ve=UhfgJ0g4XRSE89d3
+Z3 04 6 4 work tb_top fast 0
+=1-50849260501d-6a5f9a00-3b1-6684
+Z4 !s102 +cover=bcesfx
+Z5 !s124 OEM100
+Z6 o-quiet -auto_acc_if_foreign -work work +acc +cover=bcesfx
+Z7 tCvgOpt 0
+n@_opt
+Z8 OL;O;2021.1;73
+R1
+T_opt1
+R2
+Z9 !s110 1784650566
+VXh>=_QDX8F_7aK7`JDcZ83
+R3
+=1-50849260501d-6a5f9b46-31a-52c4
+R4
+R5
+R6
+R7
+n@_opt1
+R8
+vALU
+Z10 !s105 alu_if_sv_unit
+Z11 DXx4 work 14 alu_if_sv_unit 0 22 l??WAUH[Q79[mm7mHQ9663
+Z12 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R9
+!i10b 1
+!s100 Ge6S=^d451=mi^zNAZQUE3
+I10IPB>XF7k04G9@LF9F3<2
+S1
+Z13 dC:/ADI/adi_training_summer_2026/Verfiaction_Plan
+Z14 w1784648837
+Z15 8alu.sv
+Z16 Falu.sv
+!i122 8
+L0 3 63
+Z17 VDg1SIo80bB@j0V0VzS_@n1
+Z18 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z19 !s108 1784650566.000000
+Z20 !s107 test.sv|scoreboard.sv|monitor.sv|driver.sv|generator.sv|tb_top.sv|alu.sv|alu_pkg.sv|alu_if.sv|
+Z21 !s90 -reportprogress|300|-sv|-mfcu|+incdir+.|alu_if.sv|alu_pkg.sv|alu.sv|tb_top.sv|+cover=bcesfx|+define+SIM|
+!i113 0
+R4
+Z22 o-sv -mfcu +cover=bcesfx -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z23 !s92 -sv -mfcu +incdir+. +cover=bcesfx +define+SIM -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+n@a@l@u
+Yalu_if
+R10
+R11
+R12
+R9
+!i10b 1
+!s100 hWeNakOB^em@L>ajSkJMF1
+I?YWRSi3;hYVo4PGTLNTQ]1
+S1
+R13
+w1784646553
+Z24 8alu_if.sv
+Z25 Falu_if.sv
+!i122 8
+Z26 L0 9 0
+R17
+R18
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R4
+R22
+R23
+R7
+Xalu_if_sv_unit
+R12
+Z27 DXx4 work 7 alu_pkg 0 22 2^M5a>^ig][J]PLk7VPa72
+R9
+Vl??WAUH[Q79[mm7mHQ9663
+r1
+!s85 0
+!i10b 1
+!s100 n;KVBCMM;OITlO9dFAKa^3
+Il??WAUH[Q79[mm7mHQ9663
+!i103 1
+S1
+R13
+R14
+R24
+R25
+Z28 8alu_pkg.sv
+Z29 Falu_pkg.sv
+R15
+R16
+Z30 8tb_top.sv
+Z31 Ftb_top.sv
+!i122 8
+L0 6 0
+R18
+31
+R19
+R20
+R21
+!i113 0
+R4
+R22
+R23
+R7
+Xalu_pkg
+!s115 alu_if
+R12
+R9
+!i10b 1
+!s100 ECc9nUCA;8Y]n1LN4fmDm2
+I2^M5a>^ig][J]PLk7VPa72
+S1
+R13
+w1784650104
+R28
+R29
+Fgenerator.sv
+Fdriver.sv
+Fmonitor.sv
+Fscoreboard.sv
+Ftest.sv
+!i122 8
+R26
+V2^M5a>^ig][J]PLk7VPa72
+R18
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R4
+R22
+R23
+R7
+Xalu_pkg_sv_unit
+DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+DXx4 work 7 alu_pkg 0 22 @fJQ5S21?F`R[19=g=8?82
+VLgjhnah7^2fE7ehYiW1;?1
+r1
+!s85 0
+31
+!i10b 1
+!s100 UjWFf:KP=6zOJK5j8k19U2
+ILgjhnah7^2fE7ehYiW1;?1
+!i103 1
+S1
+R1
+w1784646608
+R28
+R29
+R24
+R25
+R15
+R16
+R30
+R31
+L3 6
+OV;L;10.1d;51
+!s108 1784646615.253000
+!s107 tb_top.sv|alu.sv|alu_if.sv|alu_pkg.sv|
+!s90 -sv|-mfcu|alu_pkg.sv|alu_if.sv|alu.sv|tb_top.sv|+cover=bcesfx|+define+SIM|
+!s101 -O0
+R4
+o-sv -mfcu +cover=bcesfx -O0
+!s92 -sv -mfcu +cover=bcesfx +define+SIM -O0
+vtb_top
+R12
+R27
+R11
+R9
+R17
+r1
+!s85 0
+!i10b 1
+!s100 1:JELOM5lE_L@KV8gcl@43
+IiC^c[O;e6bI4Fkz4_iP@n3
+R10
+S1
+R13
+w1784648012
+R30
+R31
+!i122 8
+L0 8 50
+R18
+31
+R19
+R20
+R21
+!i113 0
+R4
+R22
+R23
+R7

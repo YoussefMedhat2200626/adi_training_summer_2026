@@ -1,0 +1,197 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 20:21:21 on Jul 21,2026
+# vlog -reportprogress 300 -sv -mfcu "+incdir+." alu_if.sv alu_pkg.sv alu.sv tb_top.sv "+cover=bcesfx" "+define+SIM" 
+# -- Compiling interface alu_if
+# -- Compiling package alu_pkg
+# -- Compiling module ALU
+# -- Compiling package alu_if_sv_unit
+# -- Importing package alu_pkg
+# -- Compiling module tb_top
+# 
+# Top level modules:
+# 	tb_top
+# End time: 20:21:21 on Jul 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc +cover=bcesfx" work.tb_top -coverage 
+# Start time: 20:21:21 on Jul 21,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.alu_if(fast)
+# Loading work.alu_pkg(fast)
+# Loading work.alu_if_sv_unit(fast)
+# Loading work.tb_top(fast)
+# Loading work.alu_if(fast__2)
+# Loading work.ALU(fast)
+# [TB] Starting test with 1000 transactions
+# [DRV] reset complete @ 35000
+# [GEN] Generator started at time 35000
+# [GEN] Starting directed tests...
+# [GEN] Directed: A=0 B=0 OP=ADD
+# [GEN] Directed: A=0 B=0 OP=SUB
+# [GEN] Directed: A=0 B=0 OP=AND
+# [GEN] Directed: A=0 B=0 OP=OR
+# [GEN] Directed: A=0 B=15 OP=ADD
+# [GEN] Directed: A=0 B=15 OP=SUB
+# [GEN] Directed: A=0 B=15 OP=AND
+# [GEN] Directed: A=0 B=15 OP=OR
+# [GEN] Directed: A=15 B=0 OP=ADD
+# [GEN] Directed: A=15 B=0 OP=SUB
+# [GEN] Directed: A=15 B=0 OP=AND
+# [GEN] Directed: A=15 B=0 OP=OR
+# [GEN] Directed: A=15 B=15 OP=ADD
+# [GEN] Directed: A=15 B=15 OP=SUB
+# [GEN] Directed: A=15 B=15 OP=AND
+# [GEN] Directed: A=15 B=15 OP=OR
+# [GEN] Directed: A=15 B=15 OP=ADD
+# [GEN] Directed: A=15 B=15 OP=SUB
+# [GEN] Directed: A=15 B=15 OP=AND
+# [GEN] Directed: A=15 B=15 OP=OR
+# [GEN] Directed: A=0 B=15 OP=ADD
+# [GEN] Directed: A=0 B=15 OP=SUB
+# [GEN] Directed: A=0 B=15 OP=AND
+# [GEN] Directed: A=0 B=15 OP=OR
+# [GEN] Directed tests complete. Total directed: 24
+# [GEN] Starting 1000 random tests...
+# [MON] Captured 50 transactions so far @ 545000
+# [SCB-PASS] A=0 B=14 OP=AND Result=0 Zero=1 Carry=0 Arithm=0 Logic=1
+# [DRV] Sent 50 transactions so far @ 1015000
+# [MON] Captured 100 transactions so far @ 1045000
+# [SCB-PASS] A=2 B=0 OP=SUB Result=2 Zero=0 Carry=0 Arithm=1 Logic=0
+# [MON] Captured 150 transactions so far @ 1545000
+# [SCB-PASS] A=4 B=2 OP=SUB Result=2 Zero=0 Carry=0 Arithm=1 Logic=0
+# [DRV] Sent 100 transactions so far @ 2015000
+# [MON] Captured 200 transactions so far @ 2045000
+# [SCB-PASS] A=10 B=12 OP=SUB Result=14 Zero=0 Carry=1 Arithm=1 Logic=0
+# [MON] Captured 250 transactions so far @ 2545000
+# [SCB-PASS] A=0 B=0 OP=ADD Result=0 Zero=1 Carry=0 Arithm=1 Logic=0
+# [DRV] Sent 150 transactions so far @ 3015000
+# [MON] Captured 300 transactions so far @ 3045000
+# [SCB-PASS] A=9 B=0 OP=SUB Result=9 Zero=0 Carry=0 Arithm=1 Logic=0
+# [MON] Captured 350 transactions so far @ 3545000
+# [SCB-PASS] A=6 B=3 OP=OR Result=7 Zero=0 Carry=0 Arithm=0 Logic=1
+# [DRV] Sent 200 transactions so far @ 4015000
+# [MON] Captured 400 transactions so far @ 4045000
+# [SCB-PASS] A=4 B=7 OP=ADD Result=11 Zero=0 Carry=0 Arithm=1 Logic=0
+# [MON] Captured 450 transactions so far @ 4545000
+# [SCB-PASS] A=11 B=13 OP=OR Result=15 Zero=0 Carry=0 Arithm=0 Logic=1
+# [DRV] Sent 250 transactions so far @ 5015000
+# [MON] Captured 500 transactions so far @ 5045000
+# [SCB-PASS] A=1 B=5 OP=AND Result=1 Zero=0 Carry=0 Arithm=0 Logic=1
+# [MON] Captured 550 transactions so far @ 5545000
+# [SCB-PASS] A=2 B=14 OP=SUB Result=4 Zero=0 Carry=1 Arithm=1 Logic=0
+# [DRV] Sent 300 transactions so far @ 6015000
+# [MON] Captured 600 transactions so far @ 6045000
+# [SCB-PASS] A=15 B=0 OP=AND Result=0 Zero=1 Carry=0 Arithm=0 Logic=1
+# [MON] Captured 650 transactions so far @ 6545000
+# [SCB-PASS] A=1 B=10 OP=ADD Result=11 Zero=0 Carry=0 Arithm=1 Logic=0
+# [DRV] Sent 350 transactions so far @ 7015000
+# [MON] Captured 700 transactions so far @ 7045000
+# [SCB-PASS] A=11 B=1 OP=AND Result=1 Zero=0 Carry=0 Arithm=0 Logic=1
+# [MON] Captured 750 transactions so far @ 7545000
+# [SCB-PASS] A=0 B=15 OP=ADD Result=15 Zero=0 Carry=0 Arithm=1 Logic=0
+# [DRV] Sent 400 transactions so far @ 8015000
+# [MON] Captured 800 transactions so far @ 8045000
+# [SCB-PASS] A=1 B=15 OP=SUB Result=2 Zero=0 Carry=1 Arithm=1 Logic=0
+# [MON] Captured 850 transactions so far @ 8545000
+# [SCB-PASS] A=10 B=6 OP=ADD Result=0 Zero=1 Carry=1 Arithm=1 Logic=0
+# [DRV] Sent 450 transactions so far @ 9015000
+# [MON] Captured 900 transactions so far @ 9045000
+# [SCB-PASS] A=12 B=12 OP=OR Result=12 Zero=0 Carry=0 Arithm=0 Logic=1
+# [MON] Captured 950 transactions so far @ 9545000
+# [SCB-PASS] A=0 B=1 OP=SUB Result=15 Zero=0 Carry=1 Arithm=1 Logic=0
+# [DRV] Sent 500 transactions so far @ 10015000
+# [MON] Captured 1000 transactions so far @ 10045000
+# [SCB-PASS] A=2 B=3 OP=ADD Result=5 Zero=0 Carry=0 Arithm=1 Logic=0
+# [MON] Captured 1050 transactions so far @ 10545000
+# [SCB-PASS] A=9 B=6 OP=AND Result=0 Zero=1 Carry=0 Arithm=0 Logic=1
+# [DRV] Sent 550 transactions so far @ 11015000
+# [MON] Captured 1100 transactions so far @ 11045000
+# [SCB-PASS] A=12 B=15 OP=ADD Result=11 Zero=0 Carry=1 Arithm=1 Logic=0
+# [MON] Captured 1150 transactions so far @ 11545000
+# [SCB-PASS] A=5 B=1 OP=ADD Result=6 Zero=0 Carry=0 Arithm=1 Logic=0
+# [DRV] Sent 600 transactions so far @ 12015000
+# [MON] Captured 1200 transactions so far @ 12045000
+# [SCB-PASS] A=11 B=13 OP=SUB Result=14 Zero=0 Carry=1 Arithm=1 Logic=0
+# [MON] Captured 1250 transactions so far @ 12545000
+# [SCB-PASS] A=9 B=0 OP=AND Result=0 Zero=1 Carry=0 Arithm=0 Logic=1
+# [DRV] Sent 650 transactions so far @ 13015000
+# [MON] Captured 1300 transactions so far @ 13045000
+# [SCB-PASS] A=3 B=13 OP=ADD Result=0 Zero=1 Carry=1 Arithm=1 Logic=0
+# [MON] Captured 1350 transactions so far @ 13545000
+# [SCB-PASS] A=9 B=15 OP=OR Result=15 Zero=0 Carry=0 Arithm=0 Logic=1
+# [DRV] Sent 700 transactions so far @ 14015000
+# [MON] Captured 1400 transactions so far @ 14045000
+# [SCB-PASS] A=2 B=12 OP=ADD Result=14 Zero=0 Carry=0 Arithm=1 Logic=0
+# [MON] Captured 1450 transactions so far @ 14545000
+# [SCB-PASS] A=5 B=15 OP=SUB Result=6 Zero=0 Carry=1 Arithm=1 Logic=0
+# [DRV] Sent 750 transactions so far @ 15015000
+# [MON] Captured 1500 transactions so far @ 15045000
+# [SCB-PASS] A=7 B=8 OP=AND Result=0 Zero=1 Carry=0 Arithm=0 Logic=1
+# [MON] Captured 1550 transactions so far @ 15545000
+# [SCB-PASS] A=12 B=8 OP=ADD Result=4 Zero=0 Carry=1 Arithm=1 Logic=0
+# [DRV] Sent 800 transactions so far @ 16015000
+# [MON] Captured 1600 transactions so far @ 16045000
+# [SCB-PASS] A=10 B=3 OP=SUB Result=7 Zero=0 Carry=0 Arithm=1 Logic=0
+# [MON] Captured 1650 transactions so far @ 16545000
+# [SCB-PASS] A=15 B=8 OP=OR Result=15 Zero=0 Carry=0 Arithm=0 Logic=1
+# [DRV] Sent 850 transactions so far @ 17015000
+# [MON] Captured 1700 transactions so far @ 17045000
+# [SCB-PASS] A=15 B=10 OP=SUB Result=5 Zero=0 Carry=0 Arithm=1 Logic=0
+# [MON] Captured 1750 transactions so far @ 17545000
+# [SCB-PASS] A=9 B=12 OP=AND Result=8 Zero=0 Carry=0 Arithm=0 Logic=1
+# [DRV] Sent 900 transactions so far @ 18015000
+# [MON] Captured 1800 transactions so far @ 18045000
+# [SCB-PASS] A=0 B=5 OP=SUB Result=11 Zero=0 Carry=1 Arithm=1 Logic=0
+# [MON] Captured 1850 transactions so far @ 18545000
+# [SCB-PASS] A=0 B=13 OP=SUB Result=3 Zero=0 Carry=1 Arithm=1 Logic=0
+# [DRV] Sent 950 transactions so far @ 19015000
+# [MON] Captured 1900 transactions so far @ 19045000
+# [SCB-PASS] A=0 B=15 OP=AND Result=0 Zero=1 Carry=0 Arithm=0 Logic=1
+# [MON] Captured 1950 transactions so far @ 19545000
+# [SCB-PASS] A=15 B=6 OP=OR Result=15 Zero=0 Carry=0 Arithm=0 Logic=1
+# [DRV] Sent 1000 transactions so far @ 20015000
+# [MON] Captured 2000 transactions so far @ 20045000
+# [SCB-PASS] A=15 B=7 OP=AND Result=7 Zero=0 Carry=0 Arithm=0 Logic=1
+# [GEN] Completed 1000 random tests
+# [GEN] All transactions generated. Total: 1024 transactions
+# [MON] Captured 2050 transactions so far @ 20545000
+# [SCB-PASS] A=13 B=14 OP=ADD Result=11 Zero=0 Carry=1 Arithm=1 Logic=0
+# 
+# ===================== SCOREBOARD REPORT =====================
+#  PASS = 2063   FAIL = 0   TOTAL = 2063
+#  RESULT: *** TEST PASSED ***
+# ===============================================================
+# 
+# [TEST] Simulation complete at time 20685000
+# [TEST] error_count=0 correct_count=2063
+# ** Note: $finish    : test.sv(42)
+#    Time: 20685 ns  Iteration: 2  Instance: /tb_top
+# 1
+# Break in Task alu_pkg/test::run at test.sv line 42
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Start time: 20:21:38 on Jul 21,2026
+# vcover report tb_top.ucdb -details -annotate -all -output coverage_rpt.txt 
+# End time: 20:21:38 on Jul 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-17388) No matching coverage data found.
+# ** Note: (vsim-17388) No matching coverage data found.
+# End time: 23:45:26 on Jul 21,2026, Elapsed time: 3:24:05
+# Errors: 0, Warnings: 0

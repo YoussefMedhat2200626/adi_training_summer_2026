@@ -1,0 +1,947 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /tb_top/vif
+=== Design Unit: work.alu_if
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      11        11         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /tb_top/vif --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File alu_if.sv
+    3                                                interface alu_if #(parameter WIDTH = 4) (input bit CLK);
+    4                                                
+    5                                                    logic [WIDTH-1:0] A;
+    6                                                    logic [WIDTH-1:0] B;
+    7                                                    logic [1:0]       OP;
+    8                                                    logic              RST;
+    9                                                
+    10                                                   logic              Zero_Flag;
+    11                                                   logic              Arithm_FLag;
+    12                                                   logic              Logic_Flag;
+    13                                                   logic              Carry_Flag;
+    14                                                   logic [WIDTH-1:0] Result;
+    15                                               
+    16              1                          1         clocking drv_cb @(posedge CLK);
+    17                                                       default input #1step output #2;
+    18                                                       output A, B, OP, RST;
+    19                                                   endclocking
+    20                                               
+    21              1                          1         clocking mon_cb @(posedge CLK);
+    22                                                       default input #1step output #2;
+    23              1                          1             input A, B, OP, RST, Zero_Flag, Arithm_FLag, Logic_Flag, Carry_Flag, Result;
+    23              2                          1     
+    23              3                          1     
+    23              4                          1     
+    23              5                          1     
+    23              6                          1     
+    23              7                          1     
+    23              8                          1     
+    23              9                          1     
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         44        39         5    88.63%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /tb_top/vif --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                            A[3-0]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                       Arithm_FLag           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                            B[3-0]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                               CLK           1           1                                                                  100.00 
+                                        Carry_Flag           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                        Logic_Flag           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                           OP[1-0]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                               RST           0           1           0           0           0           0           3       16.66 
+                                       Result[3-0]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                         Zero_Flag           1           1           0*          0*          0*          0*    2-STATE      100.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         20 
+Toggled Node Count   =         19 
+Untoggled Node Count =          1 
+
+Toggle Coverage      =      88.63% (39 of 44 bins)
+
+=================================================================================
+=== Instance: /tb_top/dut
+=== Design Unit: work.ALU
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         7         6         1    85.71%
+
+================================Branch Details================================
+
+Branch Coverage for instance /tb_top/dut
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File alu.sv
+------------------------------------IF Branch------------------------------------
+    25                                      1996     Count coming in to IF
+    25              1                          2         if(!RST) begin
+    31              1                       1994         else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    41                                      1023     Count coming in to CASE
+    42              1                        258             2'b00: begin
+    47              1                        264             2'b01: begin
+    52              1                        259             2'b10: begin
+    57              1                        242             2'b11: begin
+                                         ***0***     All False Count
+Branch totals: 4 hits of 5 branches = 80.00%
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      1         1         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /tb_top/dut --
+
+  File alu.sv
+----------------Focused Expression View-----------------
+Line       22 Item    1  (Result == 0)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (Result == 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (Result == 0)_0       -                             
+  Row   2:          1  (Result == 0)_1       -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      24        24         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /tb_top/dut --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File alu.sv
+    3                                                module ALU #(parameter WIDTH = 4)(
+    4                                                    input  wire [WIDTH-1:0] A,
+    5                                                    input  wire [WIDTH-1:0] B,
+    6                                                    input  wire [1:0]       OP,
+    7                                                    input  wire             CLK,
+    8                                                    input  wire             RST,
+    9                                                
+    10                                                   output                    Zero_Flag,
+    11                                                   output reg                Arithm_FLag,
+    12                                                   output reg                Logic_Flag,
+    13                                                   output reg                Carry_Flag,
+    14                                                   output reg [WIDTH-1:0]    Result
+    15                                               );
+    16                                               
+    17                                               reg [WIDTH-1:0] Comp_Result;
+    18                                               reg Comp_Carry_Flag;
+    19                                               reg Comp_Arithm_Flag;
+    20                                               reg Comp_Logic_Flag;
+    21                                               
+    22              1                        935     assign Zero_Flag = (Result == 0);
+    23                                               
+    24              1                       1996     always @(posedge CLK, negedge RST) begin
+    25                                                   if(!RST) begin
+    26              1                          2             Result          <= 'b0000;
+    27              1                          2             Carry_Flag      <= 1'b0;
+    28              1                          2             Arithm_FLag     <= 1'b0;
+    29              1                          2             Logic_Flag      <= 1'b0;
+    30                                                   end
+    31                                                   else begin
+    32              1                       1994             Result         <= Comp_Result;
+    33              1                       1994             Carry_Flag     <= Comp_Carry_Flag;
+    34              1                       1994             Arithm_FLag    <= Comp_Arithm_Flag;
+    35              1                       1994             Logic_Flag     <= Comp_Logic_Flag;
+    36                                                   end
+    37                                               end
+    38                                               
+    39              1                       1023     always @(*) begin
+    40              1                       1023         Comp_Result = 'b0000;
+    41                                                   case (OP)
+    42                                                       2'b00: begin
+    43              1                        258                 {Comp_Carry_Flag,Comp_Result} = A + B;
+    44              1                        258                 Comp_Arithm_Flag = 1'b1;
+    45              1                        258                 Comp_Logic_Flag  = 1'b0;
+    46                                                       end
+    47                                                       2'b01: begin
+    48              1                        264                 {Comp_Carry_Flag,Comp_Result} = A - B;
+    49              1                        264                 Comp_Arithm_Flag = 1'b1;
+    50              1                        264                 Comp_Logic_Flag  = 1'b0;
+    51                                                       end
+    52                                                       2'b10: begin
+    53              1                        259                 {Comp_Carry_Flag,Comp_Result} = A & B;
+    54              1                        259                 Comp_Arithm_Flag = 1'b0;
+    55              1                        259                 Comp_Logic_Flag  = 1'b1;
+    56                                                       end
+    57                                                       2'b11: begin
+    58              1                        242                 {Comp_Carry_Flag,Comp_Result} = A | B;
+    59              1                        242                 Comp_Arithm_Flag = 1'b0;
+    60              1                        242                 Comp_Logic_Flag  = 1'b1;
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         58        53         5    91.37%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /tb_top/dut --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                            A[0-3]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                       Arithm_FLag           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                            B[0-3]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                               CLK           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                        Carry_Flag           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                  Comp_Arithm_Flag           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                   Comp_Carry_Flag           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                   Comp_Logic_Flag           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                  Comp_Result[3-0]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                        Logic_Flag           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                           OP[0-1]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                               RST           0           1           0           0           0           0           3       16.66 
+                                       Result[3-0]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                         Zero_Flag           1           1           0*          0*          0*          0*    2-STATE      100.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         27 
+Toggled Node Count   =         26 
+Untoggled Node Count =          1 
+
+Toggle Coverage      =      91.37% (53 of 58 bins)
+
+=================================================================================
+=== Instance: /tb_top
+=== Design Unit: work.tb_top
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         1         1    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /tb_top
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File tb_top.sv
+------------------------------------IF Branch------------------------------------
+    39                                         1     Count coming in to IF
+    39              1                          1             if (!$value$plusargs("NUM_TXNS=%d", num_txns))
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      12         9         3    75.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /tb_top --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File tb_top.sv
+    8                                                module tb_top;
+    9                                                
+    10                                                   localparam WIDTH = alu_pkg::WIDTH;
+    11                                                   localparam CLK_PERIOD = 10;
+    12                                               
+    13                                                   bit CLK;
+    14              1                       4138         always #(CLK_PERIOD/2) CLK = ~CLK;
+    14              2                       4137     
+    15                                               
+    16                                                   alu_if #(.WIDTH(WIDTH)) vif (.CLK(CLK));
+    17                                               
+    18                                                   ALU #(.WIDTH(WIDTH)) dut (
+    19                                                       .A           (vif.A),
+    20                                                       .B           (vif.B),
+    21                                                       .OP          (vif.OP),
+    22                                                       .CLK         (vif.CLK),
+    23                                                       .RST         (vif.RST),
+    24                                                       .Zero_Flag   (vif.Zero_Flag),
+    25                                                       .Arithm_FLag (vif.Arithm_FLag),
+    26                                                       .Logic_Flag  (vif.Logic_Flag),
+    27                                                       .Carry_Flag  (vif.Carry_Flag),
+    28                                                       .Result      (vif.Result)
+    29                                                   );
+    30                                               
+    31                                                   wire [31:0] tb_error_count = alu_pkg::error_count;
+    32                                                   wire [31:0] tb_correct_count = alu_pkg::correct_count;
+    33                                                   wire tb_test_finished = alu_pkg::test_finished;
+    34                                               
+    35                                                   initial begin
+    36                                                       test t;
+    37                                                       int  num_txns;
+    38                                               
+    39                                                       if (!$value$plusargs("NUM_TXNS=%d", num_txns))
+    40              1                          1                 num_txns = 1000;
+    41                                                       
+    42              1                          1             $display("[TB] Starting test with %0d transactions", num_txns);
+    43              1                          1             t = new(vif.DRIVER, vif.MONITOR, num_txns);
+    44              1                          1             t.run();
+    45                                                   end
+    46                                               
+    47                                                   initial begin
+    48              1                          1             #5000000;
+    49              1                    ***0***             $display("[TB] ERROR: watchdog timeout - simulation did not finish");
+    50              1                    ***0***             $display("[TB] Total time: %0t", $time);
+    51              1                    ***0***             $finish;
+    52                                                   end
+    53                                               
+    54                                                   initial begin
+    55              1                          1             $dumpfile("alu_tb.vcd");
+    56              1                          1             $dumpvars(0, tb_top);
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        348        26       322     7.47%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /tb_top --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                               CLK           1           1                                                                  100.00 
+                            tb_correct_count[0-10]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                              tb_correct_count[11]           0           1           0           0           0           0           3       16.66 
+                           tb_correct_count[12-31]           0           0           0           0           0           0           3        0.00 
+                              tb_error_count[0-31]           0           0           0           0           0           0           3        0.00 
+                                  tb_test_finished           0           1           0           0           0           0           3       16.66 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         66 
+Toggled Node Count   =         12 
+Untoggled Node Count =         54 
+
+Toggle Coverage      =       7.47% (26 of 348 bins)
+
+=================================================================================
+=== Instance: /alu_pkg
+=== Design Unit: work.alu_pkg
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        28        22         6    78.57%
+
+================================Branch Details================================
+
+Branch Coverage for instance /alu_pkg
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File alu_pkg.sv
+------------------------------------CASE Branch------------------------------------
+    57                                        65     Count coming in to CASE
+    58              1                         18                     OP_ADD: return "ADD";
+    59              1                         19                     OP_SUB: return "SUB";
+    60              1                         16                     OP_AND: return "AND";
+    61              1                         12                     OP_OR : return "OR";
+    62              1                    ***0***                     default: return "??";
+Branch totals: 4 hits of 5 branches = 80.00%
+
+
+  File generator.sv
+------------------------------------IF Branch------------------------------------
+    44                                      1000     Count coming in to IF
+    44              1                    ***0***                 if (!t.randomize())
+                                            1000     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+  File driver.sv
+------------------------------------IF Branch------------------------------------
+    30                                      1024     Count coming in to IF
+    30              1                       1023                 if (!first_txn) @(negedge vif.drv_cb);
+                                               1     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    33                                      1024     Count coming in to IF
+    33              1                         20                 if (transaction_count % 50 == 0)
+                                            1004     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+  File monitor.sv
+------------------------------------IF Branch------------------------------------
+    20                                      2064     Count coming in to IF
+    20              1                    ***0***                 if (vif.mon_cb.RST === 1'b0) begin
+                                            2064     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    26                                      2064     Count coming in to IF
+    26              1                       2063                 if (!first && pending != null) begin
+                                               1     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    34                                      2063     Count coming in to IF
+    34              1                         41                     if (transaction_count % 50 == 0)
+                                            2022     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+  File scoreboard.sv
+------------------------------------CASE Branch------------------------------------
+    14                                      2063     Count coming in to CASE
+    15              1                        531                 OP_ADD: begin wide = a + b; result = wide[WIDTH-1:0]; carry = wide[WIDTH]; arithm = 1; logic_f = 0; end
+    16              1                        528                 OP_SUB: begin wide = a - b; result = wide[WIDTH-1:0]; carry = wide[WIDTH]; arithm = 1; logic_f = 0; end
+    17              1                        520                 OP_AND: begin result = a & b; carry = 0; arithm = 0; logic_f = 1; end
+    18              1                        484                 OP_OR : begin result = a | b; carry = 0; arithm = 0; logic_f = 1; end
+    19              1                    ***0***                 default: begin result = '0; carry = 0; arithm = 0; logic_f = 0; end
+Branch totals: 4 hits of 5 branches = 80.00%
+
+------------------------------------IF Branch------------------------------------
+    35                                      2063     Count coming in to IF
+    35              1                       2063                 if (exp_result === t.Result && exp_carry === t.Carry_Flag &&
+    42              1                    ***0***                 end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    40                                      2063     Count coming in to IF
+    40              1                         41                     if (pass_cnt % 50 == 0)
+                                            2022     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    55                                         1     Count coming in to IF
+    55              1                          1             $display(" RESULT: %0s", (fail_cnt == 0) ? "*** TEST PASSED ***" : "*** TEST FAILED ***");
+    55              2                    ***0***             $display(" RESULT: %0s", (fail_cnt == 0) ? "*** TEST PASSED ***" : "*** TEST FAILED ***");
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      12         4         8    33.33%
+
+================================Condition Details================================
+
+Condition Coverage for instance /alu_pkg --
+
+  File driver.sv
+----------------Focused Condition View-------------------
+Line       33 Item    1  ((this.transaction_count % 50) == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                            Input Term   Covered  Reason for no coverage   Hint
+                           -----------  --------  -----------------------  --------------
+  ((this.transaction_count % 50) == 0)         Y
+
+     Rows:       Hits  FEC Target                              Non-masking condition(s)      
+ ---------  ---------  --------------------                    -------------------------     
+  Row   1:          1  ((this.transaction_count % 50) == 0)_0  -                             
+  Row   2:          1  ((this.transaction_count % 50) == 0)_1  -                             
+
+
+----------------Focused Condition View-------------------
+Line       20 Item    1  (this.vif.mon_cb.RST === 1'b0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                      Input Term   Covered  Reason for no coverage   Hint
+                     -----------  --------  -----------------------  --------------
+  (this.vif.mon_cb.RST === 1'b0)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                        Non-masking condition(s)      
+ ---------  ---------  --------------------              -------------------------     
+  Row   1:          1  (this.vif.mon_cb.RST === 1'b0)_0  -                             
+  Row   2:    ***0***  (this.vif.mon_cb.RST === 1'b0)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       26 Item    1  (~first && (this.pending != null))
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+              Input Term   Covered  Reason for no coverage   Hint
+             -----------  --------  -----------------------  --------------
+                   first         Y
+  (this.pending != null)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                Non-masking condition(s)      
+ ---------  ---------  --------------------      -------------------------     
+  Row   1:          1  first_0                   (this.pending != null)        
+  Row   2:          1  first_1                   -                             
+  Row   3:    ***0***  (this.pending != null)_0  ~first                        
+  Row   4:          1  (this.pending != null)_1  ~first                        
+
+----------------Focused Condition View-------------------
+Line       34 Item    1  ((this.transaction_count % 50) == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                            Input Term   Covered  Reason for no coverage   Hint
+                           -----------  --------  -----------------------  --------------
+  ((this.transaction_count % 50) == 0)         Y
+
+     Rows:       Hits  FEC Target                              Non-masking condition(s)      
+ ---------  ---------  --------------------                    -------------------------     
+  Row   1:          1  ((this.transaction_count % 50) == 0)_0  -                             
+  Row   2:          1  ((this.transaction_count % 50) == 0)_1  -                             
+
+
+----------------Focused Condition View-------------------
+Line       35 Item    1  ((exp_result === t.Result) && (exp_carry === t.Carry_Flag) && (exp_arithm === t.Arithm_FLag) && (exp_logic === t.Logic_Flag) && (exp_zero === t.Zero_Flag))
+Condition totals: 0 of 5 input terms covered = 0.00%
+
+                      Input Term   Covered  Reason for no coverage   Hint
+                     -----------  --------  -----------------------  --------------
+       (exp_result === t.Result)         N  '_0' not hit             Hit '_0'
+    (exp_carry === t.Carry_Flag)         N  '_0' not hit             Hit '_0'
+  (exp_arithm === t.Arithm_FLag)         N  '_0' not hit             Hit '_0'
+    (exp_logic === t.Logic_Flag)         N  '_0' not hit             Hit '_0'
+      (exp_zero === t.Zero_Flag)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                        Non-masking condition(s)      
+ ---------  ---------  --------------------              -------------------------     
+  Row   1:    ***0***  (exp_result === t.Result)_0       -                             
+  Row   2:          1  (exp_result === t.Result)_1       ((exp_carry === t.Carry_Flag) && ((exp_arithm === t.Arithm_FLag) && ((exp_logic === t.Logic_Flag) && (exp_zero === t.Zero_Flag))))
+  Row   3:    ***0***  (exp_carry === t.Carry_Flag)_0    (exp_result === t.Result)     
+  Row   4:          1  (exp_carry === t.Carry_Flag)_1    ((exp_result === t.Result) && ((exp_arithm === t.Arithm_FLag) && ((exp_logic === t.Logic_Flag) && (exp_zero === t.Zero_Flag))))
+  Row   5:    ***0***  (exp_arithm === t.Arithm_FLag)_0  ((exp_result === t.Result) && (exp_carry === t.Carry_Flag))
+  Row   6:          1  (exp_arithm === t.Arithm_FLag)_1  ((exp_result === t.Result) && (exp_carry === t.Carry_Flag) && ((exp_logic === t.Logic_Flag) && (exp_zero === t.Zero_Flag)))
+  Row   7:    ***0***  (exp_logic === t.Logic_Flag)_0    ((exp_result === t.Result) && (exp_carry === t.Carry_Flag) && (exp_arithm === t.Arithm_FLag))
+  Row   8:          1  (exp_logic === t.Logic_Flag)_1    ((exp_result === t.Result) && (exp_carry === t.Carry_Flag) && (exp_arithm === t.Arithm_FLag) && (exp_zero === t.Zero_Flag))
+  Row   9:    ***0***  (exp_zero === t.Zero_Flag)_0      ((exp_result === t.Result) && (exp_carry === t.Carry_Flag) && (exp_arithm === t.Arithm_FLag) && (exp_logic === t.Logic_Flag))
+ Row   10:          1  (exp_zero === t.Zero_Flag)_1      ((exp_result === t.Result) && (exp_carry === t.Carry_Flag) && (exp_arithm === t.Arithm_FLag) && (exp_logic === t.Logic_Flag))
+
+----------------Focused Condition View-------------------
+Line       40 Item    1  ((this.pass_cnt % 50) == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                   Input Term   Covered  Reason for no coverage   Hint
+                  -----------  --------  -----------------------  --------------
+  ((this.pass_cnt % 50) == 0)         Y
+
+     Rows:       Hits  FEC Target                     Non-masking condition(s)      
+ ---------  ---------  --------------------           -------------------------     
+  Row   1:          1  ((this.pass_cnt % 50) == 0)_0  -                             
+  Row   2:          1  ((this.pass_cnt % 50) == 0)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       55 Item    1  (this.fail_cnt == 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (this.fail_cnt == 0)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:    ***0***  (this.fail_cnt == 0)_0  -                             
+  Row   2:          1  (this.fail_cnt == 0)_1  -                             
+
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      1         1         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /alu_pkg --
+
+  File scoreboard.sv
+----------------Focused Expression View-----------------
+Line       21 Item    1  (result == 0)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (result == 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (result == 0)_0       -                             
+  Row   2:          1  (result == 0)_1       -                             
+
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     165       142        23    86.06%
+
+================================Statement Details================================
+
+Statement Coverage for instance /alu_pkg --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File alu_pkg.sv
+    6                                                package alu_pkg;
+    7                                                
+    8                                                    parameter int WIDTH   = 4;
+    9                                                    parameter int OP_ADD  = 2'b00;
+    10                                                   parameter int OP_SUB  = 2'b01;
+    11                                                   parameter int OP_AND  = 2'b10;
+    12                                                   parameter int OP_OR   = 2'b11;
+    13                                                   
+    14                                                   // Global variables for test monitoring
+    15                                                   static int error_count = 0;
+    16                                                   static int correct_count = 0;
+    17                                                   static bit test_finished = 0;
+    18                                               
+    19                                                   //-----------------------------------------------------------------
+    20                                                   // Transaction
+    21                                                   //-----------------------------------------------------------------
+    22                                                   class alu_transaction;
+    23                                                       rand bit [WIDTH-1:0] A;
+    24                                                       rand bit [WIDTH-1:0] B;
+    25                                                       rand bit [1:0]       OP;
+    26                                                       bit                  rst_n;
+    27                                               
+    28                                                       // corner-case weighting: mostly uniform random, with extra
+    29                                                       // weight on 0 and all-ones so corners get hit often
+    30                                                       constraint c_operands {
+    31                                                           A dist { 0 := 2, {WIDTH{1'b1}} := 2, [1:(1<<WIDTH)-2] :/ 6 };
+    32                                                           B dist { 0 := 2, {WIDTH{1'b1}} := 2, [1:(1<<WIDTH)-2] :/ 6 };
+    33                                                       }
+    34                                                       constraint c_op { OP inside {OP_ADD, OP_SUB, OP_AND, OP_OR}; }
+    35                                               
+    36                                                       // filled in by monitor after the DUT produces its (delayed) result
+    37                                                       bit [WIDTH-1:0] Result;
+    38                                                       bit             Zero_Flag;
+    39                                                       bit             Arithm_FLag;
+    40                                                       bit             Logic_Flag;
+    41                                                       bit             Carry_Flag;
+    42                                               
+    43                                                       function alu_transaction clone();
+    44              1                    ***0***                 clone = new();
+    45              1                    ***0***                 clone.A = A; 
+    46              1                    ***0***                 clone.B = B; 
+    47              1                    ***0***                 clone.OP = OP;
+    48              1                    ***0***                 clone.Result = Result;
+    49              1                    ***0***                 clone.Zero_Flag = Zero_Flag;
+    50              1                    ***0***                 clone.Arithm_FLag = Arithm_FLag;
+    51              1                    ***0***                 clone.Logic_Flag = Logic_Flag;
+    52              1                    ***0***                 clone.Carry_Flag = Carry_Flag;
+    53              1                    ***0***                 clone.rst_n = rst_n;
+    54                                                       endfunction
+    55                                               
+    56                                                       function string op_name();
+    57                                                           case (OP)
+    58              1                         18                     OP_ADD: return "ADD";
+    59              1                         19                     OP_SUB: return "SUB";
+    60              1                         16                     OP_AND: return "AND";
+    61              1                         12                     OP_OR : return "OR";
+    62              1                    ***0***                     default: return "??";
+    63                                                           endcase
+    64                                                       endfunction
+    65                                               
+    66                                                       function void display(string tag = "");
+    67              1                         41                 $display("[%0s] A=%0d B=%0d OP=%0s Result=%0d Zero=%0b Carry=%0b Arithm=%0b Logic=%0b",
+
+  File generator.sv
+    5               1                          1         bit   is_done = 1'b0; 
+    6               1                          1         int num_random_txns = 200;
+    7               1                          1         int total_txns = 0;
+    8                                                
+    9                                                    function new(mailbox #(alu_transaction) gen2drv, int num_random_txns = 200);
+    10              1                          1             this.gen2drv = gen2drv;
+    11              1                          1             this.num_random_txns = num_random_txns;
+    12              1                          1             this.total_txns = 24 + num_random_txns;
+    13                                                   endfunction
+    14                                               
+    15                                                   task run_directed();
+    16                                                       alu_transaction t;
+    17              1                          1             bit [WIDTH-1:0] max = {WIDTH{1'b1}};
+    18              1                          1             bit [WIDTH-1:0] corners_a[$] = '{0, 0, max, max, max, 0};
+    19              1                          1             bit [WIDTH-1:0] corners_b[$] = '{0, max, 0, max, max, max};
+    20              1                          1             bit [1:0] ops[4] = '{OP_ADD, OP_SUB, OP_AND, OP_OR};
+    21                                               
+    22              1                          1             $display("[GEN] Starting directed tests...");
+    23              1                          7             foreach (corners_a[i]) begin
+    24              1                         30                 foreach (ops[j]) begin
+    25              1                         24                     t = new();
+    26              1                         24                     t.A = corners_a[i];
+    27              1                         24                     t.B = corners_b[i];
+    28              1                         24                     t.OP = ops[j];
+    29              1                         24                     t.rst_n = 1;
+    30              1                         24                     $display("[GEN] Directed: A=%0d B=%0d OP=%0s", t.A, t.B, t.op_name());
+    31              1                         24                     gen2drv.put(t);
+    32              1                         24                     @(gen_handover);
+    33                                                           end
+    34                                                       end
+    35              1                          1             $display("[GEN] Directed tests complete. Total directed: %0d", $size(corners_a) * $size(ops));
+    36                                                   endtask
+    37                                               
+    38                                                   task run_random();
+    39                                                       alu_transaction t;
+    40              1                          1             $display("[GEN] Starting %0d random tests...", num_random_txns);
+    41              1                       1000             repeat (num_random_txns) begin
+    42              1                       1000                 t = new();
+    43              1                       1000                 t.rst_n = 1;
+    44                                                           if (!t.randomize())
+    45              1                    ***0***                     $error("[GEN] randomize() failed");
+    46              1                       1000                 gen2drv.put(t);
+    47              1                       1000                 @(gen_handover);
+    48                                                       end
+    49              1                          1             $display("[GEN] Completed %0d random tests", num_random_txns);
+    50                                                   endtask
+    51                                               
+    52                                                   task run();
+    53              1                          1             $display("[GEN] Generator started at time %0t", $time);
+    54              1                          1             run_directed();
+    55              1                          1             run_random();
+    56              1                          1             is_done = 1'b1;
+    57              1                          1             test_finished = 1;
+    58              1                          1             -> done;
+    59              1                          1             $display("[GEN] All transactions generated. Total: %0d transactions", total_txns);
+
+  File driver.sv
+    5               1                          1         int transaction_count = 0;
+    6               1                          1         bit first_txn = 1;
+    7                                                
+    8                                                    function new(virtual alu_if.DRIVER vif, mailbox #(alu_transaction) gen2drv);
+    9               1                          1             this.vif = vif;
+    10              1                          1             this.gen2drv = gen2drv;
+    11                                                   endfunction
+    12                                               
+    13                                                   task reset_dut();
+    14              1                          1             vif.drv_cb.RST <= 1'b0;
+    15              1                          1             vif.drv_cb.A <= '0;
+    16              1                          1             vif.drv_cb.B <= '0;
+    17              1                          1             vif.drv_cb.OP <= '0;
+    18              1                          3             repeat (3) @(vif.drv_cb);
+    18              2                          3     
+    19              1                          1             vif.drv_cb.RST <= 1'b1;
+    20              1                          1             @(vif.drv_cb);
+    21              1                          1             $display("[DRV] reset complete @ %0t", $time);
+    22                                                   endtask
+    23                                               
+    24                                                   task run();
+    25                                                       alu_transaction t;
+    26              1                          1             forever begin
+    27              1                       1025                 t = new();
+    28              1                       1025                 gen2drv.get(t);
+    29              1                       1024                 -> driver_handover;
+    30              1                       1023                 if (!first_txn) @(negedge vif.drv_cb);
+    31              1                       1024                 first_txn = 0;
+    32              1                       1024                 transaction_count++;
+    33                                                           if (transaction_count % 50 == 0)
+    34              1                         20                     $display("[DRV] Sent %0d transactions so far @ %0t", 
+    35                                                                        transaction_count, $time);
+    36              1                       1024                 vif.drv_cb.RST <= t.rst_n;
+    37              1                       1024                 vif.drv_cb.A <= t.A;
+    38              1                       1024                 vif.drv_cb.B <= t.B;
+    39              1                       1024                 vif.drv_cb.OP <= t.OP;
+    40              1                       1024                 @(vif.drv_cb);
+
+  File monitor.sv
+    4               1                          1         int transaction_count = 0;
+    6                                                
+    7                                                    function new(virtual alu_if.MONITOR vif, mailbox #(alu_transaction) mon2scb);
+    8               1                          1             this.vif = vif;
+    9               1                          1             this.mon2scb = mon2scb;
+    10              1                          1             this.pending = null;
+    11                                                   endfunction
+    12                                               
+    13                                                   task run();
+    14              1                          1             bit first = 1'b1;
+    15                                               
+    16              1                          1             forever begin
+    17              1                       2065                 @(vif.mon_cb);
+    18              1                       2064                 #1step;
+    19                                                           
+    20                                                           if (vif.mon_cb.RST === 1'b0) begin
+    21              1                    ***0***                     pending = null;
+    22              1                    ***0***                     first = 1'b1;
+    23              1                    ***0***                     continue;
+    24                                                           end
+    25                                               
+    26                                                           if (!first && pending != null) begin
+    27              1                       2063                     pending.Result = vif.mon_cb.Result;
+    28              1                       2063                     pending.Zero_Flag = vif.mon_cb.Zero_Flag;
+    29              1                       2063                     pending.Carry_Flag = vif.mon_cb.Carry_Flag;
+    30              1                       2063                     pending.Arithm_FLag = vif.mon_cb.Arithm_FLag;
+    31              1                       2063                     pending.Logic_Flag = vif.mon_cb.Logic_Flag;
+    32                                                               
+    33              1                       2063                     transaction_count++;
+    34                                                               if (transaction_count % 50 == 0)
+    35              1                         41                         $display("[MON] Captured %0d transactions so far @ %0t", 
+    36                                                                            transaction_count, $time);
+    37              1                       2063                     mon2scb.put(pending);
+    38                                                           end
+    39                                               
+    40              1                       2064                 pending = new();
+    41              1                       2064                 pending.rst_n = vif.mon_cb.RST;
+    42              1                       2064                 pending.A = vif.mon_cb.A;
+    43              1                       2064                 pending.B = vif.mon_cb.B;
+    44              1                       2064                 pending.OP = vif.mon_cb.OP;
+    45              1                       2064                 first = 1'b0;
+
+  File scoreboard.sv
+    3               1                          1         int pass_cnt = 0;
+    4               1                          1         int fail_cnt = 0;
+    6                                                    function new(mailbox #(alu_transaction) mon2scb);
+    7               1                          1             this.mon2scb = mon2scb;
+    8                                                    endfunction
+    9                                                
+    10                                                   function void predict(input bit [WIDTH-1:0] a, input bit [WIDTH-1:0] b, input bit [1:0] op,
+    11                                                                         output bit [WIDTH-1:0] result, output bit carry,
+    12                                                                         output bit arithm, output bit logic_f, output bit zero);
+    13                                                       bit [WIDTH:0] wide;
+    14                                                       case (op)
+    15              1                        531                 OP_ADD: begin wide = a + b; result = wide[WIDTH-1:0]; carry = wide[WIDTH]; arithm = 1; logic_f = 0; end
+    15              2                        531     
+    15              3                        531     
+    15              4                        531     
+    15              5                        531     
+    16              1                        528                 OP_SUB: begin wide = a - b; result = wide[WIDTH-1:0]; carry = wide[WIDTH]; arithm = 1; logic_f = 0; end
+    16              2                        528     
+    16              3                        528     
+    16              4                        528     
+    16              5                        528     
+    17              1                        520                 OP_AND: begin result = a & b; carry = 0; arithm = 0; logic_f = 1; end
+    17              2                        520     
+    17              3                        520     
+    17              4                        520     
+    18              1                        484                 OP_OR : begin result = a | b; carry = 0; arithm = 0; logic_f = 1; end
+    18              2                        484     
+    18              3                        484     
+    18              4                        484     
+    19              1                    ***0***                 default: begin result = '0; carry = 0; arithm = 0; logic_f = 0; end
+    19              2                    ***0***     
+    19              3                    ***0***     
+    19              4                    ***0***     
+    20                                                       endcase
+    21              1                       2063             zero = (result == 0);
+    22                                                   endfunction
+    23                                               
+    24                                                   task run();
+    25                                                       alu_transaction t;
+    26                                                       bit [WIDTH-1:0] exp_result;
+    27                                                       bit exp_carry, exp_arithm, exp_logic, exp_zero;
+    28              1                          1             int total_checked = 0;
+    29                                               
+    30              1                          1             forever begin
+    31              1                       2064                 mon2scb.get(t);
+    32              1                       2063                 total_checked++;
+    33              1                       2063                 predict(t.A, t.B, t.OP, exp_result, exp_carry, exp_arithm, exp_logic, exp_zero);
+    34                                               
+    35                                                           if (exp_result === t.Result && exp_carry === t.Carry_Flag &&
+    36                                                               exp_arithm === t.Arithm_FLag && exp_logic === t.Logic_Flag &&
+    37                                                               exp_zero === t.Zero_Flag) begin
+    38              1                       2063                     pass_cnt++;
+    39              1                       2063                     correct_count++;
+    40                                                               if (pass_cnt % 50 == 0)
+    41              1                         41                         t.display("SCB-PASS");
+    42                                                           end else begin
+    43              1                    ***0***                     fail_cnt++;
+    44              1                    ***0***                     error_count++;
+    45              1                    ***0***                     t.display("SCB-FAIL(actual)");
+    46              1                    ***0***                     $display("           expected: Result=%0d Carry=%0b Arithm=%0b Logic=%0b Zero=%0b",
+    47                                                                        exp_result, exp_carry, exp_arithm, exp_logic, exp_zero);
+    48                                                           end
+    49                                                       end
+    50                                                   endtask
+    51                                               
+    52                                                   function void report();
+    53              1                          1             $display("\n===================== SCOREBOARD REPORT =====================");
+    54              1                          1             $display(" PASS = %0d   FAIL = %0d   TOTAL = %0d", pass_cnt, fail_cnt, pass_cnt + fail_cnt);
+    55              1                          1             $display(" RESULT: %0s", (fail_cnt == 0) ? "*** TEST PASSED ***" : "*** TEST FAILED ***");
+    56              1                          1             $display("===============================================================\n");
+
+  File test.sv
+    6                                                    monitor    mon;
+    7                                                    scoreboard scb;
+    8                                                
+    9                                                    mailbox #(alu_transaction) gen2drv;
+    10                                                   mailbox #(alu_transaction) mon2scb;
+    11                                               
+    12                                                   function new(virtual alu_if.DRIVER drv_vif, virtual alu_if.MONITOR mon_vif,
+    13                                                                int num_random_txns = 200);
+    14              1                          1             gen2drv = new();
+    15              1                          1             mon2scb = new();
+    16                                               
+    17              1                          1             gen = new(gen2drv, num_random_txns);
+    18              1                          1             drv = new(drv_vif, gen2drv);
+    19              1                          1             mon = new(mon_vif, mon2scb);
+    20              1                          1             scb = new(mon2scb);
+    21                                                       
+    22              1                          1             gen.gen_handover = drv.driver_handover;
+    23                                                   endfunction
+    24                                               
+    25                                                   task run();
+    26              1                          1             drv.reset_dut();
+    27                                               
+    28                                                       fork
+    29              1                          1                 drv.run();
+    30              1                          1                 mon.run();
+    31              1                          1                 scb.run();
+    32                                                       join_none
+    33                                               
+    34              1                          1             gen.run();
+    35              1                          1             wait (gen.is_done);
+    36              1                         20             repeat (20) @(drv.vif.drv_cb);
+    36              2                         20     
+    37                                               
+    38              1                          1             scb.report();
+    39                                                       
+    40              1                          1             $display("[TEST] Simulation complete at time %0t", $time);
+    41              1                          1             $display("[TEST] error_count=%0d correct_count=%0d", error_count, correct_count);
+    42              1                          1             $finish;
+
+
+
+Total Coverage By Instance (filtered view): 65.13%
+
