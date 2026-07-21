@@ -6,7 +6,7 @@ This repository contains a robust verification environment for an 8-bit Arithmet
 
 ---
 
-## 🚀 Supported ALU Operations
+##  Supported ALU Operations
 
 The Design Under Test (`simple_alu`) supports 6 distinct operations via a 3-bit opcode:
 * **`3'b000` (ADD):** 8-bit addition with Carry-out and Overflow flag detection.
@@ -18,7 +18,7 @@ The Design Under Test (`simple_alu`) supports 6 distinct operations via a 3-bit 
 
 ---
 
-## 📂 SystemVerilog Project Architecture & File Structure
+##  SystemVerilog Project Architecture & File Structure
 
 For the **Class-Based SystemVerilog** implementation, the project follows a bottom-up object-oriented structure:
 
