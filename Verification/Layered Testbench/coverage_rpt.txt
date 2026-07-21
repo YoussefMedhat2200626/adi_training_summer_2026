@@ -1,0 +1,1352 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /ALU_tb/alu_if
+=== Design Unit: work.ALU_if
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         64        64         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /ALU_tb/alu_if --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                            A[7-0]           1           1                                                                  100.00 
+                                      ALU_OUT[7-0]           1           1                                                                  100.00 
+                                            B[7-0]           1           1                                                                  100.00 
+                                        arith_flag           1           1                                                                  100.00 
+                                        carry_flag           1           1                                                                  100.00 
+                                               clk           1           1                                                                  100.00 
+                                        logic_flag           1           1                                                                  100.00 
+                                            opcode               ENUM type       Value       Count 
+                                                                       ADD           1      100.00 
+                                                                       SUB           1      100.00 
+                                                                       AND           1      100.00 
+                                                                       XOR           1      100.00 
+                                             rst_n           1           1                                                                  100.00 
+                                         zero_flag           1           1                                                                  100.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         34 
+Toggled Node Count   =         34 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (64 of 64 bins)
+
+=================================================================================
+=== Instance: /ALU_tb/dut
+=== Design Unit: work.ALU
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       4         3         1    75.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/ALU_tb/dut/reset_check
+                     ALU.sv(42)                         0          1
+/ALU_tb/dut/zero_flag_check
+                     ALU.sv(68)                         1          1
+/ALU_tb/dut/ARITH_FLAG
+                     ALU.sv(76)                         0          1
+/ALU_tb/dut/LOGIC_FLAG
+                     ALU.sv(79)                         0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        11        10         1    90.90%
+
+================================Branch Details================================
+
+Branch Coverage for instance /ALU_tb/dut
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ALU.sv
+------------------------------------IF Branch------------------------------------
+    13                                     51453     Count coming in to IF
+    13              1                       2943         if (!a_if.rst_n) begin
+    18              1                      48510         end else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    28                                     49761     Count coming in to CASE
+    29              1                       8094             ADD: {carry_flag_comb,ALU_OUT_comb} = a_if.A + a_if.B;
+    30              1                       7991             SUB: {carry_flag_comb,ALU_OUT_comb} = a_if.A - a_if.B;
+    31              1                      16862             AND: ALU_OUT_comb = a_if.A & a_if.B;
+    32              1                      16814             XOR: ALU_OUT_comb = a_if.A ^ a_if.B;
+    33              1                    ***0***             default: {carry_flag_comb,ALU_OUT_comb} = 0;
+Branch totals: 4 hits of 5 branches = 80.00%
+
+------------------------------------IF Branch------------------------------------
+    41                                     51157     Count coming in to IF
+    41              1                       2897             if (!a_if.rst_n) begin
+                                           48260     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    67                                     49065     Count coming in to IF
+    67              1                       1449             if (a_if.ALU_OUT == 0 && !a_if.rst_n) begin
+                                           47616     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         2         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /ALU_tb/dut --
+
+  File ALU.sv
+----------------Focused Condition View-------------------
+Line       67 Item    1  ((a_if.ALU_OUT == 0) && ~a_if.rst_n)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+           Input Term   Covered  Reason for no coverage   Hint
+          -----------  --------  -----------------------  --------------
+  (a_if.ALU_OUT == 0)         Y
+           a_if.rst_n         Y
+
+     Rows:       Hits  FEC Target             Non-masking condition(s)      
+ ---------  ---------  --------------------   -------------------------     
+  Row   1:          1  (a_if.ALU_OUT == 0)_0  -                             
+  Row   2:          1  (a_if.ALU_OUT == 0)_1  ~a_if.rst_n                   
+  Row   3:          1  a_if.rst_n_0           (a_if.ALU_OUT == 0)           
+  Row   4:          1  a_if.rst_n_1           (a_if.ALU_OUT == 0)           
+
+
+
+Directive Coverage:
+    Directives                       4         4         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/ALU_tb/dut/reset_check_C                ALU    Verilog  SVA  ALU.sv(47)      1449 Covered   
+/ALU_tb/dut/zero_flag_check_C            ALU    Verilog  SVA  ALU.sv(70)      1448 Covered   
+/ALU_tb/dut/ARITH_FLAG_C                 ALU    Verilog  SVA  ALU.sv(83)      15385 Covered   
+/ALU_tb/dut/LOGIC_FLAG_C                 ALU    Verilog  SVA  ALU.sv(84)      31676 Covered   
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      5         5         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /ALU_tb/dut --
+
+  File ALU.sv
+----------------Focused Expression View-----------------
+Line       8 Item    1  ((a_if.opcode == ADD) || (a_if.opcode == SUB))
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (a_if.opcode == ADD)         Y
+  (a_if.opcode == SUB)         Y
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:          1  (a_if.opcode == ADD)_0  ~(a_if.opcode == SUB)         
+  Row   2:          1  (a_if.opcode == ADD)_1  -                             
+  Row   3:          1  (a_if.opcode == SUB)_0  ~(a_if.opcode == ADD)         
+  Row   4:          1  (a_if.opcode == SUB)_1  ~(a_if.opcode == ADD)         
+
+----------------Focused Expression View-----------------
+Line       9 Item    1  ((a_if.opcode == AND) || (a_if.opcode == XOR))
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (a_if.opcode == AND)         Y
+  (a_if.opcode == XOR)         Y
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:          1  (a_if.opcode == AND)_0  ~(a_if.opcode == XOR)         
+  Row   2:          1  (a_if.opcode == AND)_1  -                             
+  Row   3:          1  (a_if.opcode == XOR)_0  ~(a_if.opcode == AND)         
+  Row   4:          1  (a_if.opcode == XOR)_1  ~(a_if.opcode == AND)         
+
+----------------Focused Expression View-----------------
+Line       10 Item    1  (a_if.ALU_OUT == 0)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+           Input Term   Covered  Reason for no coverage   Hint
+          -----------  --------  -----------------------  --------------
+  (a_if.ALU_OUT == 0)         Y
+
+     Rows:       Hits  FEC Target             Non-masking condition(s)      
+ ---------  ---------  --------------------   -------------------------     
+  Row   1:          1  (a_if.ALU_OUT == 0)_0  -                             
+  Row   2:          1  (a_if.ALU_OUT == 0)_1  -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      22        21         1    95.45%
+
+================================Statement Details================================
+
+Statement Coverage for instance /ALU_tb/dut --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ALU.sv
+    2                                                module ALU(
+    3                                                    ALU_if.DUT a_if
+    4                                                );
+    5                                                
+    6                                                logic [WIDTH - 1:0] ALU_OUT_comb;
+    7                                                logic carry_flag_comb, arith_flag_comb, logic_flag_comb;
+    8               1                      36027     assign arith_flag_comb = (a_if.opcode == ADD || a_if.opcode == SUB);
+    9               1                      36027     assign logic_flag_comb = (a_if.opcode == AND || a_if.opcode == XOR);
+    10              1                      46167     always @* a_if.zero_flag = (a_if.ALU_OUT == 0);
+    10              2                      46167     
+    11                                               
+    12              1                      51453     always @(posedge a_if.clk, negedge a_if.rst_n) begin
+    13                                                   if (!a_if.rst_n) begin
+    14              1                       2943             a_if.ALU_OUT <= 0;
+    15              1                       2943             a_if.carry_flag <= 0;
+    16              1                       2943             a_if.arith_flag <= 0;
+    17              1                       2943             a_if.logic_flag <= 0;
+    18                                                   end else begin
+    19              1                      48510             a_if.ALU_OUT <= ALU_OUT_comb;
+    20              1                      48510             a_if.carry_flag <= carry_flag_comb;
+    21              1                      48510             a_if.arith_flag <= arith_flag_comb;
+    22              1                      48510             a_if.logic_flag <= logic_flag_comb;
+    23                                                   end
+    24                                               end
+    25                                               
+    26              1                      49761     always @*begin
+    27              1                      49761         carry_flag_comb = 0;
+    28                                                   case (a_if.opcode)
+    29              1                       8094             ADD: {carry_flag_comb,ALU_OUT_comb} = a_if.A + a_if.B;
+    30              1                       7991             SUB: {carry_flag_comb,ALU_OUT_comb} = a_if.A - a_if.B;
+    31              1                      16862             AND: ALU_OUT_comb = a_if.A & a_if.B;
+    32              1                      16814             XOR: ALU_OUT_comb = a_if.A ^ a_if.B;
+    33              1                    ***0***             default: {carry_flag_comb,ALU_OUT_comb} = 0;
+    34                                                   endcase
+    35                                               end
+    36                                               
+    37                                               // Assertions only compiled in simulation
+    38                                               `ifdef SIM
+    39                                                   // 1. Reset Behavior
+    40              1                      51157         always_comb begin
+    41                                                       if (!a_if.rst_n) begin
+    42                                                           reset_check: assert final (a_if.ALU_OUT == 0 && 
+    43                                                                                      a_if.carry_flag == 0 && 
+    44                                                                                      a_if.arith_flag == 0 && 
+    45                                                                                      a_if.logic_flag == 0)
+    46                                                                               else $error("reset_check failed");
+    47                                                           reset_check_C: cover final (a_if.ALU_OUT == 0 && 
+    48                                                                                       a_if.carry_flag == 0 && 
+    49                                                                                       a_if.arith_flag == 0 && 
+    50                                                                                       a_if.logic_flag == 0);
+    51                                                       end
+    52                                                   end
+    53                                               
+    54                                                   // 2. arith_flag_check
+    55                                                   property arith_flag_check;
+    56                                                       disable iff (!a_if.rst_n) @(posedge a_if.clk) (a_if.opcode == ADD || a_if.opcode == SUB) |=> a_if.arith_flag;
+    57                                                   endproperty
+    58                                               
+    59                                                   // 3. logic_flag_check
+    60                                                   property logic_flag_check;
+    61                                                       disable iff (!a_if.rst_n) @(posedge a_if.clk) (a_if.opcode == AND || a_if.opcode == XOR) |=> a_if.logic_flag;
+    62                                                   endproperty
+    63                                                   
+    64                                               
+    65                                                   // 4. zero_flag_check
+    66              1                      49065         always_comb begin
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         22        22         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /ALU_tb/dut --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                 ALU_OUT_comb[7-0]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                   arith_flag_comb           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                   carry_flag_comb           1           1           0*          0*          0*          0*    2-STATE      100.00 
+                                   logic_flag_comb           1           1           0*          0*          0*          0*    2-STATE      100.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         11 
+Toggled Node Count   =         11 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (22 of 22 bins)
+
+=================================================================================
+=== Instance: /ALU_tb
+=== Design Unit: work.ALU_tb
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      12        12         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /ALU_tb --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ALU_tb.sv
+    5                                                module ALU_tb;
+    6                                                    bit clk = 0;
+    7                                                    // Generate 10ns clock (100MHz)
+    8               1                     100011         always #5 clk = ~clk;
+    8               2                     100010     
+    9                                                    
+    10                                                   // Instantiate interface
+    11                                                   ALU_if alu_if(clk);
+    12                                                   
+    13                                                   // Instantiate DUT
+    14                                                   ALU dut(alu_if.DUT);
+    15                                                   
+    16                                                   // Testbench components
+    17                                                   ALU_test test;
+    18                                                   
+    19                                                   
+    20                                                   initial begin
+    21                                                       // Create and configure test
+    22              1                          1             test = new();
+    23              1                          1             test.set_interface(alu_if);
+    24              1                          1             test.set_test_duration(50000);  // 10,000 transactions
+    25                                                       
+    26                                                       // Run test
+    27              1                          1             $display("\n=== Simulation Started at %0t ===", $time);
+    28              1                          1             test.run_test();
+    29                                               
+    30                                                       // End simulation
+    31              1                          1             $display("=== Simulation Finished at %0t ===", $time);
+    32              1                          1             $stop;
+    33                                                   end
+    34                                                   
+    35                                                   // Optional: VCD dumping for waveform viewing
+    36                                                   initial begin
+    37              1                          1             $dumpfile("ALU_tb.vcd");
+    38              1                          1             $dumpvars;
+    39                                                   end
+    40                                                   
+    41                                                   initial begin
+    42              1                          1         $monitor("Time=%0t rst_n=%0d A=%0d B=%0d opcode=%s ALU_OUT=%0d carry=%0d arith=%0d logic=%0d zero=%0d",
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                          2         2         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /ALU_tb --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                               clk           1           1                                                                  100.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          1 
+Toggled Node Count   =          1 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (2 of 2 bins)
+
+=================================================================================
+=== Instance: /ALU_cvg_pkg
+=== Design Unit: work.ALU_cvg_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses          6        na        na        na
+            Covergroup Bins         46        46         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /ALU_cvg_pkg/ALU_coverage/CovCode               100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint A_logical_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_A_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_B_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                14         14          -                      
+        missing/total bins:                                 0         14          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/ALU_cvg_pkg::ALU_coverage::CovCode  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin A_data_0                                     5265          1          -    Covered              
+        bin A_data_max                                   5434          1          -    Covered              
+        bin A_data_min                                   8558          1          -    Covered              
+        default bin A_data_default                      30747                     -    Occurred             
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin B_data_0                                     5409          1          -    Covered              
+        bin B_data_max                                   5369          1          -    Covered              
+        bin B_data_min                                   5320          1          -    Covered              
+        default bin B_data_default                      33906                     -    Occurred             
+    Coverpoint A_logical_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin A_walking_ones[-128]                         3475          1          -    Covered              
+        bin A_walking_ones[1]                            3253          1          -    Covered              
+        bin A_walking_ones[2]                            3338          1          -    Covered              
+        bin A_walking_ones[4]                            3434          1          -    Covered              
+        bin A_walking_ones[8]                            3415          1          -    Covered              
+        bin A_walking_ones[16]                           3326          1          -    Covered              
+        bin A_walking_ones[32]                           3331          1          -    Covered              
+        bin A_walking_ones[64]                           3384          1          -    Covered              
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin arith_bins[ADD]                              8201          1          -    Covered              
+        bin arith_bins[SUB]                              8122          1          -    Covered              
+        bin logic_bins[AND]                             16862          1          -    Covered              
+        bin logic_bins[XOR]                             16819          1          -    Covered              
+        bin trans                                         148          1          -    Covered              
+    Cross opcode_A_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <trans,A_data_min>                         22          1          -    Covered              
+            bin <logic_bins[XOR],A_data_min>             1726          1          -    Covered              
+            bin <arith_bins[SUB],A_data_min>             2517          1          -    Covered              
+            bin <logic_bins[AND],A_data_min>             1749          1          -    Covered              
+            bin <arith_bins[ADD],A_data_min>             2566          1          -    Covered              
+            bin <logic_bins[XOR],A_data_max>               17          1          -    Covered              
+            bin <logic_bins[XOR],A_data_0>                 15          1          -    Covered              
+            bin <arith_bins[SUB],A_data_max>             2713          1          -    Covered              
+            bin <arith_bins[SUB],A_data_0>               2599          1          -    Covered              
+            bin <logic_bins[AND],A_data_max>               18          1          -    Covered              
+            bin <logic_bins[AND],A_data_0>                 16          1          -    Covered              
+            bin <arith_bins[ADD],A_data_max>             2686          1          -    Covered              
+            bin <arith_bins[ADD],A_data_0>               2635          1          -    Covered              
+        Illegal and Ignore Bins:
+            illegal_bin i_bin2                              0                     -    ZERO                 
+            illegal_bin i_bin1                              0                     -    ZERO                 
+    Cross opcode_B_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                14         14          -                      
+        missing/total bins:                                 0         14          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <logic_bins[XOR],B_data_min>               70          1          -    Covered              
+            bin <arith_bins[SUB],B_data_min>             2527          1          -    Covered              
+            bin <logic_bins[XOR],B_data_max>               57          1          -    Covered              
+            bin <arith_bins[SUB],B_data_max>             2649          1          -    Covered              
+            bin <logic_bins[XOR],B_data_0>                 66          1          -    Covered              
+            bin <arith_bins[SUB],B_data_0>               2664          1          -    Covered              
+            bin <trans,B_data_max>                          1          1          -    Covered              
+            bin <trans,B_data_0>                            1          1          -    Covered              
+            bin <logic_bins[AND],B_data_min>               60          1          -    Covered              
+            bin <arith_bins[ADD],B_data_min>             2663          1          -    Covered              
+            bin <logic_bins[AND],B_data_max>               58          1          -    Covered              
+            bin <arith_bins[ADD],B_data_max>             2605          1          -    Covered              
+            bin <logic_bins[AND],B_data_0>                 54          1          -    Covered              
+            bin <arith_bins[ADD],B_data_0>               2625          1          -    Covered              
+        Illegal and Ignore Bins:
+            illegal_bin i_bin1                              0                     -    ZERO                 
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       6         6         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /ALU_cvg_pkg --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ALU_cvg_pkg.sv
+    1                                                package ALU_cvg_pkg;
+    2                                                import ALU_shared_pkg::*;
+    3                                                import ALU_transaction_pkg::*;
+    4                                                
+    5                                                    class ALU_coverage;
+    6                                                        ALU_transaction ALU_cvg_txn;
+    7                                                        mailbox#(ALU_transaction) cvg_mail;
+    8                                                
+    9                                                        covergroup CovCode;
+    10                                                           A_cp: coverpoint ALU_cvg_txn.A {
+    11                                                               bins A_data_0 = {ZERO};
+    12                                                               bins A_data_max = {MAXPOS};
+    13                                                               bins A_data_min = {MAXNEG};
+    14                                                               bins A_data_default = default;
+    15                                                           }
+    16                                                           B_cp: coverpoint ALU_cvg_txn.B {
+    17                                                               bins B_data_0 = {ZERO};
+    18                                                               bins B_data_max = {MAXPOS};
+    19                                                               bins B_data_min = {MAXNEG};
+    20                                                               bins B_data_default = default;
+    21                                                           }
+    22                                                           A_logical_cp: coverpoint ALU_cvg_txn.A iff (ALU_cvg_txn.opcode == AND || ALU_cvg_txn.opcode == XOR) {
+    23                                                               bins A_walking_ones [] = {1,2,4,8,16,32,64,-128};
+    24                                                           }
+    25                                                           opcode_cp: coverpoint ALU_cvg_txn.opcode {
+    26                                                               bins arith_bins [] = {ADD,SUB};
+    27                                                               bins logic_bins [] = {AND,XOR};
+    28                                                               bins trans = (ADD => SUB => AND => XOR);
+    29                                                           }
+    30                                                           opcode_A_cross: cross opcode_cp, A_cp {
+    31                                                               illegal_bins i_bin1 = binsof(opcode_cp.trans)  && binsof(A_cp.A_data_max);
+    32                                                               illegal_bins i_bin2 = binsof(opcode_cp.trans) && binsof(A_cp.A_data_0);
+    33                                                           }
+    34                                                           opcode_B_cross: cross opcode_cp, B_cp {
+    35                                                               illegal_bins i_bin1 = binsof(opcode_cp.trans) && binsof(B_cp.B_data_min);
+    36                                                           }
+    37                                                       endgroup
+    38                                               
+    39                                                       function new();
+    40              1                          1                 CovCode = new();
+    41              1                          1                 cvg_mail = new();
+    42                                                       endfunction
+    43                                               
+    44                                                       task run_coverage();
+    45              1                          1                 forever begin
+    46              1                      50005                     ALU_cvg_txn = new();
+    47              1                      50005                     cvg_mail.get(ALU_cvg_txn);
+    48              1                      50004                     CovCode.sample();
+
+
+=================================================================================
+=== Instance: /ALU_shared_pkg_sv_unit
+=== Design Unit: work.ALU_shared_pkg_sv_unit
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       1         1         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/ALU_shared_pkg_sv_unit/ALU_generator/run_generator/#anonblk#173757300#15#4#/#ublk#173757300#15/immed__29
+                     ALU_generator.sv(29)               0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        24        17         7    70.83%
+
+================================Branch Details================================
+
+Branch Coverage for instance /ALU_shared_pkg_sv_unit
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ALU_driver.sv
+------------------------------------IF Branch------------------------------------
+    19                                     50000     Count coming in to IF
+    19              1                      49999                 if (!first_txn) @(negedge driver_if.clk);
+                                               1     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+  File ALU_scoreboard.sv
+------------------------------------IF Branch------------------------------------
+    15                                     50004     Count coming in to IF
+    15              1                       1494             if (!txn.rst_n) begin
+    22              1                      48510             else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    24                                     48510     Count coming in to CASE
+    25              1                       7959                     ADD: {carry_flag_ref,ALU_OUT_ref} = txn.A + txn.B;
+    26              1                       7860                     SUB: {carry_flag_ref,ALU_OUT_ref} = txn.A - txn.B;
+    27              1                      16350                     AND: ALU_OUT_ref = txn.A & txn.B;
+    28              1                      16341                     XOR: ALU_OUT_ref = txn.A ^ txn.B;
+                                         ***0***     All False Count
+Branch totals: 4 hits of 5 branches = 80.00%
+
+------------------------------------CASE Branch------------------------------------
+    30                                     48510     Count coming in to CASE
+    31              1                       7959                     ADD,SUB: arith_flag_ref = 1;
+    31              2                       7860     
+    32              1                      16350                     AND,XOR: logic_flag_ref = 1;
+    32              2                      16341     
+                                         ***0***     All False Count
+Branch totals: 4 hits of 5 branches = 80.00%
+
+------------------------------------IF Branch------------------------------------
+    44                                     50004     Count coming in to IF
+    44              1                    ***0***                 if (ALU_OUT_ref !== t_score.ALU_OUT) begin
+    48              1                      50004                 else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    51                                     50004     Count coming in to IF
+    51              1                    ***0***                 if (carry_flag_ref !== t_score.carry_flag) begin
+    55              1                      50004                 else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    58                                     50004     Count coming in to IF
+    58              1                    ***0***                 if (arith_flag_ref !== t_score.arith_flag) begin
+    62              1                      50004                 else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    65                                     50004     Count coming in to IF
+    65              1                    ***0***                 if (logic_flag_ref !== t_score.logic_flag) begin
+    69              1                      50004                 else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    72                                     50004     Count coming in to IF
+    72              1                    ***0***                 if (zero_flag_ref !== t_score.zero_flag) begin
+    76              1                      50004                 else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       5         0         5     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /ALU_shared_pkg_sv_unit --
+
+  File ALU_scoreboard.sv
+----------------Focused Condition View-------------------
+Line       44 Item    1  (this.ALU_OUT_ref !== this.t_score.ALU_OUT)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                                   Input Term   Covered  Reason for no coverage   Hint
+                                  -----------  --------  -----------------------  --------------
+  (this.ALU_OUT_ref !== this.t_score.ALU_OUT)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                                     Non-masking condition(s)      
+ ---------  ---------  --------------------                           -------------------------     
+  Row   1:          1  (this.ALU_OUT_ref !== this.t_score.ALU_OUT)_0  -                             
+  Row   2:    ***0***  (this.ALU_OUT_ref !== this.t_score.ALU_OUT)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       51 Item    1  (this.carry_flag_ref !== this.t_score.carry_flag)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                                         Input Term   Covered  Reason for no coverage   Hint
+                                        -----------  --------  -----------------------  --------------
+  (this.carry_flag_ref !== this.t_score.carry_flag)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                                           Non-masking condition(s)      
+ ---------  ---------  --------------------                                 -------------------------     
+  Row   1:          1  (this.carry_flag_ref !== this.t_score.carry_flag)_0  -                             
+  Row   2:    ***0***  (this.carry_flag_ref !== this.t_score.carry_flag)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       58 Item    1  (this.arith_flag_ref !== this.t_score.arith_flag)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                                         Input Term   Covered  Reason for no coverage   Hint
+                                        -----------  --------  -----------------------  --------------
+  (this.arith_flag_ref !== this.t_score.arith_flag)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                                           Non-masking condition(s)      
+ ---------  ---------  --------------------                                 -------------------------     
+  Row   1:          1  (this.arith_flag_ref !== this.t_score.arith_flag)_0  -                             
+  Row   2:    ***0***  (this.arith_flag_ref !== this.t_score.arith_flag)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       65 Item    1  (this.logic_flag_ref !== this.t_score.logic_flag)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                                         Input Term   Covered  Reason for no coverage   Hint
+                                        -----------  --------  -----------------------  --------------
+  (this.logic_flag_ref !== this.t_score.logic_flag)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                                           Non-masking condition(s)      
+ ---------  ---------  --------------------                                 -------------------------     
+  Row   1:          1  (this.logic_flag_ref !== this.t_score.logic_flag)_0  -                             
+  Row   2:    ***0***  (this.logic_flag_ref !== this.t_score.logic_flag)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       72 Item    1  (this.zero_flag_ref !== this.t_score.zero_flag)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                                       Input Term   Covered  Reason for no coverage   Hint
+                                      -----------  --------  -----------------------  --------------
+  (this.zero_flag_ref !== this.t_score.zero_flag)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                                         Non-masking condition(s)      
+ ---------  ---------  --------------------                               -------------------------     
+  Row   1:          1  (this.zero_flag_ref !== this.t_score.zero_flag)_0  -                             
+  Row   2:    ***0***  (this.zero_flag_ref !== this.t_score.zero_flag)_1  -                             
+
+
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      1         1         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /ALU_shared_pkg_sv_unit --
+
+  File ALU_scoreboard.sv
+----------------Focused Expression View-----------------
+Line       35 Item    1  (this.ALU_OUT_ref == 0)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+  (this.ALU_OUT_ref == 0)         Y
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:          1  (this.ALU_OUT_ref == 0)_0  -                             
+  Row   2:          1  (this.ALU_OUT_ref == 0)_1  -                             
+
+
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     154       144        10    93.50%
+
+================================Statement Details================================
+
+Statement Coverage for instance /ALU_shared_pkg_sv_unit --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ALU_generator.sv
+    1                                                import ALU_shared_pkg::*;
+    2                                                import ALU_transaction_pkg::*;
+    3                                                class ALU_generator;
+    4                                                    ALU_transaction t_gen;
+    5               1                          1         int TEST_SIZE = 100000;
+    6                                                    mailbox#(ALU_transaction) gen_mail;
+    7                                                    event gen_handover;
+    8                                                
+    9                                                    function new();
+    10              1                          1             this.gen_mail = new();
+    11                                                   endfunction
+    12                                               
+    13                                                   task run_generator();
+    14              1                          1             t_gen = new();
+    15              1                          1             for (int i=0; i<TEST_SIZE; ++i) begin
+    15              2                      50000     
+    16                                                          /* if (i == 0) begin
+    17                                                               t_gen.rst_n = 1;
+    18                                                               t_gen.A = 0;
+    19                                                               t_gen.B = 0;
+    20                                                               t_gen.opcode = opcode_e'(0);
+    21                                                               gen_mail.put(t_gen);
+    22                                                               @(gen_handover);
+    23                                                           end
+    24                                                           else begin
+    25                                                               assert(t_gen.randomize()) else $stop;
+    26                                                               gen_mail.put(t_gen);
+    27                                                               @(gen_handover);
+    28                                                           end*/
+    29                                                           assert(t_gen.randomize()) else $stop;
+    30              1                      50000                 gen_mail.put(t_gen);
+    31              1                      50000                 @(gen_handover);
+    32                                                       end
+    33              1                          1             test_finished  = 1;
+
+  File ALU_driver.sv
+    1                                                import ALU_shared_pkg::*;
+    2                                                import ALU_transaction_pkg :: *;
+    3                                                
+    4                                                class ALU_driver;
+    5                                                    ALU_transaction t_driver;
+    6                                                    mailbox#(ALU_transaction) driver_mail;
+    7                                                    event driver_handover;
+    8                                                    virtual ALU_if driver_if;
+    9               1                          1         bit first_txn = 1;
+    10                                               
+    11                                                   function new();
+    12              1                          1             this.driver_mail = new();
+    13                                                   endfunction
+    14                                               
+    15                                                   task run_driver();
+    16              1                          1             forever begin
+    17              1                      50001                 t_driver = new();
+    18              1                      50001                 driver_mail.get(t_driver);
+    19              1                      49999                 if (!first_txn) @(negedge driver_if.clk);
+    20              1                      50000                 first_txn = 0;
+    21                                               
+    22              1                      50000                 driver_if.rst_n = t_driver.rst_n;
+    23              1                      50000                 driver_if.A = t_driver.A;
+    24              1                      50000                 driver_if.B = t_driver.B;
+    25              1                      50000                 driver_if.opcode = t_driver.opcode;
+    26              1                      50000                 -> driver_handover;
+
+  File ALU_monitor.sv
+    1                                                import ALU_shared_pkg::*;
+    2                                                import ALU_transaction_pkg::*;
+    3                                                
+    4                                                class ALU_monitor;
+    5                                                    ALU_transaction t_monitor;
+    6                                                    virtual ALU_if monitor_if;
+    7                                                    mailbox#(ALU_transaction) monitor_mail;
+    8                                                    
+    9                                                    function new();
+    10              1                          1             this.monitor_mail = new();
+    11                                                   endfunction
+    12                                                   
+    13                                                   task run_monitor();
+    14              1                          1             forever begin
+    15              1                      50005                 t_monitor = new();
+    16              1                      50005                 @(posedge monitor_if.clk);
+    17              1                      50004                 #1step;
+    18                                                           
+    19                                                           
+    20              1                      50004                 t_monitor.rst_n = monitor_if.rst_n;
+    21              1                      50004                 t_monitor.A = monitor_if.A;
+    22              1                      50004                 t_monitor.B = monitor_if.B;
+    23              1                      50004                 t_monitor.opcode = monitor_if.opcode;
+    24              1                      50004                 t_monitor.ALU_OUT = monitor_if.ALU_OUT;
+    25              1                      50004                 t_monitor.carry_flag = monitor_if.carry_flag;
+    26              1                      50004                 t_monitor.arith_flag = monitor_if.arith_flag;
+    27              1                      50004                 t_monitor.logic_flag = monitor_if.logic_flag;
+    28              1                      50004                 t_monitor.zero_flag = monitor_if.zero_flag;
+    29                                                           
+    30              1                      50004                 monitor_mail.put(t_monitor);
+
+  File ALU_agent.sv
+    1                                                import ALU_shared_pkg::*;
+    2                                                import ALU_transaction_pkg::*;
+    3                                                
+    4                                                
+    5                                                class ALU_agent;
+    6                                                    ALU_driver driver;
+    7                                                    ALU_monitor monitor;
+    8                                                    mailbox#(ALU_transaction) gen_to_drv_mail;
+    9                                                    mailbox#(ALU_transaction) mon_to_sub_mail;
+    10                                                   event driver_handover;
+    11                                                   
+    12                                                   function new();
+    13              1                          1             this.gen_to_drv_mail = new();
+    14              1                          1             this.mon_to_sub_mail = new();
+    15              1                          1             this.driver = new();
+    16              1                          1             this.monitor = new();
+    17                                                       
+    18                                                       // Connect mailboxes
+    19              1                          1             driver.driver_mail = this.gen_to_drv_mail;
+    20              1                          1             driver.driver_handover = this.driver_handover;
+    21              1                          1             monitor.monitor_mail = this.mon_to_sub_mail;
+    22                                                   endfunction
+    23                                                   
+    24                                                   task run_agent();
+    25                                                       fork
+    26              1                          1                 driver.run_driver();
+    27              1                          1                 monitor.run_monitor();
+    28                                                       join_none
+    29                                                   endtask
+    30                                                   
+    31                                                   function void set_interface(virtual ALU_if vif);
+    32              1                          1             driver.driver_if = vif;
+    33              1                          1             monitor.monitor_if = vif;
+
+  File ALU_subscriber.sv
+    1                                                import ALU_shared_pkg::*;
+    2                                                import ALU_transaction_pkg::*;
+    3                                                
+    4                                                class ALU_subscriber;
+    5                                                    mailbox#(ALU_transaction) sub_mail;
+    6                                                
+    7                                                    // Analysis ports for coverage and scoreboard
+    8                                                    mailbox#(ALU_transaction) scoreboard_mail;
+    9                                                    mailbox#(ALU_transaction) coverage_mail;
+    10                                               
+    11                                                   function new();
+    12              1                          1             this.sub_mail = new();
+    13              1                          1             this.scoreboard_mail = new();
+    14              1                          1             this.coverage_mail = new();
+    15                                                   endfunction
+    16                                               
+    17                                                   task run_subscriber();
+    18              1                          1             forever begin
+    19                                                           // t_sub is declared HERE, inside the loop body, not as a class
+    20                                                           // member and not before the loop. In an automatic task (all
+    21                                                           // class methods are automatic), a variable declared inside a
+    22                                                           // loop body gets its own fresh storage on every iteration.
+    23                                                           // This matters because send_to_scoreboard/send_to_coverage are
+    24                                                           // spawned with fork...join_none: the loop does NOT wait for
+    25                                                           // them, so it immediately comes back around to grab the next
+    26                                                           // transaction. If t_sub were a single shared variable (a class
+    27                                                           // member, or declared before the loop), the next iteration's
+    28                                                           // reassignment could stomp on it before the forked tasks had
+    29                                                           // a chance to bind their own argument to it -- which is
+    30                                                           // exactly what was happening to send_to_coverage (the 2nd,
+    31                                                           // and thus more delayed, fork branch) while send_to_scoreboard
+    32                                                           // (the 1st branch) usually won the race.
+    33              1                      50005                 ALU_transaction t_sub = new();
+    34              1                      50005                 sub_mail.get(t_sub);
+    35                                               
+    36                                                           // Fork to send to both scoreboard and coverage in parallel
+    37                                                           fork
+    38              1                      50004                     send_to_scoreboard(t_sub);
+    39              1                      50004                     send_to_coverage(t_sub);
+    40                                                           join_none
+    41                                                       end
+    42                                                   endtask
+    43                                               
+    44                                                   task send_to_scoreboard(ALU_transaction txn);
+    45              1                      50004             ALU_transaction t_score = new();
+    46                                                       // Deep copy transaction
+    47              1                      50004             t_score.rst_n = txn.rst_n;
+    48              1                      50004             t_score.A = txn.A;
+    49              1                      50004             t_score.B = txn.B;
+    50              1                      50004             t_score.opcode = txn.opcode;
+    51              1                      50004             t_score.ALU_OUT = txn.ALU_OUT;
+    52              1                      50004             t_score.carry_flag = txn.carry_flag;
+    53              1                      50004             t_score.arith_flag = txn.arith_flag;
+    54              1                      50004             t_score.logic_flag = txn.logic_flag;
+    55              1                      50004             t_score.zero_flag = txn.zero_flag;
+    56              1                      50004             scoreboard_mail.put(t_score);
+    57                                                   endtask
+    58                                               
+    59                                                   task send_to_coverage(ALU_transaction txn);
+    60              1                      50004             ALU_transaction t_cvg = new();
+    61                                                       // Deep copy transaction for coverage
+    62              1                      50004             t_cvg.rst_n = txn.rst_n;
+    63              1                      50004             t_cvg.A = txn.A;
+    64              1                      50004             t_cvg.B = txn.B;
+    65              1                      50004             t_cvg.opcode = txn.opcode;
+    66              1                      50004             t_cvg.ALU_OUT = txn.ALU_OUT;
+    67              1                      50004             t_cvg.carry_flag = txn.carry_flag;
+    68              1                      50004             t_cvg.arith_flag = txn.arith_flag;
+    69              1                      50004             t_cvg.logic_flag = txn.logic_flag;
+    70              1                      50004             t_cvg.zero_flag = txn.zero_flag;
+    71              1                      50004             coverage_mail.put(t_cvg);
+
+  File ALU_scoreboard.sv
+    1                                                import ALU_shared_pkg::*;
+    2                                                import ALU_transaction_pkg::*;
+    3                                                class ALU_scoreboard;
+    4                                                    ALU_transaction t_score;
+    5                                                    mailbox#(ALU_transaction) score_mail;
+    6                                                
+    7                                                    bit [WIDTH - 1:0] ALU_OUT_ref;
+    8                                                    bit carry_flag_ref, arith_flag_ref, logic_flag_ref,zero_flag_ref;
+    9                                                
+    10                                                   function new();
+    11              1                          1             this.score_mail = new();
+    12                                                   endfunction
+    13                                               
+    14                                                   function void golden_model(input ALU_transaction txn);
+    15                                                       if (!txn.rst_n) begin
+    16              1                       1494                 ALU_OUT_ref = 0;
+    17              1                       1494                 carry_flag_ref = 0;
+    18              1                       1494                 arith_flag_ref = 0;
+    19              1                       1494                 logic_flag_ref = 0;
+    20              1                       1494                 zero_flag_ref = 0;
+    21                                                       end
+    22                                                       else begin
+    23              1                      48510                 {carry_flag_ref,arith_flag_ref,logic_flag_ref} = 3'b000;
+    24                                                           case (txn.opcode)
+    25              1                       7959                     ADD: {carry_flag_ref,ALU_OUT_ref} = txn.A + txn.B;
+    26              1                       7860                     SUB: {carry_flag_ref,ALU_OUT_ref} = txn.A - txn.B;
+    27              1                      16350                     AND: ALU_OUT_ref = txn.A & txn.B;
+    28              1                      16341                     XOR: ALU_OUT_ref = txn.A ^ txn.B;
+    29                                                           endcase
+    30                                                           case (txn.opcode)
+    31              1                      15819                     ADD,SUB: arith_flag_ref = 1;
+    32              1                      32691                     AND,XOR: logic_flag_ref = 1;
+    33                                                           endcase
+    34                                                       end
+    35              1                      50004             zero_flag_ref = (ALU_OUT_ref == 0);
+    36                                                   endfunction
+    37                                               
+    38                                                   task run_scoreboard();
+    39              1                          1             forever begin
+    40              1                      50005                 t_score = new();
+    41              1                      50005                 score_mail.get(t_score);
+    42              1                      50004                 golden_model(t_score);
+    43                                               
+    44                                                           if (ALU_OUT_ref !== t_score.ALU_OUT) begin
+    45              1                    ***0***                     $display("Error! ALU_OUT_ref = %0d, Got = %0d, at time = %0t",ALU_OUT_ref,t_score.ALU_OUT,$time);
+    46              1                    ***0***                     error_count++;
+    47                                                           end
+    48                                                           else begin
+    49              1                      50004                     correct_count++;
+    50                                                           end
+    51                                                           if (carry_flag_ref !== t_score.carry_flag) begin
+    52              1                    ***0***                     $display("Error! carry_flag_ref = %0d, Got = %0d, at time = %0t",carry_flag_ref,t_score.carry_flag,$time);
+    53              1                    ***0***                     error_count++;
+    54                                                           end
+    55                                                           else begin
+    56              1                      50004                     correct_count++;
+    57                                                           end
+    58                                                           if (arith_flag_ref !== t_score.arith_flag) begin
+    59              1                    ***0***                     $display("Error! arith_flag_ref = %0d, Got = %0d, at time = %0t",arith_flag_ref,t_score.arith_flag,$time);
+    60              1                    ***0***                     error_count++;
+    61                                                           end
+    62                                                           else begin
+    63              1                      50004                     correct_count++;
+    64                                                           end
+    65                                                           if (logic_flag_ref !== t_score.logic_flag) begin
+    66              1                    ***0***                     $display("Error! logic_flag_ref = %0d, Got = %0d, at time = %0t",logic_flag_ref,t_score.logic_flag,$time);
+    67              1                    ***0***                     error_count++;
+    68                                                           end
+    69                                                           else begin
+    70              1                      50004                     correct_count++;
+    71                                                           end
+    72                                                           if (zero_flag_ref !== t_score.zero_flag) begin
+    73              1                    ***0***                     $display("Error! zero_flag_ref = %0d, Got = %0d, at time = %0t",zero_flag_ref,t_score.zero_flag,$time);
+    74              1                    ***0***                     error_count++;
+    75                                                           end
+    76                                                           else begin
+    77              1                      50004                     correct_count++;
+
+  File ALU_env.sv
+    1                                                import ALU_shared_pkg::*;
+    2                                                import ALU_transaction_pkg::*;
+    3                                                import ALU_cvg_pkg::*;
+    4                                                
+    5                                                class ALU_env;
+    6                                                    ALU_generator generator;
+    7                                                    ALU_agent agent;
+    8                                                    ALU_subscriber subscriber;
+    9                                                    ALU_scoreboard scoreboard;
+    10                                                   ALU_coverage coverage;
+    11                                                   
+    12                                                   mailbox#(ALU_transaction) sub_to_scb_mail;
+    13                                                   mailbox#(ALU_transaction) sub_to_cvg_mail;
+    14                                                   
+    15                                                   function new();
+    16              1                          1             sub_to_scb_mail = new();
+    17              1                          1             sub_to_cvg_mail = new();
+    18                                                       
+    19              1                          1             generator = new();
+    20              1                          1             agent = new();
+    21              1                          1             subscriber = new();
+    22              1                          1             scoreboard = new();
+    23              1                          1             coverage = new();
+    24                                                       
+    25                                                       // Connect generator to agent
+    26              1                          1             generator.gen_mail = agent.gen_to_drv_mail;
+    27                                               
+    28                                                       // Connect generator's handover event to the SAME event object the
+    29                                                       // driver holds. Must be done here (right after agent = new()),
+    30                                                       // since agent.driver_handover was already copied by-handle into
+    31                                                       // driver.driver_handover inside ALU_agent's constructor. Reassigning
+    32                                                       // agent.driver_handover later (e.g. in ALU_test) would only change
+    33                                                       // the agent's own property, not the driver's already-copied handle.
+    34              1                          1             generator.gen_handover = agent.driver_handover;
+    35                                                       
+    36                                                       // Connect monitor to subscriber.
+    37                                                       // NOTE: must target agent.monitor.monitor_mail directly, not
+    38                                                       // agent.mon_to_sub_mail — the monitor already copied agent's
+    39                                                       // *original* mon_to_sub_mail handle into monitor.monitor_mail
+    40                                                       // inside ALU_agent's constructor, so reassigning agent's own
+    41                                                       // property here would only orphan that original mailbox.
+    42              1                          1             agent.monitor.monitor_mail = subscriber.sub_mail;
+    43                                                       
+    44                                                       // Connect subscriber to scoreboard and coverage
+    45              1                          1             subscriber.scoreboard_mail = sub_to_scb_mail;
+    46              1                          1             subscriber.coverage_mail = sub_to_cvg_mail;
+    47                                                       
+    48                                                       // Connect scoreboard
+    49              1                          1             scoreboard.score_mail = sub_to_scb_mail;
+    50                                                       
+    51                                                       // Connect coverage
+    52              1                          1             coverage.cvg_mail = sub_to_cvg_mail;
+    53                                                   endfunction
+    54                                                   
+    55                                                   task run_env();
+    56                                                       fork
+    57              1                          1                 generator.run_generator();
+    58              1                          1                 agent.run_agent();
+    59              1                          1                 subscriber.run_subscriber();
+    60              1                          1                 scoreboard.run_scoreboard();
+    61              1                          1                 coverage.run_coverage();
+    62                                                       join_none
+    63                                                   endtask
+    64                                                   
+    65                                                   function void set_interface(virtual ALU_if vif);
+    66              1                          1             agent.set_interface(vif);
+    67                                                   endfunction
+    68                                                   
+    69                                                   function void report();
+    70              1                          1             $display("\n========== TEST REPORT ==========");
+    71              1                          1             $display("Total correct comparisons: %0d", correct_count);
+    72              1                          1             $display("Total error comparisons: %0d", error_count);
+    73              1                          1             $display("==================================\n");
+
+  File ALU_test.sv
+    1                                                import ALU_shared_pkg::*;
+    2                                                import ALU_transaction_pkg::*;
+    3                                                import ALU_cvg_pkg::*;
+    4                                                
+    5                                                class ALU_test;
+    6                                                    ALU_env env;
+    7                                                    virtual ALU_if test_vif;
+    8               1                          1         int test_duration = 50000;
+    9                                                    
+    10                                                   function new();
+    11              1                          1             env = new();
+    12                                                   endfunction
+    13                                                   
+    14                                                   task run_test();
+    15              1                          1             $display("\n========== Starting ALU Test ==========");
+    16              1                          1             $display("Test duration: %0d transactions", test_duration);
+    17                                                       
+    18                                                       // Reset DUT initially
+    19              1                          1             test_vif.rst_n = 0;
+    20              1                          1             @(negedge test_vif.clk);
+    21              1                          1             test_vif.rst_n = 1;
+    22              1                          1             $display("Time %0t: Reset deasserted", $time);
+    23                                                       
+    24                                                       // (Handover event between generator and driver is now wired
+    25                                                       // correctly inside ALU_env's constructor, not here.)
+    26                                               
+    27                                                       // Run all components in parallel
+    28                                                       fork
+    29              1                          1                 env.run_env();
+    30              1                          1                 wait_for_test_completion();
+    31                                                       join
+    32                                                       
+    33              1                          1             env.report();
+    34              1                          1             $display("========== Test Completed ==========\n");
+    35                                                   endtask
+    36                                                   
+    37                                                   task wait_for_test_completion();
+    38              1                          1             wait(test_finished == 1);
+    39              1                          1             $display("Time %0t: Generator finished", $time);
+    40              1                          5             repeat(5) @(negedge test_vif.clk);
+    40              2                          5     
+    41              1                          1             $display("Time %0t: All transactions processed", $time);
+    42                                                   endtask
+    43                                                   
+    44                                                   function void set_interface(virtual ALU_if vif);
+    45              1                          1             test_vif = vif;
+    46              1                          1             env.set_interface(vif);
+    47                                                   endfunction
+    48                                                   
+    49                                                   function void set_test_duration(int duration);
+    50              1                          1             test_duration = duration;
+    51              1                          1             env.generator.TEST_SIZE = test_duration;
+
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /ALU_cvg_pkg/ALU_coverage/CovCode               100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint A_logical_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_A_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_B_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                14         14          -                      
+        missing/total bins:                                 0         14          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/ALU_cvg_pkg::ALU_coverage::CovCode  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin A_data_0                                     5265          1          -    Covered              
+        bin A_data_max                                   5434          1          -    Covered              
+        bin A_data_min                                   8558          1          -    Covered              
+        default bin A_data_default                      30747                     -    Occurred             
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin B_data_0                                     5409          1          -    Covered              
+        bin B_data_max                                   5369          1          -    Covered              
+        bin B_data_min                                   5320          1          -    Covered              
+        default bin B_data_default                      33906                     -    Occurred             
+    Coverpoint A_logical_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin A_walking_ones[-128]                         3475          1          -    Covered              
+        bin A_walking_ones[1]                            3253          1          -    Covered              
+        bin A_walking_ones[2]                            3338          1          -    Covered              
+        bin A_walking_ones[4]                            3434          1          -    Covered              
+        bin A_walking_ones[8]                            3415          1          -    Covered              
+        bin A_walking_ones[16]                           3326          1          -    Covered              
+        bin A_walking_ones[32]                           3331          1          -    Covered              
+        bin A_walking_ones[64]                           3384          1          -    Covered              
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin arith_bins[ADD]                              8201          1          -    Covered              
+        bin arith_bins[SUB]                              8122          1          -    Covered              
+        bin logic_bins[AND]                             16862          1          -    Covered              
+        bin logic_bins[XOR]                             16819          1          -    Covered              
+        bin trans                                         148          1          -    Covered              
+    Cross opcode_A_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <trans,A_data_min>                         22          1          -    Covered              
+            bin <logic_bins[XOR],A_data_min>             1726          1          -    Covered              
+            bin <arith_bins[SUB],A_data_min>             2517          1          -    Covered              
+            bin <logic_bins[AND],A_data_min>             1749          1          -    Covered              
+            bin <arith_bins[ADD],A_data_min>             2566          1          -    Covered              
+            bin <logic_bins[XOR],A_data_max>               17          1          -    Covered              
+            bin <logic_bins[XOR],A_data_0>                 15          1          -    Covered              
+            bin <arith_bins[SUB],A_data_max>             2713          1          -    Covered              
+            bin <arith_bins[SUB],A_data_0>               2599          1          -    Covered              
+            bin <logic_bins[AND],A_data_max>               18          1          -    Covered              
+            bin <logic_bins[AND],A_data_0>                 16          1          -    Covered              
+            bin <arith_bins[ADD],A_data_max>             2686          1          -    Covered              
+            bin <arith_bins[ADD],A_data_0>               2635          1          -    Covered              
+        Illegal and Ignore Bins:
+            illegal_bin i_bin2                              0                     -    ZERO                 
+            illegal_bin i_bin1                              0                     -    ZERO                 
+    Cross opcode_B_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                14         14          -                      
+        missing/total bins:                                 0         14          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <logic_bins[XOR],B_data_min>               70          1          -    Covered              
+            bin <arith_bins[SUB],B_data_min>             2527          1          -    Covered              
+            bin <logic_bins[XOR],B_data_max>               57          1          -    Covered              
+            bin <arith_bins[SUB],B_data_max>             2649          1          -    Covered              
+            bin <logic_bins[XOR],B_data_0>                 66          1          -    Covered              
+            bin <arith_bins[SUB],B_data_0>               2664          1          -    Covered              
+            bin <trans,B_data_max>                          1          1          -    Covered              
+            bin <trans,B_data_0>                            1          1          -    Covered              
+            bin <logic_bins[AND],B_data_min>               60          1          -    Covered              
+            bin <arith_bins[ADD],B_data_min>             2663          1          -    Covered              
+            bin <logic_bins[AND],B_data_max>               58          1          -    Covered              
+            bin <arith_bins[ADD],B_data_max>             2605          1          -    Covered              
+            bin <logic_bins[AND],B_data_0>                 54          1          -    Covered              
+            bin <arith_bins[ADD],B_data_0>               2625          1          -    Covered              
+        Illegal and Ignore Bins:
+            illegal_bin i_bin1                              0                     -    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/ALU_tb/dut/reset_check_C                ALU    Verilog  SVA  ALU.sv(47)      1449 Covered   
+/ALU_tb/dut/zero_flag_check_C            ALU    Verilog  SVA  ALU.sv(70)      1448 Covered   
+/ALU_tb/dut/ARITH_FLAG_C                 ALU    Verilog  SVA  ALU.sv(83)      15385 Covered   
+/ALU_tb/dut/LOGIC_FLAG_C                 ALU    Verilog  SVA  ALU.sv(84)      31676 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 4
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/ALU_tb/dut/reset_check
+                     ALU.sv(42)                         0          1
+/ALU_tb/dut/zero_flag_check
+                     ALU.sv(68)                         1          1
+/ALU_tb/dut/ARITH_FLAG
+                     ALU.sv(76)                         0          1
+/ALU_tb/dut/LOGIC_FLAG
+                     ALU.sv(79)                         0          1
+/ALU_shared_pkg_sv_unit/ALU_generator/run_generator/#anonblk#173757300#15#4#/#ublk#173757300#15/immed__29
+                     ALU_generator.sv(29)               0          1
+
+Total Coverage By Instance (filtered view): 85.00%
+

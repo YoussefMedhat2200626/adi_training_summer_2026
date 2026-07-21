@@ -1,0 +1,280 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /ALU_tb/dut
+=== Design Unit: work.ALU
+=================================================================================
+
+Directive Coverage:
+    Directives                       4         4         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/ALU_tb/dut/reset_check_C                ALU    Verilog  SVA  ALU.sv(47)      1449 Covered   
+/ALU_tb/dut/zero_flag_check_C            ALU    Verilog  SVA  ALU.sv(70)      1448 Covered   
+/ALU_tb/dut/ARITH_FLAG_C                 ALU    Verilog  SVA  ALU.sv(83)      15385 Covered   
+/ALU_tb/dut/LOGIC_FLAG_C                 ALU    Verilog  SVA  ALU.sv(84)      31676 Covered   
+
+=================================================================================
+=== Instance: /ALU_cvg_pkg
+=== Design Unit: work.ALU_cvg_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses          6        na        na        na
+            Covergroup Bins         46        46         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /ALU_cvg_pkg/ALU_coverage/CovCode               100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint A_logical_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_A_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_B_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                14         14          -                      
+        missing/total bins:                                 0         14          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/ALU_cvg_pkg::ALU_coverage::CovCode  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin A_data_0                                     5265          1          -    Covered              
+        bin A_data_max                                   5434          1          -    Covered              
+        bin A_data_min                                   8558          1          -    Covered              
+        default bin A_data_default                      30747                     -    Occurred             
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin B_data_0                                     5409          1          -    Covered              
+        bin B_data_max                                   5369          1          -    Covered              
+        bin B_data_min                                   5320          1          -    Covered              
+        default bin B_data_default                      33906                     -    Occurred             
+    Coverpoint A_logical_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin A_walking_ones[-128]                         3475          1          -    Covered              
+        bin A_walking_ones[1]                            3253          1          -    Covered              
+        bin A_walking_ones[2]                            3338          1          -    Covered              
+        bin A_walking_ones[4]                            3434          1          -    Covered              
+        bin A_walking_ones[8]                            3415          1          -    Covered              
+        bin A_walking_ones[16]                           3326          1          -    Covered              
+        bin A_walking_ones[32]                           3331          1          -    Covered              
+        bin A_walking_ones[64]                           3384          1          -    Covered              
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin arith_bins[ADD]                              8201          1          -    Covered              
+        bin arith_bins[SUB]                              8122          1          -    Covered              
+        bin logic_bins[AND]                             16862          1          -    Covered              
+        bin logic_bins[XOR]                             16819          1          -    Covered              
+        bin trans                                         148          1          -    Covered              
+    Cross opcode_A_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <trans,A_data_min>                         22          1          -    Covered              
+            bin <logic_bins[XOR],A_data_min>             1726          1          -    Covered              
+            bin <arith_bins[SUB],A_data_min>             2517          1          -    Covered              
+            bin <logic_bins[AND],A_data_min>             1749          1          -    Covered              
+            bin <arith_bins[ADD],A_data_min>             2566          1          -    Covered              
+            bin <logic_bins[XOR],A_data_max>               17          1          -    Covered              
+            bin <logic_bins[XOR],A_data_0>                 15          1          -    Covered              
+            bin <arith_bins[SUB],A_data_max>             2713          1          -    Covered              
+            bin <arith_bins[SUB],A_data_0>               2599          1          -    Covered              
+            bin <logic_bins[AND],A_data_max>               18          1          -    Covered              
+            bin <logic_bins[AND],A_data_0>                 16          1          -    Covered              
+            bin <arith_bins[ADD],A_data_max>             2686          1          -    Covered              
+            bin <arith_bins[ADD],A_data_0>               2635          1          -    Covered              
+        Illegal and Ignore Bins:
+            illegal_bin i_bin2                              0                     -    ZERO                 
+            illegal_bin i_bin1                              0                     -    ZERO                 
+    Cross opcode_B_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                14         14          -                      
+        missing/total bins:                                 0         14          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <logic_bins[XOR],B_data_min>               70          1          -    Covered              
+            bin <arith_bins[SUB],B_data_min>             2527          1          -    Covered              
+            bin <logic_bins[XOR],B_data_max>               57          1          -    Covered              
+            bin <arith_bins[SUB],B_data_max>             2649          1          -    Covered              
+            bin <logic_bins[XOR],B_data_0>                 66          1          -    Covered              
+            bin <arith_bins[SUB],B_data_0>               2664          1          -    Covered              
+            bin <trans,B_data_max>                          1          1          -    Covered              
+            bin <trans,B_data_0>                            1          1          -    Covered              
+            bin <logic_bins[AND],B_data_min>               60          1          -    Covered              
+            bin <arith_bins[ADD],B_data_min>             2663          1          -    Covered              
+            bin <logic_bins[AND],B_data_max>               58          1          -    Covered              
+            bin <arith_bins[ADD],B_data_max>             2605          1          -    Covered              
+            bin <logic_bins[AND],B_data_0>                 54          1          -    Covered              
+            bin <arith_bins[ADD],B_data_0>               2625          1          -    Covered              
+        Illegal and Ignore Bins:
+            illegal_bin i_bin1                              0                     -    ZERO                 
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /ALU_cvg_pkg/ALU_coverage/CovCode               100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint A_logical_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_A_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_B_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                14         14          -                      
+        missing/total bins:                                 0         14          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/ALU_cvg_pkg::ALU_coverage::CovCode  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    46         46          -                      
+    missing/total bins:                                     0         46          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint A_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin A_data_0                                     5265          1          -    Covered              
+        bin A_data_max                                   5434          1          -    Covered              
+        bin A_data_min                                   8558          1          -    Covered              
+        default bin A_data_default                      30747                     -    Occurred             
+    Coverpoint B_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin B_data_0                                     5409          1          -    Covered              
+        bin B_data_max                                   5369          1          -    Covered              
+        bin B_data_min                                   5320          1          -    Covered              
+        default bin B_data_default                      33906                     -    Occurred             
+    Coverpoint A_logical_cp                           100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin A_walking_ones[-128]                         3475          1          -    Covered              
+        bin A_walking_ones[1]                            3253          1          -    Covered              
+        bin A_walking_ones[2]                            3338          1          -    Covered              
+        bin A_walking_ones[4]                            3434          1          -    Covered              
+        bin A_walking_ones[8]                            3415          1          -    Covered              
+        bin A_walking_ones[16]                           3326          1          -    Covered              
+        bin A_walking_ones[32]                           3331          1          -    Covered              
+        bin A_walking_ones[64]                           3384          1          -    Covered              
+    Coverpoint opcode_cp                              100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin arith_bins[ADD]                              8201          1          -    Covered              
+        bin arith_bins[SUB]                              8122          1          -    Covered              
+        bin logic_bins[AND]                             16862          1          -    Covered              
+        bin logic_bins[XOR]                             16819          1          -    Covered              
+        bin trans                                         148          1          -    Covered              
+    Cross opcode_A_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <trans,A_data_min>                         22          1          -    Covered              
+            bin <logic_bins[XOR],A_data_min>             1726          1          -    Covered              
+            bin <arith_bins[SUB],A_data_min>             2517          1          -    Covered              
+            bin <logic_bins[AND],A_data_min>             1749          1          -    Covered              
+            bin <arith_bins[ADD],A_data_min>             2566          1          -    Covered              
+            bin <logic_bins[XOR],A_data_max>               17          1          -    Covered              
+            bin <logic_bins[XOR],A_data_0>                 15          1          -    Covered              
+            bin <arith_bins[SUB],A_data_max>             2713          1          -    Covered              
+            bin <arith_bins[SUB],A_data_0>               2599          1          -    Covered              
+            bin <logic_bins[AND],A_data_max>               18          1          -    Covered              
+            bin <logic_bins[AND],A_data_0>                 16          1          -    Covered              
+            bin <arith_bins[ADD],A_data_max>             2686          1          -    Covered              
+            bin <arith_bins[ADD],A_data_0>               2635          1          -    Covered              
+        Illegal and Ignore Bins:
+            illegal_bin i_bin2                              0                     -    ZERO                 
+            illegal_bin i_bin1                              0                     -    ZERO                 
+    Cross opcode_B_cross                              100.00%        100          -    Covered              
+        covered/total bins:                                14         14          -                      
+        missing/total bins:                                 0         14          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <logic_bins[XOR],B_data_min>               70          1          -    Covered              
+            bin <arith_bins[SUB],B_data_min>             2527          1          -    Covered              
+            bin <logic_bins[XOR],B_data_max>               57          1          -    Covered              
+            bin <arith_bins[SUB],B_data_max>             2649          1          -    Covered              
+            bin <logic_bins[XOR],B_data_0>                 66          1          -    Covered              
+            bin <arith_bins[SUB],B_data_0>               2664          1          -    Covered              
+            bin <trans,B_data_max>                          1          1          -    Covered              
+            bin <trans,B_data_0>                            1          1          -    Covered              
+            bin <logic_bins[AND],B_data_min>               60          1          -    Covered              
+            bin <arith_bins[ADD],B_data_min>             2663          1          -    Covered              
+            bin <logic_bins[AND],B_data_max>               58          1          -    Covered              
+            bin <arith_bins[ADD],B_data_max>             2605          1          -    Covered              
+            bin <logic_bins[AND],B_data_0>                 54          1          -    Covered              
+            bin <arith_bins[ADD],B_data_0>               2625          1          -    Covered              
+        Illegal and Ignore Bins:
+            illegal_bin i_bin1                              0                     -    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/ALU_tb/dut/reset_check_C                ALU    Verilog  SVA  ALU.sv(47)      1449 Covered   
+/ALU_tb/dut/zero_flag_check_C            ALU    Verilog  SVA  ALU.sv(70)      1448 Covered   
+/ALU_tb/dut/ARITH_FLAG_C                 ALU    Verilog  SVA  ALU.sv(83)      15385 Covered   
+/ALU_tb/dut/LOGIC_FLAG_C                 ALU    Verilog  SVA  ALU.sv(84)      31676 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 4
+
+Total Coverage By Instance (filtered view): 100.00%
+
