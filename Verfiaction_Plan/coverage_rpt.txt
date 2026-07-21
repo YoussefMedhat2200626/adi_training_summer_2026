@@ -1640,7 +1640,7 @@ Statement Coverage for instance /alu_cvg_pkg --
 Statement Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                      29        29         0   100.00%
+    Statements                      32        32         0   100.00%
 
 ================================Statement Details================================
 
@@ -1695,52 +1695,76 @@ Statement Coverage for instance /alu_if_sv_unit --
     56                                                   function void report();
     57              1                          1             cvg.report();
 
-  File test.sv
-    13                                               import alu_cvg_pkg::*;
-    14                                               
-    15                                               class test;
-    16                                                   generator  gen;
-    17                                                   alu_agent  agnt;
-    18                                                   scoreboard scb;
-    19                                               
-    20                                                   mailbox #(alu_transaction) gen2drv;
+  File alu_env.sv
+    13                                               // alu_agent.sv / test.sv: it needs alu_agent, which itself depends on
+    14                                               // alu_cvg_pkg, so it imports both packages explicitly rather than
+    15                                               // living inside alu_pkg.
+    16                                               //=====================================================================
+    17                                               `timescale 1ns/1ps
+    18                                               
+    19                                               import alu_pkg::*;
+    20                                               import alu_cvg_pkg::*;
     21                                               
-    22                                                   function new(virtual alu_if.DRIVER drv_vif, virtual alu_if.MONITOR mon_vif,
-    23                                                                int num_random_txns = 200);
-    24              1                          1             gen2drv = new();
-    25                                               
-    26              1                          1             gen  = new(gen2drv, num_random_txns);
-    27              1                          1             agnt = new(drv_vif, mon_vif, gen2drv);
-    28              1                          1             scb  = new(agnt.mon2scb);
-    29                                               
-    30              1                          1             gen.gen_handover = agnt.drv.driver_handover;
-    31                                                   endfunction
-    32                                               
-    33                                                   task run();
-    34                                                       // Start driver/monitor/coverage running BEFORE driving reset.
-    35                                                       // drv.run() just blocks on an empty gen2drv mailbox until the
-    36                                                       // generator starts (below), so it's safe to have it live now.
-    37                                                       // Crucially, mon.run() needs to already be running so it can
-    38                                                       // observe RST===0 during reset_dut() -- otherwise reset_cg
-    39                                                       // never sees the rst_n=0 bin.
-    40                                                       fork
-    41              1                          1                 agnt.run();
-    42              1                          1                 scb.run();
-    43                                                       join_none
-    44                                               
-    45              1                          1             agnt.reset_dut();
-    46                                               
-    47              1                          1             gen.run();
-    48              1                          1             wait (gen.is_done);
-    49              1                         20             repeat (20) @(agnt.drv_vif.drv_cb);
-    49              2                         20     
-    50                                               
-    51              1                          1             scb.report();
-    52              1                          1             agnt.report();
-    53                                               
-    54              1                          1             $display("[TEST] Simulation complete at time %0t", $time);
-    55              1                          1             $display("[TEST] error_count=%0d correct_count=%0d", error_count, correct_count);
-    56              1                          1             $finish;
+    22                                               class alu_env;
+    23                                                   generator  gen;
+    24                                                   alu_agent  agnt;
+    25                                                   scoreboard scb;
+    26                                               
+    27                                                   mailbox #(alu_transaction) gen2drv;
+    28                                               
+    29                                                   function new(virtual alu_if.DRIVER  drv_vif,
+    30                                                                virtual alu_if.MONITOR mon_vif,
+    31                                                                int num_random_txns = 200);
+    32              1                          1             gen2drv = new();
+    33                                               
+    34              1                          1             gen  = new(gen2drv, num_random_txns);
+    35              1                          1             agnt = new(drv_vif, mon_vif, gen2drv);
+    36              1                          1             scb  = new(agnt.mon2scb);
+    37                                               
+    38              1                          1             gen.gen_handover = agnt.drv.driver_handover;
+    39                                                   endfunction
+    40                                               
+    41                                                   task run();
+    42                                                       // Bring up the agent (driver + monitor + coverage) and the
+    43                                                       // scoreboard first so the monitor is already alive to observe
+    44                                                       // reset -- this matters for reset_cg in functional coverage.
+    45                                                       fork
+    46              1                          1                 agnt.run();
+    47              1                          1                 scb.run();
+    48                                                       join_none
+    49                                               
+    50              1                          1             agnt.reset_dut();
+    51                                               
+    52              1                          1             gen.run();
+    53              1                          1             wait (gen.is_done);
+    54              1                         20             repeat (20) @(agnt.drv_vif.drv_cb);   // drain in-flight transactions
+    54              2                         20     
+    55                                                   endtask
+    56                                               
+    57                                                   function void report();
+    58              1                          1             scb.report();
+    59              1                          1             agnt.report();
+
+  File test.sv
+    13                                               
+    14                                               import alu_pkg::*;
+    15                                               import alu_cvg_pkg::*;
+    16                                               
+    17                                               class test;
+    18                                                   alu_env env;
+    19                                               
+    20                                                   function new(virtual alu_if.DRIVER drv_vif, virtual alu_if.MONITOR mon_vif,
+    21                                                                int num_random_txns = 200);
+    22              1                          1             env = new(drv_vif, mon_vif, num_random_txns);
+    23                                                   endfunction
+    24                                               
+    25                                                   task run();
+    26              1                          1             env.run();
+    27              1                          1             env.report();
+    28                                               
+    29              1                          1             $display("[TEST] Simulation complete at time %0t", $time);
+    30              1                          1             $display("[TEST] error_count=%0d correct_count=%0d", error_count, correct_count);
+    31              1                          1             $finish;
 
 
 COVERGROUP COVERAGE:
@@ -2129,5 +2153,5 @@ Covergroup                                             Metric       Goal       B
 
 TOTAL COVERGROUP COVERAGE: 89.00%  COVERGROUP TYPES: 5
 
-Total Coverage By Instance (filtered view): 69.53%
+Total Coverage By Instance (filtered view): 69.54%
 

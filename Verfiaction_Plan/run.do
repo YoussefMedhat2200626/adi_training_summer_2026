@@ -5,6 +5,7 @@ vlog -sv -mfcu +incdir+. \
     alu_pkg.sv \
     alu_cvg_pkg.sv \
     alu_agent.sv \
+    alu_env.sv \
     test.sv \
     alu.sv \
     tb_top.sv \
