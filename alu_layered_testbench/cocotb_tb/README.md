@@ -36,4 +36,32 @@ async def tb_top(dut):
     await sampler_task 
 ```
 
+## How to Run
 
+1. Open your terminal and navigate to this folder:
+   ```bash
+   cd ~/Desktop/alu/alu_layered_testbench/cocotb_tb
+   ```
+
+2. Activate the Python Virtual Environment and set up paths depending on your shell:
+
+   **If you are using Bash / Zsh:**
+   ```bash
+   source ~/Desktop/alu/.venv/bin/activate
+   export PATH=/mnt/shared/altera_pro/26.1/questa_fse/bin:$PATH
+   export LM_LICENSE_FILE=~/Downloads/LR-089766_License.txt
+   export MGLS_LICENSE_FILE=~/Downloads/LR-089766_License.txt
+   ```
+
+   **If you are using Fish (Your current shell!):**
+   ```fish
+   source ~/Desktop/alu/.venv/bin/activate.fish
+   set -x PATH /mnt/shared/altera_pro/26.1/questa_fse/bin $PATH
+   set -x LM_LICENSE_FILE ~/Downloads/LR-089766_License.txt
+   set -x MGLS_LICENSE_FILE ~/Downloads/LR-089766_License.txt
+   ```
+
+3. Run the Simulation with Questa-compat mode:
+   ```bash
+   make SIM=questa-compat
+   ```

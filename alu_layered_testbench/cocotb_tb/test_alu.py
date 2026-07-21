@@ -9,13 +9,13 @@ async def drive_arithmetic(dut):
         dut.A.value = 10 + i
         dut.B.value = 5
         dut.alu_op.value = 0 
-        await Timer(10, units="ns")
+        await Timer(10, unit="ns")
         
         # SUB
         dut.A.value = 20 + i
         dut.B.value = 5
         dut.alu_op.value = 1 
-        await Timer(10, units="ns")
+        await Timer(10, unit="ns")
 
 async def drive_logical(dut):
     """Coroutine to drive logical operations (AND=10, XOR=11)"""
@@ -25,13 +25,13 @@ async def drive_logical(dut):
         dut.A.value = 0xFF
         dut.B.value = 0x0F
         dut.alu_op.value = 2 
-        await Timer(10, units="ns")
+        await Timer(10, unit="ns")
         
         # XOR
         dut.A.value = 0xAA
         dut.B.value = 0x55
         dut.alu_op.value = 3 
-        await Timer(10, units="ns")
+        await Timer(10, unit="ns")
 
 async def sample_output(dut):
     """Coroutine to passively sample and print the output"""
@@ -40,7 +40,7 @@ async def sample_output(dut):
     # We will sample 12 times (6 arithmetic + 6 logical)
     for _ in range(12):
         # Wait for signals to settle before sampling
-        await Timer(10, units="ns")
+        await Timer(10, unit="ns")
         
         # Read the values
         a = int(dut.A.value)
