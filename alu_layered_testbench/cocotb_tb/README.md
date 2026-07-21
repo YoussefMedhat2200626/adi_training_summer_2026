@@ -45,7 +45,7 @@ async def tb_top(dut):
 
 2. Activate the Python Virtual Environment and set up paths depending on your shell:
 
-   **If you are using Bash / Zsh:**
+   **For Bash / Zsh:**
    ```bash
    source ~/Desktop/alu/.venv/bin/activate
    export PATH=/mnt/shared/altera_pro/26.1/questa_fse/bin:$PATH
@@ -53,8 +53,8 @@ async def tb_top(dut):
    export MGLS_LICENSE_FILE=~/Downloads/LR-089766_License.txt
    ```
 
-   **If you are using Fish (Your current shell!):**
-   ```fish
+   **For CachyOS (Default Shell):**
+   ```bash
    source ~/Desktop/alu/.venv/bin/activate.fish
    set -x PATH /mnt/shared/altera_pro/26.1/questa_fse/bin $PATH
    set -x LM_LICENSE_FILE ~/Downloads/LR-089766_License.txt
