@@ -31,12 +31,18 @@ class test;
     endfunction
 
     task run();
-        agnt.reset_dut();
-
+        // Start driver/monitor/coverage running BEFORE driving reset.
+        // drv.run() just blocks on an empty gen2drv mailbox until the
+        // generator starts (below), so it's safe to have it live now.
+        // Crucially, mon.run() needs to already be running so it can
+        // observe RST===0 during reset_dut() -- otherwise reset_cg
+        // never sees the rst_n=0 bin.
         fork
             agnt.run();
             scb.run();
         join_none
+
+        agnt.reset_dut();
 
         gen.run();
         wait (gen.is_done);
