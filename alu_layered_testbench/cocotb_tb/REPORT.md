@@ -12,7 +12,6 @@ The main testbench `tb_top` spawns all three of these tasks simultaneously using
 ## 2. Simulation Results
 
 ```text
-#      0.00ns INFO     test                                STARTING SIMULATION
 #      0.00ns INFO     test                                --- Monitor Started ---
 #      0.00ns INFO     test                                --- Starting Arithmetic Stimulus ---
 #     10.00ns INFO     test                               Monitor Sampled -> ADD: 10 op 5 = 15 (Carry=0, Zero=0)
@@ -21,6 +20,9 @@ The main testbench `tb_top` spawns all three of these tasks simultaneously using
 #     40.00ns INFO     test                               Monitor Sampled -> SUB: 21 op 5 = 16 (Carry=0, Zero=0)
 #     50.00ns INFO     test                               Monitor Sampled -> ADD: 12 op 5 = 17 (Carry=0, Zero=0)
 #     60.00ns INFO     test                               Monitor Sampled -> SUB: 22 op 5 = 17 (Carry=0, Zero=0)
+#     60.00ns INFO     cocotb.regression                  test_alu.test_arithmetic passed
+#     60.00ns INFO     cocotb.regression                  running test_alu.test_logical (2/2)
+#     60.00ns INFO     test                                --- Monitor Started ---
 #     60.00ns INFO     test                                --- Starting Logical Stimulus ---
 #     70.00ns INFO     test                               Monitor Sampled -> AND: 255 op 15 = 15 (Carry=0, Zero=0)
 #     80.00ns INFO     test                               Monitor Sampled -> XOR: 170 op 85 = 255 (Carry=0, Zero=0)
@@ -28,15 +30,15 @@ The main testbench `tb_top` spawns all three of these tasks simultaneously using
 #    100.00ns INFO     test                               Monitor Sampled -> XOR: 170 op 85 = 255 (Carry=0, Zero=0)
 #    110.00ns INFO     test                               Monitor Sampled -> AND: 255 op 15 = 15 (Carry=0, Zero=0)
 #    120.00ns INFO     test                               Monitor Sampled -> XOR: 170 op 85 = 255 (Carry=0, Zero=0)
-#    120.00ns INFO     test                                SIMULATION FINISHED 
-#    120.00ns INFO     cocotb.regression                  test_alu.tb_top passed
+#    120.00ns INFO     cocotb.regression                  test_alu.test_logical passed
 #    120.00ns INFO     cocotb.regression                  **************************************************************************************
 #                                                         ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
 #                                                         **************************************************************************************
-#                                                         ** test_alu.tb_top                PASS         120.00           0.09       1349.11  **
+#                                                         ** test_alu.test_arithmetic       PASS          60.00           0.03       1758.25  **
+#                                                         ** test_alu.test_logical          PASS          60.00           0.00      79790.18  **
 #                                                         **************************************************************************************
-#                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                120.00           0.09       1343.80  **
+#                                                         ** TESTS=2 PASS=2 FAIL=0 SKIP=0                120.00           0.04       3362.73  **
 #                                                         **************************************************************************************
 # ** Note: $finish
-#    Time: 120 ns  Iteration: 0  Instance: /alu
+#    Time: 120001 ps  Iteration: 0  Instance: /alu
 ```

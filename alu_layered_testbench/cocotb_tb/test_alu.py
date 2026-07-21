@@ -33,12 +33,11 @@ async def drive_logical(dut):
         dut.alu_op.value = 3 
         await Timer(10, unit="ns")
 
-async def sample_output(dut):
+async def sample_output(dut, samples=6):
     """Coroutine to passively sample and print the output"""
     cocotb.log.info(" --- Monitor Started ---")
     
-    # We will sample 12 times (6 arithmetic + 6 logical)
-    for _ in range(12):
+    for _ in range(samples):
         # Wait for signals to settle before sampling
         await Timer(10, unit="ns")
         
@@ -54,20 +53,13 @@ async def sample_output(dut):
         cocotb.log.info(f"Monitor Sampled -> {op_name}: {a} op {b} = {res} (Carry={carry}, Zero={zero})")
 
 @cocotb.test()
-async def tb_top(dut):
-    """Main Testbench following the start_soon() structure"""
-    cocotb.log.info(" STARTING SIMULATION ")
-    
-    # 1. Start the sampling coroutine in the background
-    sampler_task = cocotb.start_soon(sample_output(dut))
-    
-    # 2. Drive the arithmetic operations
+async def test_arithmetic(dut):
+    sampler_task = cocotb.start_soon(sample_output(dut, samples=6))
     await cocotb.start_soon(drive_arithmetic(dut))
-    
-    # 3. Drive the logical operations
-    await cocotb.start_soon(drive_logical(dut))
-    
-    # 4. Wait for the monitor to finish sampling
     await sampler_task
-    
-    cocotb.log.info(" SIMULATION FINISHED ")
+
+@cocotb.test()
+async def test_logical(dut):
+    sampler_task = cocotb.start_soon(sample_output(dut, samples=6))
+    await cocotb.start_soon(drive_logical(dut))
+    await sampler_task
