@@ -1,4 +1,4 @@
-# ALU Verification Environment (Assignment 3 & 4 - TE_ALU)
+# ALU Verification Environment (Assignment 3 & 4 & 5 - TE_ALU)
 
 This repository contains a robust verification environment for an 8-bit Arithmetic Logic Unit (ALU). The underlying verification architecture and transaction-based methodology have been successfully designed and applied across two distinct frameworks:
 1. **Class-Based SystemVerilog** (OOP verification environment using interfaces, mailboxes, agents, and scoreboard).
