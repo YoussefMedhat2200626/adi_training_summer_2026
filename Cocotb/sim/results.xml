@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1784714471" />
+    <testcase name="test_case_add" classname="ALU_tb" file="/mnt/c/ADI/adi_training_summer_2026/Cocotb/sim/ALU_tb.py" lineno="116" time="0.0017371177673339844" sim_time_ns="40.0" ratio_time="23026.648366730715" />
+    <testcase name="test_case_sub" classname="ALU_tb" file="/mnt/c/ADI/adi_training_summer_2026/Cocotb/sim/ALU_tb.py" lineno="123" time="0.0005371570587158203" sim_time_ns="40.00000000000001" ratio_time="74466.11628939194" />
+    <testcase name="test_case_and" classname="ALU_tb" file="/mnt/c/ADI/adi_training_summer_2026/Cocotb/sim/ALU_tb.py" lineno="130" time="0.0005156993865966797" sim_time_ns="40.0" ratio_time="77564.56773000462" />
+    <testcase name="test_case_or" classname="ALU_tb" file="/mnt/c/ADI/adi_training_summer_2026/Cocotb/sim/ALU_tb.py" lineno="137" time="0.00048422813415527344" sim_time_ns="39.999999999999986" ratio_time="82605.69177744951" />
+  </testsuite>
+</testsuites>
