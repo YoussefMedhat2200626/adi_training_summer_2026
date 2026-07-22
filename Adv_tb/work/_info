@@ -1,0 +1,132 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/Adv_tb
+T_opt
+!s11d tb_sv_unit C:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/Adv_tb/work 1 intf 1 C:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/Adv_tb/work 
+!s110 1784662387
+VicKka225RdmO2SM>CD1322
+04 2 4 work tb fast 0
+=1-c475ab072dad-6a5fc973-15a-4fb4
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+valu
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1784662364
+!i10b 1
+!s100 kfJmV3Igc4kZUf8He6Wac0
+I[e9U0acoZWe1NEEcCR>QW0
+S1
+R1
+Z5 w1784651138
+8alu.sv
+Falu.sv
+!i122 1
+L0 1 48
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z8 !s108 1784662364.000000
+Z9 !s107 environment.sv|agent.sv|subscriber.sv|scoreboard.sv|monitor.sv|driver.sv|generator.sv|transaction.sv|tb.sv|intf.sv|alu.sv|
+Z10 !s90 alu.sv|intf.sv|tb.sv|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Yintf
+R3
+R4
+!i10b 1
+!s100 E^KR^h6A=zeK6z8E@8ih;3
+IadBiDhD;d3H:k^Z8eYl7]1
+S1
+R1
+R5
+8intf.sv
+Fintf.sv
+!i122 1
+L0 6 0
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vtb
+R3
+DXx4 work 10 tb_sv_unit 0 22 31R<B3X5mjZJo>eUoUlnR3
+R4
+R6
+r1
+!s85 0
+!i10b 1
+!s100 zS?[j<>jD;Pn6a[aNgCjM1
+IcWZm=K6<9:F<;e08N2>YT0
+!s105 tb_sv_unit
+S1
+R1
+R5
+Z12 8tb.sv
+Z13 Ftb.sv
+!i122 1
+L0 10 31
+R7
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+Xtb_sv_unit
+!s115 intf
+R3
+R4
+V31R<B3X5mjZJo>eUoUlnR3
+r1
+!s85 0
+!i10b 1
+!s100 J:5g:W]nMlm?Kaz<ALWW=2
+I31R<B3X5mjZJo>eUoUlnR3
+!i103 1
+S1
+R1
+w1784662358
+R12
+R13
+Ftransaction.sv
+Fgenerator.sv
+Fdriver.sv
+Fmonitor.sv
+Fscoreboard.sv
+Fsubscriber.sv
+Fagent.sv
+Fenvironment.sv
+!i122 1
+L0 7 0
+R7
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2

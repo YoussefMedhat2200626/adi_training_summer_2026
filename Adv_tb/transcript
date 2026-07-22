@@ -1,0 +1,800 @@
+# vsim -c -do "run -all; quit" tb 
+# Start time: 22:33:06 on Jul 21,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_sv_unit(fast)
+# Loading work.tb(fast)
+# Loading work.intf(fast)
+# run -all
+# ************** This is the DRIVER **************
+#  rst_n = 0 | A = 0 (0) | B = 0 (0) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 4
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 0 (0) | B = 0 (0) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 6
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 0 (0) | B = 0 (0) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 6
+# Test Case Passed [opcode=0] Expected result=0 carry=0 at time : 6
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 1 (1) | B = 11 (1011) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 10
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 1 (1) | B = 11 (1011) | opcode = 0 | result = 12 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 16
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 1 (1) | B = 11 (1011) | opcode = 0 | result = 12 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 16
+# Test Case Passed [opcode=0] Expected result=12 carry=0 at time : 16
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 15 (1111) | B = 2 (10) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 20
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 15 (1111) | B = 2 (10) | opcode = 0 | result = 1 | carry = 1
+# *******************************************************
+# Monitor has received the data from the DUT at time : 26
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 15 (1111) | B = 2 (10) | opcode = 0 | result = 1 | carry = 1
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 26
+# Test Case Passed [opcode=0] Expected result=1 carry=1 at time : 26
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 15 (1111) | B = 6 (110) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 30
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 15 (1111) | B = 6 (110) | opcode = 0 | result = 5 | carry = 1
+# *******************************************************
+# Monitor has received the data from the DUT at time : 36
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 15 (1111) | B = 6 (110) | opcode = 0 | result = 5 | carry = 1
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 36
+# Test Case Passed [opcode=0] Expected result=5 carry=1 at time : 36
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 0 (0) | B = 1 (1) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 40
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 0 (0) | B = 1 (1) | opcode = 0 | result = 1 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 46
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 0 (0) | B = 1 (1) | opcode = 0 | result = 1 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 46
+# Test Case Passed [opcode=0] Expected result=1 carry=0 at time : 46
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 10 (1010) | B = 7 (111) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 50
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 10 (1010) | B = 7 (111) | opcode = 0 | result = 1 | carry = 1
+# *******************************************************
+# Monitor has received the data from the DUT at time : 56
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 10 (1010) | B = 7 (111) | opcode = 0 | result = 1 | carry = 1
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 56
+# Test Case Passed [opcode=0] Expected result=1 carry=1 at time : 56
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 9 (1001) | B = 6 (110) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 60
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 9 (1001) | B = 6 (110) | opcode = 0 | result = 15 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 66
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 9 (1001) | B = 6 (110) | opcode = 0 | result = 15 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 66
+# Test Case Passed [opcode=0] Expected result=15 carry=0 at time : 66
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 14 (1110) | B = 9 (1001) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 70
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 14 (1110) | B = 9 (1001) | opcode = 0 | result = 7 | carry = 1
+# *******************************************************
+# Monitor has received the data from the DUT at time : 76
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 14 (1110) | B = 9 (1001) | opcode = 0 | result = 7 | carry = 1
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 76
+# Test Case Passed [opcode=0] Expected result=7 carry=1 at time : 76
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 5 (101) | B = 9 (1001) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 80
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 5 (101) | B = 9 (1001) | opcode = 0 | result = 14 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 86
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 5 (101) | B = 9 (1001) | opcode = 0 | result = 14 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 86
+# Test Case Passed [opcode=0] Expected result=14 carry=0 at time : 86
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 15 (1111) | B = 2 (10) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 90
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 15 (1111) | B = 2 (10) | opcode = 0 | result = 1 | carry = 1
+# *******************************************************
+# Monitor has received the data from the DUT at time : 96
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 15 (1111) | B = 2 (10) | opcode = 0 | result = 1 | carry = 1
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 96
+# Test Case Passed [opcode=0] Expected result=1 carry=1 at time : 96
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 10 (1010) | B = 0 (0) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 100
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 10 (1010) | B = 0 (0) | opcode = 1 | result = 10 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 106
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 10 (1010) | B = 0 (0) | opcode = 1 | result = 10 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 106
+# Test Case Passed [opcode=1] Expected result=10 carry=0 at time : 106
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 9 (1001) | B = 15 (1111) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 110
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 9 (1001) | B = 15 (1111) | opcode = 1 | result = 10 | carry = 1
+# *******************************************************
+# Monitor has received the data from the DUT at time : 116
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 9 (1001) | B = 15 (1111) | opcode = 1 | result = 10 | carry = 1
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 116
+# Test Case Passed [opcode=1] Expected result=10 carry=1 at time : 116
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 14 (1110) | B = 12 (1100) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 120
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 14 (1110) | B = 12 (1100) | opcode = 1 | result = 2 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 126
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 14 (1110) | B = 12 (1100) | opcode = 1 | result = 2 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 126
+# Test Case Passed [opcode=1] Expected result=2 carry=0 at time : 126
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 10 (1010) | B = 13 (1101) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 130
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 10 (1010) | B = 13 (1101) | opcode = 1 | result = 13 | carry = 1
+# *******************************************************
+# Monitor has received the data from the DUT at time : 136
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 10 (1010) | B = 13 (1101) | opcode = 1 | result = 13 | carry = 1
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 136
+# Test Case Passed [opcode=1] Expected result=13 carry=1 at time : 136
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 15 (1111) | B = 9 (1001) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 140
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 15 (1111) | B = 9 (1001) | opcode = 1 | result = 6 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 146
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 15 (1111) | B = 9 (1001) | opcode = 1 | result = 6 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 146
+# Test Case Passed [opcode=1] Expected result=6 carry=0 at time : 146
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 7 (111) | B = 10 (1010) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 150
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 7 (111) | B = 10 (1010) | opcode = 1 | result = 13 | carry = 1
+# *******************************************************
+# Monitor has received the data from the DUT at time : 156
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 7 (111) | B = 10 (1010) | opcode = 1 | result = 13 | carry = 1
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 156
+# Test Case Passed [opcode=1] Expected result=13 carry=1 at time : 156
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 15 (1111) | B = 9 (1001) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 160
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 15 (1111) | B = 9 (1001) | opcode = 1 | result = 6 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 166
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 15 (1111) | B = 9 (1001) | opcode = 1 | result = 6 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 166
+# Test Case Passed [opcode=1] Expected result=6 carry=0 at time : 166
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 8 (1000) | B = 4 (100) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 170
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 8 (1000) | B = 4 (100) | opcode = 1 | result = 4 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 176
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 8 (1000) | B = 4 (100) | opcode = 1 | result = 4 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 176
+# Test Case Passed [opcode=1] Expected result=4 carry=0 at time : 176
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 13 (1101) | B = 5 (101) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 180
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 13 (1101) | B = 5 (101) | opcode = 1 | result = 8 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 186
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 13 (1101) | B = 5 (101) | opcode = 1 | result = 8 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 186
+# Test Case Passed [opcode=1] Expected result=8 carry=0 at time : 186
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 6 (110) | B = 3 (11) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 190
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 6 (110) | B = 3 (11) | opcode = 10 | result = 2 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 196
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 6 (110) | B = 3 (11) | opcode = 10 | result = 2 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 196
+# Test Case Passed [opcode=10] Expected result=2 carry=0 at time : 196
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 14 (1110) | B = 1 (1) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 200
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 14 (1110) | B = 1 (1) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 206
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 14 (1110) | B = 1 (1) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 206
+# Test Case Passed [opcode=10] Expected result=0 carry=0 at time : 206
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 15 (1111) | B = 6 (110) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 210
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 15 (1111) | B = 6 (110) | opcode = 10 | result = 6 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 216
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 15 (1111) | B = 6 (110) | opcode = 10 | result = 6 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 216
+# Test Case Passed [opcode=10] Expected result=6 carry=0 at time : 216
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 1 (1) | B = 1 (1) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 220
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 1 (1) | B = 1 (1) | opcode = 10 | result = 1 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 226
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 1 (1) | B = 1 (1) | opcode = 10 | result = 1 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 226
+# Test Case Passed [opcode=10] Expected result=1 carry=0 at time : 226
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 12 (1100) | B = 11 (1011) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 230
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 12 (1100) | B = 11 (1011) | opcode = 10 | result = 8 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 236
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 12 (1100) | B = 11 (1011) | opcode = 10 | result = 8 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 236
+# Test Case Passed [opcode=10] Expected result=8 carry=0 at time : 236
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 11 (1011) | B = 14 (1110) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 240
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 11 (1011) | B = 14 (1110) | opcode = 10 | result = 10 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 246
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 11 (1011) | B = 14 (1110) | opcode = 10 | result = 10 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 246
+# Test Case Passed [opcode=10] Expected result=10 carry=0 at time : 246
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 8 (1000) | B = 12 (1100) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 250
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 8 (1000) | B = 12 (1100) | opcode = 10 | result = 8 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 256
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 8 (1000) | B = 12 (1100) | opcode = 10 | result = 8 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 256
+# Test Case Passed [opcode=10] Expected result=8 carry=0 at time : 256
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 3 (11) | B = 5 (101) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 260
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 3 (11) | B = 5 (101) | opcode = 10 | result = 1 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 266
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 3 (11) | B = 5 (101) | opcode = 10 | result = 1 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 266
+# Test Case Passed [opcode=10] Expected result=1 carry=0 at time : 266
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 7 (111) | B = 2 (10) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 270
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 7 (111) | B = 2 (10) | opcode = 10 | result = 2 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 276
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 7 (111) | B = 2 (10) | opcode = 10 | result = 2 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 276
+# Test Case Passed [opcode=10] Expected result=2 carry=0 at time : 276
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 12 (1100) | B = 1 (1) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 280
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 12 (1100) | B = 1 (1) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 286
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 12 (1100) | B = 1 (1) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 286
+# Test Case Passed [opcode=10] Expected result=0 carry=0 at time : 286
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 11 (1011) | B = 8 (1000) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 290
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 11 (1011) | B = 8 (1000) | opcode = 11 | result = 3 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 296
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 11 (1011) | B = 8 (1000) | opcode = 11 | result = 3 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 296
+# Test Case Passed [opcode=11] Expected result=3 carry=0 at time : 296
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 7 (111) | B = 2 (10) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 300
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 7 (111) | B = 2 (10) | opcode = 11 | result = 5 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 306
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 7 (111) | B = 2 (10) | opcode = 11 | result = 5 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 306
+# Test Case Passed [opcode=11] Expected result=5 carry=0 at time : 306
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 5 (101) | B = 7 (111) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 310
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 5 (101) | B = 7 (111) | opcode = 11 | result = 2 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 316
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 5 (101) | B = 7 (111) | opcode = 11 | result = 2 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 316
+# Test Case Passed [opcode=11] Expected result=2 carry=0 at time : 316
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 6 (110) | B = 6 (110) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 320
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 6 (110) | B = 6 (110) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 326
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 6 (110) | B = 6 (110) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 326
+# Test Case Passed [opcode=11] Expected result=0 carry=0 at time : 326
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 7 (111) | B = 11 (1011) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 330
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 7 (111) | B = 11 (1011) | opcode = 11 | result = 12 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 336
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 7 (111) | B = 11 (1011) | opcode = 11 | result = 12 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 336
+# Test Case Passed [opcode=11] Expected result=12 carry=0 at time : 336
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 7 (111) | B = 0 (0) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 340
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 7 (111) | B = 0 (0) | opcode = 11 | result = 7 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 346
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 7 (111) | B = 0 (0) | opcode = 11 | result = 7 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 346
+# Test Case Passed [opcode=11] Expected result=7 carry=0 at time : 346
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 2 (10) | B = 4 (100) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 350
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 2 (10) | B = 4 (100) | opcode = 11 | result = 6 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 356
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 2 (10) | B = 4 (100) | opcode = 11 | result = 6 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 356
+# Test Case Passed [opcode=11] Expected result=6 carry=0 at time : 356
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 14 (1110) | B = 2 (10) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 360
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 14 (1110) | B = 2 (10) | opcode = 11 | result = 12 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 366
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 14 (1110) | B = 2 (10) | opcode = 11 | result = 12 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 366
+# Test Case Passed [opcode=11] Expected result=12 carry=0 at time : 366
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 0 (0) | B = 0 (0) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 370
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 0 (0) | B = 0 (0) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 376
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 0 (0) | B = 0 (0) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 376
+# Test Case Passed [opcode=1] Expected result=0 carry=0 at time : 376
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 0 (0) | B = 15 (1111) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 380
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 0 (0) | B = 15 (1111) | opcode = 0 | result = 15 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 386
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 0 (0) | B = 15 (1111) | opcode = 0 | result = 15 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 386
+# Test Case Passed [opcode=0] Expected result=15 carry=0 at time : 386
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 15 (1111) | B = 0 (0) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 390
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 15 (1111) | B = 0 (0) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 396
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 15 (1111) | B = 0 (0) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 396
+# Test Case Passed [opcode=10] Expected result=0 carry=0 at time : 396
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 15 (1111) | B = 15 (1111) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 400
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 15 (1111) | B = 15 (1111) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 406
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 15 (1111) | B = 15 (1111) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 406
+# Test Case Passed [opcode=1] Expected result=0 carry=0 at time : 406
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 2 (10) | B = 9 (1001) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 410
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 2 (10) | B = 9 (1001) | opcode = 0 | result = 11 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 416
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 2 (10) | B = 9 (1001) | opcode = 0 | result = 11 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 416
+# Test Case Passed [opcode=0] Expected result=11 carry=0 at time : 416
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 6 (110) | B = 8 (1000) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 420
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 6 (110) | B = 8 (1000) | opcode = 1 | result = 14 | carry = 1
+# *******************************************************
+# Monitor has received the data from the DUT at time : 426
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 6 (110) | B = 8 (1000) | opcode = 1 | result = 14 | carry = 1
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 426
+# Test Case Passed [opcode=1] Expected result=14 carry=1 at time : 426
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 8 (1000) | B = 6 (110) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 430
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 8 (1000) | B = 6 (110) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 436
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 8 (1000) | B = 6 (110) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 436
+# Test Case Passed [opcode=10] Expected result=0 carry=0 at time : 436
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 5 (101) | B = 5 (101) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 440
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 5 (101) | B = 5 (101) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 446
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 5 (101) | B = 5 (101) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 446
+# Test Case Passed [opcode=11] Expected result=0 carry=0 at time : 446
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 1 (1) | B = 11 (1011) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 450
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 1 (1) | B = 11 (1011) | opcode = 0 | result = 12 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 456
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 1 (1) | B = 11 (1011) | opcode = 0 | result = 12 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 456
+# Test Case Passed [opcode=0] Expected result=12 carry=0 at time : 456
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 14 (1110) | B = 6 (110) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 460
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 14 (1110) | B = 6 (110) | opcode = 1 | result = 8 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 466
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 14 (1110) | B = 6 (110) | opcode = 1 | result = 8 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 466
+# Test Case Passed [opcode=1] Expected result=8 carry=0 at time : 466
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 2 (10) | B = 14 (1110) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 470
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 2 (10) | B = 14 (1110) | opcode = 10 | result = 2 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 476
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 2 (10) | B = 14 (1110) | opcode = 10 | result = 2 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 476
+# Test Case Passed [opcode=10] Expected result=2 carry=0 at time : 476
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 8 (1000) | B = 5 (101) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 480
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 8 (1000) | B = 5 (101) | opcode = 11 | result = 13 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 486
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 8 (1000) | B = 5 (101) | opcode = 11 | result = 13 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 486
+# Test Case Passed [opcode=11] Expected result=13 carry=0 at time : 486
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 13 (1101) | B = 2 (10) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 490
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 13 (1101) | B = 2 (10) | opcode = 0 | result = 15 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 496
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 13 (1101) | B = 2 (10) | opcode = 0 | result = 15 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 496
+# Test Case Passed [opcode=0] Expected result=15 carry=0 at time : 496
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 1 (1) | B = 1 (1) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 500
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 1 (1) | B = 1 (1) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 506
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 1 (1) | B = 1 (1) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 506
+# Test Case Passed [opcode=1] Expected result=0 carry=0 at time : 506
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 3 (11) | B = 1 (1) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 510
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 3 (11) | B = 1 (1) | opcode = 11 | result = 2 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 516
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 3 (11) | B = 1 (1) | opcode = 11 | result = 2 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 516
+# Test Case Passed [opcode=11] Expected result=2 carry=0 at time : 516
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 12 (1100) | B = 10 (1010) | opcode = 1 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 520
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 12 (1100) | B = 10 (1010) | opcode = 1 | result = 2 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 526
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 12 (1100) | B = 10 (1010) | opcode = 1 | result = 2 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 526
+# Test Case Passed [opcode=1] Expected result=2 carry=0 at time : 526
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 11 (1011) | B = 15 (1111) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 530
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 11 (1011) | B = 15 (1111) | opcode = 11 | result = 4 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 536
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 11 (1011) | B = 15 (1111) | opcode = 11 | result = 4 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 536
+# Test Case Passed [opcode=11] Expected result=4 carry=0 at time : 536
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 6 (110) | B = 13 (1101) | opcode = 10 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 540
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 6 (110) | B = 13 (1101) | opcode = 10 | result = 4 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 546
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 6 (110) | B = 13 (1101) | opcode = 10 | result = 4 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 546
+# Test Case Passed [opcode=10] Expected result=4 carry=0 at time : 546
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 0 (0) | B = 2 (10) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 550
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 0 (0) | B = 2 (10) | opcode = 0 | result = 2 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 556
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 0 (0) | B = 2 (10) | opcode = 0 | result = 2 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 556
+# Test Case Passed [opcode=0] Expected result=2 carry=0 at time : 556
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 12 (1100) | B = 13 (1101) | opcode = 11 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 560
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 12 (1100) | B = 13 (1101) | opcode = 11 | result = 1 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 566
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 12 (1100) | B = 13 (1101) | opcode = 11 | result = 1 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 566
+# Test Case Passed [opcode=11] Expected result=1 carry=0 at time : 566
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 5 (101) | B = 9 (1001) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 570
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 5 (101) | B = 9 (1001) | opcode = 0 | result = 14 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 576
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 5 (101) | B = 9 (1001) | opcode = 0 | result = 14 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 576
+# Test Case Passed [opcode=0] Expected result=14 carry=0 at time : 576
+# ************** This is the DRIVER **************
+#  rst_n = 1 | A = 8 (1000) | B = 4 (100) | opcode = 0 | result = 0 | carry = 0
+# *******************************************************
+# Driver has inserted the data into the DUT at time : 580
+# ************** This is the MONITOR **************
+#  rst_n = 1 | A = 8 (1000) | B = 4 (100) | opcode = 0 | result = 12 | carry = 0
+# *******************************************************
+# Monitor has received the data from the DUT at time : 586
+# ************** This is the SCOREBOARD **************
+#  rst_n = 1 | A = 8 (1000) | B = 4 (100) | opcode = 0 | result = 12 | carry = 0
+# *******************************************************
+# Scoreboard has received the data from the monitor at time : 586
+# Test Case Passed [opcode=0] Expected result=12 carry=0 at time : 586
+# =====================================================
+#  Functional Coverage = 90.16 %
+# =====================================================
+# =====================================================
+#  Passed Test Cases : 59
+#  Failed Test Cases : 0
+# =====================================================
+# ** Note: $finish    : environment.sv(43)
+#    Time: 590 ns  Iteration: 1  Instance: /tb
+# End time: 22:33:33 on Jul 21,2026, Elapsed time: 0:00:27
+# Errors: 0, Warnings: 0
