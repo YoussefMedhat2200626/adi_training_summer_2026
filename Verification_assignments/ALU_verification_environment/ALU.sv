@@ -15,34 +15,6 @@ module alu #(parameter n = 4) (
 
     always @(posedge CLK or negedge RST) begin
 
-        // if (!RST) begin
-        //     Out   <= {n{1'b0}};
-        //     Carry <= 1'b0;
-        // end else begin
-        //     case (OpSel)
-        //         OP_ADD: begin
-        //             Out   <= A + B;
-        //             Carry <= ({1'b0, A} + {1'b0, B}) > {1'b0, {n{1'b1}}};
-        //         end
-        //         OP_SUB: begin
-        //             Out   <= A - B;
-        //             Carry <= (A < B) ? 1'b1 : 1'b0;
-        //         end
-        //         OP_AND: begin
-        //             Out   <= A & B;
-        //             Carry <= 1'b0;
-        //         end
-        //         OP_OR: begin
-        //             Out   <= A | B;
-        //             Carry <= 1'b0;
-        //         end
-        //         default: begin
-        //             Out   <= {n{1'b0}};
-        //             Carry <= 1'b0;
-        //         end
-        //     endcase
-        // end
-
         if(!RST) begin
             Out = 4'h0;
             Carry = 1'b0;
