@@ -19,7 +19,7 @@
 #     ZedBoard.org Community Forums
 #     http://www.zedboard.org
 # 
-#  Disclaimer:
+#  Disclaimer
 #     Avnet, Inc. makes no warranty for the use of this code or design.
 #     This code is provided  "As Is". Avnet, Inc assumes no responsibility for
 #     any errors, which may appear in this code, nor does it make a commitment

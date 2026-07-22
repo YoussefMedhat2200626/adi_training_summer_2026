@@ -20,7 +20,7 @@ clk_wiz_0 u_pll
     // Clock in ports
     .clk_in1(clk)                  // input clk_in1
 );
-clock_div u_clock_div (clk_counter,rst_n,4,clk_out);//F/(divsor*2) 
+clock_div u_clock_div (clk_counter,rst_n,524288,clk_out);//F/(divsor*2) 
 
 counter u_count(
     .clk(clk_out),

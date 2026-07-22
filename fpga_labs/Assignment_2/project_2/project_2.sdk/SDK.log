@@ -1,0 +1,24 @@
+15:00:50 INFO  : Registering command handlers for SDK TCF services
+15:00:52 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\johns\Desktop\tasks\ADI\adi_training_summer_2026\fpga_labs\Assignment_2\project_2\project_2.sdk\temp_xsdb_launch_script.tcl
+15:00:57 INFO  : XSCT server has started successfully.
+15:01:01 INFO  : Successfully done setting XSCT server connection channel  
+15:01:01 INFO  : Processing command line option -hwspec C:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/fpga_labs/Assignment_2/project_2/project_2.sdk/nand_soc_wrapper.hdf.
+15:01:01 INFO  : Successfully done setting SDK workspace  
+15:04:54 ERROR : Failed to call write_mss 
+Reason: ERROR: [Common 17-176] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/fpga_labs/Assignment_2/project_2/project_2.sdk/inverter_bsp/system.mss]
+
+15:05:07 ERROR : Failed to call write_mss 
+Reason: ERROR: [Common 17-176] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/fpga_labs/Assignment_2/project_2/project_2.sdk/inverter_bsp/system.mss]
+
+15:05:21 ERROR : Failed to call write_mss 
+Reason: ERROR: [Common 17-176] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/fpga_labs/Assignment_2/project_2/project_2.sdk/inverter_bsp/system.mss]
+
+15:05:26 ERROR : Failed to call write_mss 
+Reason: ERROR: [Common 17-176] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/fpga_labs/Assignment_2/project_2/project_2.sdk/inverter_bsp/system.mss]
+
+15:05:54 ERROR : Failed to call write_mss 
+Reason: ERROR: [Common 17-176] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/fpga_labs/Assignment_2/project_2/project_2.sdk/inverter_bsp/system.mss]
+
+15:06:06 ERROR : Failed to call write_mss 
+Reason: ERROR: [Common 17-176] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/fpga_labs/Assignment_2/project_2/project_2.sdk/inverter_bsp/system.mss]
+

@@ -1,0 +1,66 @@
+/*
+ *
+ * Xilinx, Inc.
+ * XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A 
+ * COURTESY TO YOU.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+ * ONE POSSIBLE   IMPLEMENTATION OF THIS FEATURE, APPLICATION OR 
+ * STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION 
+ * IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE 
+ * FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION
+ * XILINX EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO 
+ * THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO 
+ * ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE 
+ * FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY 
+ * AND FITNESS FOR A PARTICULAR PURPOSE.
+ */
+
+/*
+ * 
+ *
+ * This file is a generated sample test application.
+ *
+ * This application is intended to test and/or illustrate some 
+ * functionality of your system.  The contents of this file may
+ * vary depending on the IP in your system and may use existing
+ * IP driver functions.  These drivers will be generated in your
+ * SDK application project when you run the "Generate Libraries" menu item.
+ *
+ */
+
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_cache.h"
+#include "xscugic.h"
+#include "xil_exception.h"
+#include "scugic_header.h"
+#include "xgpio.h"
+#include "gpio_header.h"
+#include "xdevcfg.h"
+#include "devcfg_header.h"
+#include "xdmaps.h"
+#include "dmaps_header.h"
+#include "xscutimer.h"
+#include "scutimer_header.h"
+#include "xscuwdt.h"
+#include "scuwdt_header.h"
+int main () 
+{
+	init_platform();
+	{
+	XGpio input, output;
+	int a;
+	int y;
+	// from "platform.h"
+	// from "xgpio.h"
+	// the input to the inverter // output from the inverter
+	XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID); // set the input address XGpio_Initialize(&output, XPAR AXI_GPIO_1_DEVICE_ID); // set the output address
+	XGpio_SetDataDirection (&input, 1, 1); XGpio_SetDataDirection (&output, 1, 0);
+	while(1) {
+	}
+	a= XGpio_DiscreteRead(&input, 1); y = a;
+	// channel 1 in AXI GPIO, 1 = input // channel 1 in AXI GPIO, = output
+	// read input value and store in "a" // invert "a" and store in "y"
+	XGpio_Discretewrite(&output, 1, y); // write output "y"
+	cleanup_platform();
+	return 0;
+}

@@ -1,0 +1,21 @@
+15:16:25 **** Auto Build of configuration Debug for project Inverter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/testperiph.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Inverter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:48:2: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/testperiph.c:62:2: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+  cleanup_platform();
+  ^~~~~~~~~~~~~~~~
+../src/testperiph.c:64:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [src/testperiph.o] Error 1
+
+15:16:25 Build Finished (took 352ms)
+

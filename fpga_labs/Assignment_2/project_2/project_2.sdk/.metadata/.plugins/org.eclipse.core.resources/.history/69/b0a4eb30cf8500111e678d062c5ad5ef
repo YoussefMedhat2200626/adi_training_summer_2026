@@ -1,0 +1,25 @@
+
+
+#include <stdio.h>
+#include "platform.h" #include "xil printf.h" #include "xgpio.h"
+#include "xparameters.h"
+int main()
+init_platform();
+{
+XGpio input, output;
+int a;
+int y;
+// from "platform.h"
+// from "xgpio.h"
+// the input to the inverter // output from the inverter
+XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID); // set the input address XGpio_Initialize(&output, XPAR AXI_GPIO_1_DEVICE_ID); // set the output address
+XGpio_SetDataDirection (&input, 1, 1); XGpio_SetDataDirection (&output, 1, 0);
+while(1) {
+}
+a= XGpio_DiscreteRead(&input, 1); y = a;
+// channel 1 in AXI GPIO, 1 = input // channel 1 in AXI GPIO, = output
+// read input value and store in "a" // invert "a" and store in "y"
+XGpio_Discretewrite(&output, 1, y); // write output "y"
+cleanup_platform();
+return 0;
+// from "platform.h"
