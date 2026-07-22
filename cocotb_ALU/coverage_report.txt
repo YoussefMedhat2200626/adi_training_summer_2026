@@ -1,0 +1,15 @@
+=========================================
+      FUNCTIONAL COVERAGE SUMMARY        
+=========================================
+Opcode Coverage              : 100.0% (8/8)
+Result Space Coverage        : 100.0% (256/256 values)
+Operand A Pattern Coverage   : 100.0%
+Operand B Pattern Coverage   : 100.0%
+Result Bit Toggle 0->1       : 100.0%
+Result Bit Toggle 1->0       : 100.0%
+ADD Overflow Covered         : YES
+SUB Underflow Covered        : YES
+INC Overflow Covered         : YES
+DEC Underflow Covered        : YES
+Carryout Immediate Clear     : YES
+=========================================
