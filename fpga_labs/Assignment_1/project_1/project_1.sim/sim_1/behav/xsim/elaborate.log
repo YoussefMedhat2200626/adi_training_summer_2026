@@ -1,0 +1,24 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 336922dbb9be46ffb387dc8d797da1b2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port counter [C:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/fpga_labs/Assignment_1/project_1/project_1.srcs/sim_1/new/tb_top.v:16]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 16 for port divisor [C:/Users/johns/Desktop/tasks/ADI/adi_training_summer_2026/fpga_labs/Assignment_1/project_1/project_1.srcs/sources_1/new/top.sv:23]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=52,CLKIN...
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clock_div
+Compiling module xil_defaultlib.counter
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
