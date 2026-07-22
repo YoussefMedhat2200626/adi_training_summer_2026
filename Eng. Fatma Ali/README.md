@@ -4,14 +4,14 @@ Welcome to my repository for the Communication Protocols and FPGA assignments su
 
 ---
 
-## 📚 Course & Submission Details
+##  Submission Details
 
-* **Instructor / TA:** Eng. Fatma Ali
+* **Instructor:** Eng. Fatma Ali
 * **Topics Covered:** AMBA AHB Protocol, SPI Protocol, and FPGA Implementation
 * **Repository Owner:** Mohamed Abdelhafez Elnewehy
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 ```text
 ├── ahb_protocol/
