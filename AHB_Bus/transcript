@@ -1,0 +1,26 @@
+# vsim -do {run -all; quit} -c ahb_lite_master_tb 
+# Loading work.ahb_lite_master_tb
+# Loading work.ahb_lite_master
+# Loading work.ahb_lite_slave_model
+# run -all 
+# T1: single write/read
+#   PASS: 0xa0000000
+# T2/T3: INCR4 write+read burst
+#   PASS beat 0: 0xa0000000
+#   PASS beat 1: 0xa0000001
+#   PASS beat 2: 0xa0000002
+#   PASS beat 3: 0xa0000003
+# T4: INCR8 with wait states
+#   PASS beat 0: 0xa0000000
+#   PASS beat 1: 0xa0000001
+#   PASS beat 2: 0xa0000002
+#   PASS beat 3: 0xa0000003
+#   PASS beat 4: 0xa0000004
+#   PASS beat 5: 0xa0000005
+#   PASS beat 6: 0xa0000006
+#   PASS beat 7: 0xa0000007
+# T5: ERROR response abort
+#   PASS: master reported error and aborted the burst
+# All tests complete.
+# ** Note: $finish    : ahb_lite_master_tb.v(173)
+#    Time: 1205 ns  Iteration: 1  Instance: /ahb_lite_master_tb

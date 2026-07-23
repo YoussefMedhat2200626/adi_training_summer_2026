@@ -1,0 +1,62 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\ADI\adi_training_summer_2026\AHB_Bus
+vahb_lite_master
+!i10b 1
+Z1 !s100 VYQlIk742d>e3I3K1mf7<3
+Z2 Iz]Z<>HK?>6;hL>W1@36ee0
+Z3 V`EYYol@UASf=DlEnl^ZNe2
+Z4 dC:\ADI\adi_training_summer_2026\AHB_Bus
+Z5 w1784752822
+Z6 8ahb_lite_master.v
+Z7 Fahb_lite_master.v
+L0 8
+Z8 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z9 !s108 1784754019.847000
+Z10 !s107 ahb_lite_slave_model.v|ahb_lite_master_tb.v|ahb_lite_master.v|
+Z11 !s90 ahb_lite_master.v|ahb_lite_master_tb.v|ahb_lite_slave_model.v|
+!s101 -O0
+o-O0
+vahb_lite_master_tb
+!i10b 1
+!s100 MS[;jC9R00GRz@F=odG=:3
+I;3`MeRUnaTFZ7onNoR9od0
+Z12 Vdn^FVS`QLSaSQ5ceBD`1?1
+R4
+w1784754016
+Z13 8ahb_lite_master_tb.v
+Z14 Fahb_lite_master_tb.v
+L0 9
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vahb_lite_slave_model
+!i10b 1
+Z15 !s100 Wi_o<2[CIGn`lSaf?CUOY1
+Z16 IzSjagklCD37?aIUGbTc<31
+Z17 Vo_0TQzcW<?N=RJ:A6>LBm2
+R4
+Z18 w1784753825
+Z19 8ahb_lite_slave_model.v
+Z20 Fahb_lite_slave_model.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
