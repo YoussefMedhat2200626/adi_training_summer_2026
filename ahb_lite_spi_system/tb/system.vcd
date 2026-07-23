@@ -1,0 +1,79 @@
+$date
+	Thu Jul 23 23:32:58 2026
+$end
+$version
+	Questa Altera Starter FPGA Edition Version 2025.3
+$end
+$timescale
+	1ps
+$end
+
+$scope module tb_ahb_lite_system $end
+
+$scope task wait_cmd_ready $end
+$upscope $end
+
+$scope task issue_cmd $end
+$upscope $end
+
+$scope task provide_wdata $end
+$upscope $end
+
+$scope task capture_rdata $end
+$upscope $end
+
+$scope task check $end
+$upscope $end
+
+$scope task test_single_write $end
+$upscope $end
+
+$scope task test_single_read $end
+$upscope $end
+
+$scope task test_write_read_verify $end
+$upscope $end
+
+$scope task test_back_to_back_writes $end
+$upscope $end
+
+$scope task test_back_to_back_reads $end
+$upscope $end
+
+$scope task test_write_then_read_pipeline $end
+$upscope $end
+
+$scope task test_incr4_write_burst $end
+$upscope $end
+
+$scope task test_incr4_read_burst $end
+$upscope $end
+
+$scope task test_incr8_burst $end
+$upscope $end
+
+$scope task test_incr16_burst $end
+$upscope $end
+
+$scope task test_wrap4_word_burst $end
+$upscope $end
+
+$scope task test_wait_states $end
+$upscope $end
+
+$scope task test_error_response $end
+$upscope $end
+
+$scope task test_byte_halfword_access $end
+$upscope $end
+
+$scope task test_reset_during_transfer $end
+$upscope $end
+
+$scope module u_slave_bfm_2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+$end

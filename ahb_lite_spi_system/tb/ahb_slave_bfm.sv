@@ -21,7 +21,7 @@ module ahb_slave_bfm
     output logic        HRESP
 );
 
-    logic [31:0] mem [0:255];
+    logic [31:0] mem [0:255] = '{default: 32'h0};
 
     int          wait_state_count = 0;      
     logic [31:0] error_addr       = 32'hFFFF_FFFF;  
@@ -179,9 +179,6 @@ module ahb_slave_bfm
 
     assign HRDATA = mem[addr_word_r];
 
-    initial begin
-        for (int i = 0; i < 256; i++)
-            mem[i] = 32'h0;
-    end
+
 
 endmodule
