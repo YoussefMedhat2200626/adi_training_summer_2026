@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="40.950001 us"></ZoomEndTime>
+      <Cursor1Time time="8.600000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="116"></NameColumnWidth>
+      <ValueColumnWidth column_width="61"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="3" />
+   <wvobject type="logic" fp_name="/tb_top/clk_100mhz">
+      <obj_property name="ElementShortName">clk_100mhz</obj_property>
+      <obj_property name="ObjectShortName">clk_100mhz</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/leds">
+      <obj_property name="ElementShortName">leds[2:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[2:0]</obj_property>
+   </wvobject>
+</wave_config>
