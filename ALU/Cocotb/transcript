@@ -1,0 +1,65 @@
+# vsim -c -onfinish exit -pli "C:\\Users\\yosse\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\cocotb\\libs\\cocotbvpi_modelsim.dll" tb_top.tb_top -do "run -all; quit" 
+# Start time: 15:44:40 on Jul 24,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_top(fast)
+# Loading work.alu_if(fast__1)
+# Loading work.alu(fast)
+# Loading C:\\Users\\yosse\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\cocotb\\libs\\cocotbvpi_modelsim.dll
+#      -.--ns INFO     gpi                                ..mbed\gpi_embed.cpp:94   in _embed_init_python              Using Python 3.13.0rc1 interpreter at C:\Users\yosse\AppData\Local\Programs\Python\Python313\python.exe
+#      -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+# run -all
+#      0.00ns INFO     cocotb                             Running on ModelSim for Questa-64 version 2024.1 2024.02
+# 
+#      0.00ns INFO     cocotb                             Seeding Python random module with 1784897080
+# 
+#      0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from C:\Users\yosse\AppData\Local\Programs\Python\Python313\Lib\site-packages\cocotb
+# 
+#      0.00ns INFO     cocotb                             Running tests
+# 
+#      0.00ns INFO     cocotb.regression                  running test_alu.alu_simple_test (1/1)
+# 
+#     20.00ns INFO     cocotb.tb_top                      Reset complete.
+# 
+#     31.00ns INFO     cocotb.tb_top                      Test Case 1 (ADD) Passed.
+# 
+#     41.00ns INFO     cocotb.tb_top                      Test Case 2 (SUB -> Zero Flag) Passed.
+# 
+#     51.00ns INFO     cocotb.tb_top                      Test Case 3 (AND) Passed.
+# 
+#     51.00ns INFO     cocotb.tb_top                      All test cases passed successfully!
+# 
+#     51.00ns INFO     cocotb.regression                  test_alu.alu_simple_test passed
+# 
+#     51.00ns INFO     cocotb.regression                  **************************************************************************************
+# 
+#                                                         ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+# 
+#                                                         **************************************************************************************
+# 
+#                                                         ** test_alu.alu_simple_test       PASS          51.00           0.00      49310.63  **
+# 
+#                                                         **************************************************************************************
+# 
+#                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 51.00           0.00      30484.47  **
+# 
+#                                                         **************************************************************************************
+# 
+# ** Note: $finish
+#    Time: 51 ns  Iteration: 0  Instance: /tb_top
+# End time: 15:44:40 on Jul 24,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
