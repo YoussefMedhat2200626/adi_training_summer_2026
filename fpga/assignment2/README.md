@@ -14,21 +14,21 @@ An IP Integrator Block Design (`nor_zynq_sys`) was created to connect the hardwa
 - `axi_gpio_0` reads the output of the AND gate.
 - `axi_gpio_1` writes the inverted result back out to the `nand_out` port.
 
-![Block Design](zynq_nand_out_block_design.png)
+![Block Design](images/zynq_nand_out_block_design.png)
 
 ---
 
 ## Step 2: Design Validation
 The block design was validated to ensure all AXI interconnects, clocks, and resets were correctly mapped with no critical warnings or errors.
 
-![Validation Success](zynq_nand_validation.png)
+![Validation Success](images/zynq_nand_validation.png)
 
 ---
 
 ## Step 3: HDL Wrapper Generation
 After validating the design, an HDL wrapper (`nor_zynq_sys_wrapper.v`) was generated to instantiate the block design into the top-level Verilog hierarchy so it could be synthesized.
 
-![HDL Wrapper](zynq_nand_hdl_wrapper.png)
+![HDL Wrapper](images/zynq_nand_hdl_wrapper.png)
 
 ---
 
@@ -41,14 +41,14 @@ A constraints file (`cons.xdc`) was created to map:
 
 The design was then successfully synthesized and implemented, meeting all timing constraints.
 
-![Implementation and Timing](zynq_nand_implementation.png)
+![Implementation and Timing](images/zynq_nand_implementation.png)
 
 ---
 
 ## Step 5: Bitstream Generation
 With implementation complete and constraints correctly applied, the hardware bitstream was successfully generated. This bitstream programs the PL portion of the Zynq chip.
 
-![Bitstream Generation](zynq_nand_bitstream_success.png)
+![Bitstream Generation](images/zynq_nand_bitstream_success.png)
 
 ---
 
