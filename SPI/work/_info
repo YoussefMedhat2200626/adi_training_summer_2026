@@ -1,0 +1,131 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Electronics - Analog and Digital/ADI/SPI
+vreg_map
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1785254235
+!i10b 1
+!s100 ;icg3i`h3l<6`J815>EI=1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IMGo]NWX`:V_6]7JklAF_61
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1785241359
+8reg_map.sv
+Freg_map.sv
+!i122 102
+L0 1 32
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1785254235.000000
+!s107 spi_slave_wrapper_tb.sv|spi_slave_wrapper.sv|spi_slave_tb.sv|spi_slave.sv|reg_map.sv|
+Z7 !s90 -reportprogress|300|reg_map.sv|spi_slave.sv|spi_slave_tb.sv|spi_slave_wrapper.sv|spi_slave_wrapper_tb.sv|
+!i113 1
+Z8 tCvgOpt 0
+vspi_slave
+R1
+R2
+!i10b 1
+!s100 AH]cXm:z_C2>7L6GdUcmX1
+R3
+I[kNIFB3EfBjV<hGbC;<=b1
+R4
+S1
+R0
+w1785254232
+8spi_slave.sv
+Fspi_slave.sv
+!i122 102
+L0 1 202
+R5
+r1
+!s85 0
+31
+R6
+Z9 !s107 spi_slave_wrapper_tb.sv|spi_slave_wrapper.sv|spi_slave_tb.sv|spi_slave.sv|reg_map.sv|
+R7
+!i113 1
+R8
+vspi_slave_tb
+R1
+R2
+!i10b 1
+!s100 <5YG2KNV4]JRkNZ3:gb4M1
+R3
+I><hb;=BQ3af5A5LFd9c2o1
+R4
+S1
+R0
+w1785232524
+8spi_slave_tb.sv
+Fspi_slave_tb.sv
+!i122 102
+L0 1 120
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vspi_slave_wrapper
+R1
+R2
+!i10b 1
+!s100 kn4VzjzGOlH<5NbAFP=NI2
+R3
+I34FhafAlCLzZj2e0i_zde1
+R4
+S1
+R0
+w1785236296
+8spi_slave_wrapper.sv
+Fspi_slave_wrapper.sv
+!i122 102
+L0 3 37
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vspi_slave_wrapper_tb
+R1
+R2
+!i10b 1
+!s100 <P=kg[A5nnbMoIb]?hnJW0
+R3
+IzO_AhgDfD7jNL3TP:7Acg1
+R4
+S1
+R0
+w1785250681
+8spi_slave_wrapper_tb.sv
+Fspi_slave_wrapper_tb.sv
+!i122 102
+L0 1 154
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
