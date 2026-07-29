@@ -1,5 +1,5 @@
 $date
-	Wed Jul 29 14:39:52 2026
+	Wed Jul 29 17:49:32 2026
 $end
 $version
 	QuestaSim Version 2021.1
@@ -12,178 +12,156 @@ $scope module Testbench $end
 $var parameter 32 ! MEM_DEPTH $end
 $var parameter 32 " HEADER_SIZE $end
 $var parameter 32 # DATA_WIDTH $end
-$var parameter 32 $ HALF_CLK $end
-$var parameter 32 % T_LEAD $end
-$var parameter 32 & T_LAG $end
-$var reg 1 ' clk $end
-$var reg 1 ( rst_n $end
-$var reg 1 ) SDI $end
-$var reg 1 * SDO $end
-$var reg 1 + csb $end
-$var reg 8 , readback [7:0] $end
+$var parameter 32 $ CLK_PERIOD $end
+$var parameter 32 % HALF_CLK $end
+$var parameter 32 & T_LEAD $end
+$var parameter 32 ' T_LAG $end
+$var reg 1 ( clk $end
+$var reg 1 ) rst_n $end
+$var reg 1 * SDI $end
+$var reg 1 + SDO $end
+$var reg 1 , csb $end
+$var reg 8 - readback [7:0] $end
+
+$scope task reset_system $end
+$upscope $end
+
+$scope task spi_clk_cycle $end
+$upscope $end
+
+$scope task spi_write $end
+$upscope $end
+
+$scope task spi_read $end
+$upscope $end
 
 $scope module dut $end
-$var parameter 32 - MEM_DEPTH $end
-$var parameter 32 . HEADER_SIZE $end
-$var parameter 32 / DATA_WIDTH $end
-$var wire 1 0 sclk $end
-$var wire 1 1 rst_n $end
-$var wire 1 2 SDI $end
-$var wire 1 3 csb $end
-$var wire 1 4 SDO $end
-$var reg 15 5 addr [14:0] $end
-$var reg 1 6 wn_en $end
-$var reg 8 7 wr_data [7:0] $end
-$var reg 8 8 rd_data [7:0] $end
+$var parameter 32 . MEM_DEPTH $end
+$var parameter 32 / HEADER_SIZE $end
+$var parameter 32 0 DATA_WIDTH $end
+$var wire 1 1 sclk $end
+$var wire 1 2 rst_n $end
+$var wire 1 3 SDI $end
+$var wire 1 4 csb $end
+$var wire 1 5 SDO $end
+$var reg 15 6 addr [14:0] $end
+$var reg 1 7 wn_en $end
+$var reg 8 8 wr_data [7:0] $end
+$var reg 8 9 rd_data [7:0] $end
 
 $scope module u_Single_port_Async_RAM $end
-$var parameter 32 9 MEM_DEPTH $end
-$var parameter 32 : ADDR_WIDTH $end
-$var parameter 32 ; DATA_WIDTH $end
-$var wire 1 0 sclk $end
-$var wire 1 1 rst_n $end
-$var wire 1 < addr [14] $end
-$var wire 1 = addr [13] $end
-$var wire 1 > addr [12] $end
-$var wire 1 ? addr [11] $end
-$var wire 1 @ addr [10] $end
-$var wire 1 A addr [9] $end
-$var wire 1 B addr [8] $end
-$var wire 1 C addr [7] $end
-$var wire 1 D addr [6] $end
-$var wire 1 E addr [5] $end
-$var wire 1 F addr [4] $end
-$var wire 1 G addr [3] $end
-$var wire 1 H addr [2] $end
-$var wire 1 I addr [1] $end
-$var wire 1 J addr [0] $end
-$var wire 1 K wr_en $end
-$var wire 1 L wr_data [7] $end
-$var wire 1 M wr_data [6] $end
-$var wire 1 N wr_data [5] $end
-$var wire 1 O wr_data [4] $end
-$var wire 1 P wr_data [3] $end
-$var wire 1 Q wr_data [2] $end
-$var wire 1 R wr_data [1] $end
-$var wire 1 S wr_data [0] $end
-$var reg 8 T rd_data [7:0] $end
+$var parameter 32 : MEM_DEPTH $end
+$var parameter 32 ; ADDR_WIDTH $end
+$var parameter 32 < DATA_WIDTH $end
+$var wire 1 1 sclk $end
+$var wire 1 2 rst_n $end
+$var wire 1 = addr [14] $end
+$var wire 1 > addr [13] $end
+$var wire 1 ? addr [12] $end
+$var wire 1 @ addr [11] $end
+$var wire 1 A addr [10] $end
+$var wire 1 B addr [9] $end
+$var wire 1 C addr [8] $end
+$var wire 1 D addr [7] $end
+$var wire 1 E addr [6] $end
+$var wire 1 F addr [5] $end
+$var wire 1 G addr [4] $end
+$var wire 1 H addr [3] $end
+$var wire 1 I addr [2] $end
+$var wire 1 J addr [1] $end
+$var wire 1 K addr [0] $end
+$var wire 1 L wr_en $end
+$var wire 1 M wr_data [7] $end
+$var wire 1 N wr_data [6] $end
+$var wire 1 O wr_data [5] $end
+$var wire 1 P wr_data [4] $end
+$var wire 1 Q wr_data [3] $end
+$var wire 1 R wr_data [2] $end
+$var wire 1 S wr_data [1] $end
+$var wire 1 T wr_data [0] $end
+$var reg 8 U rd_data [7:0] $end
 $upscope $end
 
 $scope module u_spi_slave_interface $end
-$var parameter 32 U HEADER_SIZE $end
-$var parameter 32 V DATA_WIDTH $end
-$var wire 1 2 SDI $end
-$var wire 1 3 csb $end
-$var wire 1 W rd_data [7] $end
-$var wire 1 X rd_data [6] $end
-$var wire 1 Y rd_data [5] $end
-$var wire 1 Z rd_data [4] $end
-$var wire 1 [ rd_data [3] $end
-$var wire 1 \ rd_data [2] $end
-$var wire 1 ] rd_data [1] $end
-$var wire 1 ^ rd_data [0] $end
-$var wire 1 0 sclk $end
-$var wire 1 1 rst_n $end
-$var reg 15 _ addr [14:0] $end
-$var wire 1 4 SDO $end
-$var reg 1 ` wn_en $end
-$var reg 8 a wr_data [7:0] $end
-$var reg 8 b shift_Reg_SDO [7:0] $end
-$var reg 1 c mode $end
-$var reg 5 d counter [4:0] $end
-$var reg 2 e current_state [1:0] $end
-$var reg 2 f next_state [1:0] $end
+$var parameter 32 V HEADER_SIZE $end
+$var parameter 32 W DATA_WIDTH $end
+$var wire 1 3 SDI $end
+$var wire 1 4 csb $end
+$var wire 1 X rd_data [7] $end
+$var wire 1 Y rd_data [6] $end
+$var wire 1 Z rd_data [5] $end
+$var wire 1 [ rd_data [4] $end
+$var wire 1 \ rd_data [3] $end
+$var wire 1 ] rd_data [2] $end
+$var wire 1 ^ rd_data [1] $end
+$var wire 1 _ rd_data [0] $end
+$var wire 1 1 sclk $end
+$var wire 1 2 rst_n $end
+$var reg 15 ` addr [14:0] $end
+$var wire 1 5 SDO $end
+$var reg 1 a wn_en $end
+$var reg 8 b wr_data [7:0] $end
+$var reg 8 c shift_Reg_SDO [7:0] $end
+$var reg 1 d mode $end
+$var reg 5 e counter [4:0] $end
+$var reg 1 f header_phase_end $end
+$var reg 1 g end_of_data $end
+$var reg 1 h addr_updated $end
+$var reg 2 i current_state [1:0] $end
+$var reg 2 j next_state [1:0] $end
+$var wire 1 k async_rst_n $end
+$var reg 1 l end_of_data_d $end
 $upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-0'
-x(
-x)
-x*
-x+
-bx ,
-bx 5
-x6
-bx 7
-bx 8
-bx T
-bx _
-x`
-bx a
-bx b
-xc
-b0 d
+0(
+0)
+0*
+0+
+1,
+bx -
+b0 6
+07
+b0 8
+b0 9
+b0 U
+b0 `
+0a
+b0 b
+b0 c
+0d
 b0 e
-b0 f
+0f
+0g
+xh
+b0 i
+b0 j
+0l
 b1000000000000000 !
 b10000 "
 b1000 #
-b110010 $
-b1100100 %
+b1100100 $
+b110010 %
 b1100100 &
-b1000000000000000 -
-b10000 .
-b1000 /
-b1000000000000000 9
-b1111 :
-b1000 ;
-b10000 U
-b1000 V
-x3
-x2
-x1
-00
-x4
-x^
-x]
-x\
-x[
-xZ
-xY
-xX
-xW
-xS
-xR
-xQ
-xP
-xO
-xN
-xM
-xL
-xK
-xJ
-xI
-xH
-xG
-xF
-xE
-xD
-xC
-xB
-xA
-x@
-x?
-x>
-x=
-x<
-$end
-#5
-1'
-10
-#10
-0'
-00
-0(
-1+
-0)
+b1100100 '
+b1000000000000000 .
+b10000 /
+b1000 0
+b1000000000000000 :
+b1111 ;
+b1000 <
+b10000 V
+b1000 W
+0k
+14
+03
 02
 01
-13
-b0 T
-b0 8
+05
+0_
 0^
 0]
 0\
@@ -191,18 +169,7 @@ b0 8
 0Z
 0Y
 0X
-0W
-b0 b
-b0 a
-0`
-0c
-b0 _
-04
-0*
-b0 5
-06
-b0 7
-0K
+0T
 0S
 0R
 0Q
@@ -211,6 +178,7 @@ b0 7
 0N
 0M
 0L
+0K
 0J
 0I
 0H
@@ -225,19 +193,13 @@ b0 7
 0?
 0>
 0=
-0<
-#15
-1'
-10
-#20
-0'
-00
-1(
+$end
+#200
 1)
 12
-11
-bx T
-bx 8
+bx U
+bx 9
+x_
 x^
 x]
 x\
@@ -245,892 +207,211 @@ x[
 xZ
 xY
 xX
-xW
-#25
-1'
-10
-#30
-0'
-00
-#35
-1'
-10
-#40
-0'
-00
-#45
-1'
-10
-#50
-0'
-00
-#55
-1'
-10
-#60
-0'
-00
-#65
-1'
-10
-#70
-0'
-00
-#75
-1'
-10
-#80
-0'
-00
-#85
-1'
-10
-#90
-0'
-00
-#95
-1'
-10
-#100
-0'
-00
-#105
-1'
-10
-#110
-0'
-00
-#115
-1'
-10
-#120
-0'
-00
-#125
-1'
-10
-#130
-0'
-00
-#135
-1'
-10
-#140
-0'
-00
-#145
-1'
-10
-#150
-0'
-00
-#155
-1'
-10
-#160
-0'
-00
-#165
-1'
-10
-#170
-0'
-00
-#175
-1'
-10
-#180
-0'
-00
-#185
-1'
-10
-#190
-0'
-00
-#195
-1'
-10
-#200
-0'
-00
-#205
-1'
-10
-#210
-0'
-00
-#215
-1'
-10
-#220
-0'
-00
-#225
-1'
-10
-#230
-0'
-00
-#235
-1'
-10
-#240
-0'
-00
-#245
-1'
-10
-#250
-0'
-00
-#255
-1'
-10
-#260
-0'
-00
-#265
-1'
-10
-#270
-0'
-00
-#275
-1'
-10
-#280
-0'
-00
-#285
-1'
-10
-#290
-0'
-00
-#295
-1'
-10
-#300
-0'
-00
-#305
-1'
-10
-#310
-0'
-00
-#315
-1'
-10
-#320
-0'
-00
-#325
-1'
-10
-#330
-0'
-00
-#335
-1'
-10
-#340
-0'
-00
-#345
-1'
-10
-#350
-0'
-00
-#355
-1'
-10
-#360
-0'
-00
-#365
-1'
-10
-#370
-0'
-00
-#375
-1'
-10
-#380
-0'
-00
-#385
-1'
-10
-#390
-0'
-00
-#395
-1'
-10
 #400
-0'
-00
-#405
-1'
-10
-#410
-0'
-00
-#415
-1'
-10
-#420
-0'
-00
-#425
-1'
-10
-#430
-0'
-00
-#435
-1'
-10
-#440
-0'
-00
-#445
-1'
-10
-#450
-0'
-00
-#455
-1'
-10
-#460
-0'
-00
-#465
-1'
-10
-#470
-0'
-00
-#475
-1'
-10
-#480
-0'
-00
-#485
-1'
-10
-#490
-0'
-00
-#495
-1'
-10
-#500
-0'
-00
-#505
-1'
-10
-#510
-0'
-00
-#515
-1'
-10
-#520
-0'
-00
-#525
-1'
-10
-#530
-0'
-00
-#535
-1'
-10
-#540
-0'
-00
-#545
-1'
-10
+0,
+04
+1k
+b1 j
 #550
-0'
-00
-#555
-1'
-10
-#560
-0'
-00
-#565
-1'
-10
-#570
-0'
-00
-#575
-1'
-10
-#580
-0'
-00
-#585
-1'
-10
-#590
-0'
-00
-#595
-1'
-10
+1(
+11
+b1 i
 #600
-0'
-00
-#605
-1'
-10
-#610
-0'
-00
-#615
-1'
-10
-#620
-0'
-00
-#625
-1'
-10
-#630
-0'
-00
-#635
-1'
-10
-#640
-0'
-00
-#645
-1'
-10
+0(
+01
 #650
-0'
-00
-#655
-1'
-10
-#660
-0'
-00
-#665
-1'
-10
-#670
-0'
-00
-#675
-1'
-10
-#680
-0'
-00
-#685
-1'
-10
-#690
-0'
-00
-#695
-1'
-10
+1(
+11
+b1 e
 #700
-0'
-00
-#705
-1'
-10
-#710
-0'
-00
-#715
-1'
-10
-#720
-0'
-00
-#725
-1'
-10
-#730
-0'
-00
-#735
-1'
-10
-#740
-0'
-00
-#745
-1'
-10
+0(
+01
 #750
-0'
-00
-#755
-1'
-10
-#760
-0'
-00
-#765
-1'
-10
-#770
-0'
-00
-#775
-1'
-10
-#780
-0'
-00
-#785
-1'
-10
-#790
-0'
-00
-#795
-1'
-10
+1(
+11
+b10 e
 #800
-0'
-00
-#805
-1'
-10
-#810
-0'
-00
-#815
-1'
-10
-#820
-0'
-00
-#825
-1'
-10
-#830
-0'
-00
-#835
-1'
-10
-#840
-0'
-00
-#845
-1'
-10
+0(
+01
 #850
-0'
-00
-#855
-1'
-10
-#860
-0'
-00
-#865
-1'
-10
-#870
-0'
-00
-#875
-1'
-10
-#880
-0'
-00
-#885
-1'
-10
-#890
-0'
-00
-#895
-1'
-10
+1(
+11
+b11 e
 #900
-0'
-00
-#905
-1'
-10
-#910
-0'
-00
-#915
-1'
-10
-#920
-0'
-00
-#925
-1'
-10
-#930
-0'
-00
-#935
-1'
-10
-#940
-0'
-00
-#945
-1'
-10
+0(
+01
 #950
-0'
-00
-#955
-1'
-10
-#960
-0'
-00
-#965
-1'
-10
-#970
-0'
-00
-#975
-1'
-10
-#980
-0'
-00
-#985
-1'
-10
-#990
-0'
-00
-#995
-1'
-10
+1(
+11
+b100 e
 #1000
-0'
-00
-#1005
-1'
-10
-#1010
-0'
-00
-#1015
-1'
-10
-#1020
-0'
-00
-#1025
-1'
-10
-#1030
-0'
-00
-#1035
-1'
-10
-#1040
-0'
-00
-#1045
-1'
-10
+0(
+01
 #1050
-0'
-00
-#1055
-1'
-10
-#1060
-0'
-00
-#1065
-1'
-10
-#1070
-0'
-00
-#1075
-1'
-10
-#1080
-0'
-00
-#1085
-1'
-10
-#1090
-0'
-00
-#1095
-1'
-10
+1(
+11
+b101 e
 #1100
-0'
-00
-#1105
-1'
-10
-#1110
-0'
-00
-#1115
-1'
-10
-#1120
-0'
-00
-#1125
-1'
-10
-#1130
-0'
-00
-#1135
-1'
-10
-#1140
-0'
-00
-#1145
-1'
-10
+0(
+01
 #1150
-0'
-00
-#1155
-1'
-10
-#1160
-0'
-00
-#1165
-1'
-10
-#1170
-0'
-00
-#1175
-1'
-10
-#1180
-0'
-00
-#1185
-1'
-10
-#1190
-0'
-00
-#1195
-1'
-10
+1(
+11
+b110 e
 #1200
-0'
-00
-#1205
-1'
-10
-#1210
-0'
-00
-#1215
-1'
-10
-#1220
-0'
-00
-#1225
-1'
-10
-#1230
-0'
-00
-#1235
-1'
-10
-#1240
-0'
-00
-#1245
-1'
-10
+0(
+1*
+13
+01
 #1250
-0'
-00
-#1255
-1'
-10
-#1260
-0'
-00
-#1265
-1'
-10
-#1270
-0'
-00
-#1275
-1'
-10
-#1280
-0'
-00
-#1285
-1'
-10
-#1290
-0'
-00
-#1295
-1'
-10
+1(
+11
+b111 e
+b1 `
+b1 6
+1g
+1K
 #1300
-0'
-00
-#1305
-1'
-10
-#1310
-0'
-00
-#1315
-1'
-10
-#1320
-0'
-00
-#1325
-1'
-10
-#1330
-0'
-00
-#1335
-1'
-10
-#1340
-0'
-00
-#1345
-1'
-10
+0(
+0*
+03
+01
 #1350
-0'
-00
-#1355
-1'
-10
-#1360
-0'
-00
-#1365
-1'
-10
-#1370
-0'
-00
-#1375
-1'
-10
-#1380
-0'
-00
-#1385
-1'
-10
-#1390
-0'
-00
-#1395
-1'
-10
+1(
+11
+b1000 e
+1l
+b10 `
+b10 6
+0g
+0K
+1J
 #1400
-0'
-00
-#1405
-1'
-10
-#1410
-0'
-00
-#1415
-1'
-10
-#1420
-0'
-00
-#1425
-1'
-10
-#1430
-0'
-00
-#1435
-1'
-10
-#1440
-0'
-00
-#1445
-1'
-10
+0(
+01
 #1450
-0'
-00
-#1455
-1'
-10
-#1460
-0'
-00
-#1465
-1'
-10
-#1470
-0'
-00
-#1475
-1'
-10
-#1480
-0'
-00
-#1485
-1'
-10
-#1490
-0'
-00
-#1495
-1'
-10
+1(
+11
+b1001 e
+0l
+b100 `
+b100 6
+0J
+1I
 #1500
-0'
-00
+0(
+1*
+13
+01
+#1550
+1(
+11
+b1010 e
+b1001 `
+b1001 6
+1K
+0I
+1H
+#1600
+0(
+0*
+03
+01
+#1650
+1(
+11
+b1011 e
+b10010 `
+b10010 6
+0K
+1J
+0H
+1G
+#1700
+0(
+01
+#1750
+1(
+11
+b1100 e
+b100100 `
+b100100 6
+0J
+1I
+0G
+1F
+#1800
+0(
+01
+#1850
+1(
+11
+b1101 e
+b1001000 `
+b1001000 6
+0I
+1H
+0F
+1E
+#1900
+0(
+1*
+13
+01
+#1950
+1(
+11
+b1110 e
+b10010001 `
+b10010001 6
+1f
+1K
+0H
+1G
+0E
+1D
+b11 j
+#2000
+0(
+01
+#2050
+1(
+11
+b0 e
+b11 i
+b100100011 `
+b100100011 6
+0f
+1J
+0G
+1F
+0D
+1C
+#2100
+0(
+01
+#2150
+1(
+11
+b1 e
+b1 b
+b1 8
+1T
+#2200
+0(
+0*
+03
+01
+#2250
+1(
+11
+b10 e
+b10 b
+b10 8
+0T
+1S
+#2300
+0(
+1*
+13
+01

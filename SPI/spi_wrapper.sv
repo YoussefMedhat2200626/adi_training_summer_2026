@@ -1,5 +1,5 @@
 module spi_wrapper #(
-    parameter MEM_DEPTH   = 256,
+    parameter MEM_DEPTH   = 32768,
     parameter HEADER_SIZE = 16,
     parameter DATA_WIDTH  = 8
 )(
