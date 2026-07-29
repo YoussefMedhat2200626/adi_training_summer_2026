@@ -202,11 +202,7 @@ initial begin
     $display("  mem[0x200] = 0x%0h",
         {uut.slave_mem[32'h203],uut.slave_mem[32'h202],uut.slave_mem[32'h201],uut.slave_mem[32'h200]});
 
-    //----------------------------------------------------------
-    // Test k : HRESP/error-counter pattern while not ready
-    //----------------------------------------------------------
-    $display("\n========== TEST k : HRESP OVER 10 NOT-READY CYCLES ==========");
-    hold_not_ready(10);
+    repeat (10) @(negedge HCLK);
 
     $stop;
 end

@@ -64,7 +64,7 @@ always_ff @(posedge HCLK or negedge HRESETn) begin
     end
     else if (!HREADY) begin
         error_flag <= error_flag + 1;
-        HRESP <= error_flag[1] |error_flag[0];
+        HRESP <= (error_flag == 1);
     end
     else HRESP <= 0;
 end
