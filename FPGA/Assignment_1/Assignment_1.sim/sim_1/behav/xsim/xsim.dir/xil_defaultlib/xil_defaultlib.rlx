@@ -1,0 +1,11 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+D:/Vivado_Projects/Assignment_1/Assignment_1.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+D:/Vivado_Projects/Assignment_1/Assignment_1.srcs/sim_1/new/counter_tb.v,1785758876,verilog,,,,counter_tb,,,../../../../Assignment_1.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/Vivado_Projects/Assignment_1/Assignment_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v,1785755931,verilog,,D:/Vivado_Projects/Assignment_1/Assignment_1.srcs/sources_1/new/clock_divider.v,,clk_wiz_0,,,../../../../Assignment_1.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/Vivado_Projects/Assignment_1/Assignment_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1785755931,verilog,,D:/Vivado_Projects/Assignment_1/Assignment_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../Assignment_1.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/Vivado_Projects/Assignment_1/Assignment_1.srcs/sources_1/new/clock_divider.v,1785757433,verilog,,D:/Vivado_Projects/Assignment_1/Assignment_1.srcs/sources_1/new/counter.v,,clock_divider,,,../../../../Assignment_1.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/Vivado_Projects/Assignment_1/Assignment_1.srcs/sources_1/new/counter.v,1785755139,verilog,,D:/Vivado_Projects/Assignment_1/Assignment_1.srcs/sources_1/new/top.v,,counter,,,../../../../Assignment_1.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/Vivado_Projects/Assignment_1/Assignment_1.srcs/sources_1/new/top.v,1785758136,verilog,,D:/Vivado_Projects/Assignment_1/Assignment_1.srcs/sim_1/new/counter_tb.v,,top,,,../../../../Assignment_1.srcs/sources_1/ip/clk_wiz_0,,,,,
